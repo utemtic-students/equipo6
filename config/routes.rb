@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 devise_for :users
 
   root 'welcome#index'
-  get 'empresario/index'
+  get 'turist/index'
 
 end
 
