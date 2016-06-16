@@ -11,7 +11,127 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160610050623) do
+ActiveRecord::Schema.define(version: 20160615000951) do
+
+  create_table "activities", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "activities", ["article_id"], name: "index_activities_on_article_id"
+
+  create_table "activity_x_puntuations", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "activity_x_puntuations", ["article_id"], name: "index_activity_x_puntuations_on_article_id"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "categories", ["article_id"], name: "index_categories_on_article_id"
+
+  create_table "night_entretaiments", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "night_entretaiments", ["article_id"], name: "index_night_entretaiments_on_article_id"
+
+  create_table "puntuations", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "puntuations", ["article_id"], name: "index_puntuations_on_article_id"
+
+  create_table "restaurant_type_x_categories", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "restaurant_type_x_categories", ["article_id"], name: "index_restaurant_type_x_categories_on_article_id"
+
+  create_table "restaurant_x_puntuations", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "restaurant_x_puntuations", ["article_id"], name: "index_restaurant_x_puntuations_on_article_id"
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "restaurants", ["article_id"], name: "index_restaurants_on_article_id"
+
+  create_table "type_activity_x_categories", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "type_activity_x_categories", ["article_id"], name: "index_type_activity_x_categories_on_article_id"
+
+  create_table "types", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "types", ["article_id"], name: "index_types_on_article_id"
+
+  create_table "types_night_entretaiment_x_categories", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "types_night_entretaiment_x_categories", ["article_id"], name: "index_types_night_entretaiment_x_categories_on_article_id"
+
+  create_table "types_night_entretaiment_x_puntuations", force: :cascade do |t|
+    t.string   "commenter"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "types_night_entretaiment_x_puntuations", ["article_id"], name: "index_types_night_entretaiment_x_puntuations_on_article_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
