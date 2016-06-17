@@ -29,12 +29,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 #gema material Design para bootstrap
 
-gem 'bootstrap-material-design'
+#gem 'bootstrap-material-design'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
 
 gem 'devise'
+
+gem 'google-webfonts', '~> 0.2.0'
 
 
 # Use Capistrano for deployment
