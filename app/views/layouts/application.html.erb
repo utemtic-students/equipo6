@@ -3,13 +3,7 @@
 <head>
   <title>Goturista10</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'empresario', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'shop-homepage', media: 'all', 'data-turbolinks-track' => true %>
-
-
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'empresario', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'welcome', 'data-turbolinks-track' => true %>
+ 
   <%= csrf_meta_tags %>
   
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -23,38 +17,13 @@
 
 </head>
 <body>
-
-
     <title>Go Turista</title>
-
 </head>
 <body>
 
 
 
-
-
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
-
 <%= yield %>
-<div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Universidad Tecnologica de Manzanillo 2016</p>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
- 
   
 </body>
 </html>
