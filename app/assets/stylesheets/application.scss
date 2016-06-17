@@ -12,12 +12,6 @@
  *
  *= require_tree .
  *= require_self
-<<<<<<< HEAD:app/assets/stylesheets/application.css
- *= require bootstrap-material-design
-=======
-
- 
->>>>>>> e98c9ecdf403e26283f9d67935f55429fec0b4aa:app/assets/stylesheets/application.scss
  */
 @import "bootstrap";
 
@@ -25,7 +19,6 @@ body{
 	background-color: white !important;
 }
 
-<<<<<<< HEAD:app/assets/stylesheets/application.css
 .centrar{
  padding: 1em 3em;
  margin: 1em 18%;
@@ -33,8 +26,6 @@ body{
 .centrarTexto{
  margin-left: 8px;
 }
-=======
  @import "bootstrap-sprockets";
  @import "bootstrap";
  
->>>>>>> e98c9ecdf403e26283f9d67935f55429fec0b4aa:app/assets/stylesheets/application.scss
