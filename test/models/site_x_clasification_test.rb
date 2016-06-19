@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ActivityXPhotoTest < ActiveSupport::TestCase
+class SiteXClasificationTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

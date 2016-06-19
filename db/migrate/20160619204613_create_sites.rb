@@ -1,7 +1,7 @@
-class CreateEveningEntertainments < ActiveRecord::Migration
+class CreateSites < ActiveRecord::Migration
   def change
-    create_table :evening_entertainments do |t|
-		t.string :Name
+    create_table :sites do |t|
+    	t.string :Name
 		t.text :Description
 		t.text :Ubication
 		t.references :scores, index: true

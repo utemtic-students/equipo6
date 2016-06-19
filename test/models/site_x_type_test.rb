@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RestaurantXClasificationTypeTest < ActiveSupport::TestCase
+class SiteXTypeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
