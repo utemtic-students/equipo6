@@ -11,16 +11,8 @@ devise_for :users
   get 'turist/bars'
   get 'turist/gotcha'
   get 'turist/lakatana'
-
-
-
-
-
-
-
   get 'questions/question'
-
-
+  resources :sites do
+    resources :photos
+  end
 end
-
-
