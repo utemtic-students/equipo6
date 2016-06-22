@@ -11,13 +11,13 @@
         <br>
         <div class="col-md-9">
             <div class="row">
-                <% @site.each do |site| %>
+                <% @sites.each do |site| %>
                     <div class="col-sm-6 col-lg-6 col-md-6">
                         <div class="thumbnail">
-                            <%= image_tag  site.SRC %>
+                            <%= image_tag  site.SRC%>
                             <div class="caption">
                                 <h4>
-                                    <a href="#"><%= site.Name%></a>
+                                    <a class="typeSite" ><%= site.Name%></a>
                                 </h4>
                                 <p>
                                     <%= site.Description%>
