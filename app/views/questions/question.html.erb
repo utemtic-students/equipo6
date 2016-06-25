@@ -1,0 +1,81 @@
+<!-- 
+¿Que Edad Tienes?
+¿Que Actividad te interesa?
+¿Con quien vienes?
+¿Que musica te gusta?
+¿Que comida te gustaria probar?
+-->
+<!-- Primera Pregunta -->
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	     <strong>¿Que Edad Tienes?</strong>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+		 <!-- 
+		Dropdown de edad 
+		 -->
+		 <div class="dropdown">
+  			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Selecciona tu edad
+  			 <span class="caret"></span></button>
+  				<ul class="dropdown-menu">
+    				<li><a href="#">15 a 18 años</a></li>
+    				<li><a href="#">18 a 25 años</a></li>
+    				<li><a href="#">25 a 35 años</a></li>
+  					<li><a href="#">Mas de 35 años</a></li>
+  				</ul>
+		</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Segunda Pregunta -->
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <strong>¿Que Actividad te interesa?</strong>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+     <!--
+   ** Estos son algunos Checkbox de ejemplo ** 
+   <input name="cbipeliculas" type="checkbox" />Deportes</input><br>
+   <input name="cbipeliculas" type="checkbox" />Actividades Extremas</input><br>
+   <input name="cbipeliculas" type="checkbox" />Bailar</input><br>-->
+<div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary active">
+    <input type="radio" name="Deportes" id="option1" autocomplete="off" checked> Deportes</label>
+  <label class="btn btn-primary">
+    <input type="radio" name="ActividadesExtremas" id="option2" autocomplete="off"> Actividades Extremas</label>
+    <label class="btn btn-primary">
+    <input type="radio" name="Bailar" id="option3" autocomplete="off"> Bailar</label>
+		</div>
+     </div>
+    </div>
+  </div>
+
+  <!-- Tercera Pregunta -->
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <strong>¿Con quien vienes?</strong>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+
