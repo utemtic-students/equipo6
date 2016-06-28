@@ -1,0 +1,12 @@
+<h3>Ingrese sus datos</h3>
+<%= form_tag :action => 'business' do %>
+<p>Nombre:
+<%= text_field_tag 'nombre_empresario' %></p>
+<p>Apellido:
+<%= text_field_tag 'apellido_empresario' %></p>
+<p>Telefono:
+<%= text_field_tag 'telefono_empresario' %></p>
+<p>Correo Electronico:
+<%= text_field_tag 'correo_empresario' %></p>
+<%= submit_tag 'Registrar' %>
+<% end %>
