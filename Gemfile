@@ -35,7 +35,7 @@ gem 'bootstrap-material-design'
 # gem 'unicorn'
 
 gem 'devise'
-
+gem 'omniauth-facebook'
 gem 'google-webfonts', '~> 0.2.0'
 
 
