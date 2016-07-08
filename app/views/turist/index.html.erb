@@ -10,20 +10,23 @@
         <div class="col-md-9">
             <div class="row">
                 <% @sites.each do |site| %>
-                    <div class="col-sm-6 col-lg-6 col-md-6">
+                    <div class="col-sm-12 col-lg-6 col-md-6">
                         <div class="thumbnail">
                             <%= image_tag  site.SRC%>
-                            <div class="caption">
-                                <h4>
-                                    <a class="typeSite" ><%= site.Description%></a>
-                                </h4>
+                            <div class="">
+                                <br> 
                                 <p>
                                     <%= site.Name%>
                                 </p>
+                                <hr>
+                                <h4 class="description">
+                                   <a class="typeSite" ><%= site.Description%></a> 
+                                </h4>
                                 <p>
-                                    <a  href="extremeActivities"><strong>Actividades Extrema</strong></a>.<br>
-                                    <a  href="extremeActivities">Categoria - <strong>Tour</strong></a>.
+                                    <a  href="extremeActivities"><strong>Actividades Extrema</strong> Categoria - <strong>Tour</strong></a> .<br>
+                          
                                 </p>
+                                <center><button class="btn btn-primary">Ver Mas</button></center>
 
                             </div>
                             <div class="ratings">
