@@ -1,3 +1,8 @@
+<!--Imagen de perfil-->
+|
+<%= image_tag "perfilEmpresario/_CA17513.jpg" %>
+
+<!-- Formulario de perfil de empresario-->
 <%= form_tag :action => 'business' do %>
 <p>Nombre:</p>
 Rodolfo Vallesa Santos
@@ -19,8 +24,9 @@ Plaza las palmas s/n
 <p>
 <textarea name="comentarios" rows="10" cols="40">Describe tu empresa</textarea>
 <p>
-<%= submit_tag "Editar información" %>
+<label class="btn btn-primary">Editar Información</label>
 <% end %>
 
+<!-- Formulario para subir imagenes -->
+<input type="text" name="subirfoto" class="btn-subirfoto"><label class="btn btn-primary">Subir Foto</label>
 
-    
