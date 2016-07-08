@@ -1,12 +1,26 @@
-<h3>Ingrese sus datos</h3>
 <%= form_tag :action => 'business' do %>
-<p>Nombre:
-<%= text_field_tag 'nombre_empresario' %></p>
-<p>Apellido:
-<%= text_field_tag 'apellido_empresario' %></p>
-<p>Telefono:
-<%= text_field_tag 'telefono_empresario' %></p>
-<p>Correo Electronico:
-<%= text_field_tag 'correo_empresario' %></p>
-<%= submit_tag 'Registrar' %>
+<p>Nombre:</p>
+Rodolfo Vallesa Santos
+<p>Correo:</P> 
+rodolfovallesa@gmail.com
+<p>Teléfono:</p> 
+3141065003
+<p>Nombre de la empresa:</p>
+Comida express
+<p>Elegir clasificación:</p>
+Bar
+<input id="bar" name="bar" type="checkbox"/>
+Restaurant
+<input id="restaurant" name="restaurant" type="checkbox"/>
+Actividad Extrema
+<input id="Aextrema" name="Aextrema" type="checkbox"/>
+<p>Dirección de la empresa:</p>
+Plaza las palmas s/n
+<p>
+<textarea name="comentarios" rows="10" cols="40">Describe tu empresa</textarea>
+<p>
+<%= submit_tag "Editar información" %>
 <% end %>
+
+
+    
