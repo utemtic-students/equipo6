@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'turist/index'
   resources :sites do
-    resources :photos
+  resources :photos
   end
 end

@@ -6,7 +6,7 @@ class CreateSites < ActiveRecord::Migration
 		t.text :Ubication
 		t.references :scores, index: true
 		t.references :businessmans, index: true
-      	t.timestamps null: false
+    t.timestamps null: false
     end
   end
 end

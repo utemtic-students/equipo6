@@ -1,5 +1,10 @@
 class QuestionsController < ApplicationController
   def question
-  	render layout: "questions"
+  	
+  	@Surveyfirst = Survey.first
+  	
+  		
+
+	render layout: "questions"
   end
 end

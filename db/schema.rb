@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160619205149) do
+ActiveRecord::Schema.define(version: 20160707232209) do
 
   create_table "clasifications", force: :cascade do |t|
     t.string   "Name"
@@ -73,6 +73,13 @@ ActiveRecord::Schema.define(version: 20160619205149) do
   add_index "sites", ["businessmans_id"], name: "index_sites_on_businessmans_id"
   add_index "sites", ["scores_id"], name: "index_sites_on_scores_id"
 
+  create_table "surveys", force: :cascade do |t|
+    t.string   "questions"
+    t.string   "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "types", force: :cascade do |t|
     t.string   "Name"
     t.text     "Description"
@@ -91,8 +98,14 @@ ActiveRecord::Schema.define(version: 20160619205149) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "username",               default: "", null: false
+    t.string   "name"
+    t.string   "last_name"
+    t.text     "bio"
+    t.string   "uid"
+    t.string   "provider"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
