@@ -49,7 +49,7 @@
                 <ul class="nav navbar-nav">
                     <% @types.each do |type| %>
                       <li>
-                          <a href="#"><%=type.Name %></a>
+                          <%= link_to type.Name, {:controller => "turist", :action => "index", :type_id => type.id }%>
                       </li>
                     <% end %>
                 </ul>

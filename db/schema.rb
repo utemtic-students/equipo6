@@ -13,52 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20160707232209) do
 
-  create_table "activities", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "activities", ["article_id"], name: "index_activities_on_article_id"
-
-  create_table "activity_x_puntuations", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "activity_x_puntuations", ["article_id"], name: "index_activity_x_puntuations_on_article_id"
-
-  create_table "categories", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "categories", ["article_id"], name: "index_categories_on_article_id"
-
   create_table "clasifications", force: :cascade do |t|
     t.string   "Name"
     t.text     "Description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
-  create_table "night_entretaiments", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "night_entretaiments", ["article_id"], name: "index_night_entretaiments_on_article_id"
 
   create_table "photos", force: :cascade do |t|
     t.integer  "sites_id"
@@ -69,46 +29,6 @@ ActiveRecord::Schema.define(version: 20160707232209) do
   end
 
   add_index "photos", ["sites_id"], name: "index_photos_on_sites_id"
-
-  create_table "puntuations", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "puntuations", ["article_id"], name: "index_puntuations_on_article_id"
-
-  create_table "restaurant_type_x_categories", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "restaurant_type_x_categories", ["article_id"], name: "index_restaurant_type_x_categories_on_article_id"
-
-  create_table "restaurant_x_puntuations", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "restaurant_x_puntuations", ["article_id"], name: "index_restaurant_x_puntuations_on_article_id"
-
-  create_table "restaurants", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "restaurants", ["article_id"], name: "index_restaurants_on_article_id"
 
   create_table "scores", force: :cascade do |t|
     t.integer  "Star1"
@@ -153,51 +73,19 @@ ActiveRecord::Schema.define(version: 20160707232209) do
   add_index "sites", ["businessmans_id"], name: "index_sites_on_businessmans_id"
   add_index "sites", ["scores_id"], name: "index_sites_on_scores_id"
 
-<<<<<<< HEAD
   create_table "surveys", force: :cascade do |t|
     t.string   "questions"
     t.string   "answer"
-=======
-  create_table "type_activity_x_categories", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "article_id"
->>>>>>> refs/remotes/origin/master
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
-=======
-  add_index "type_activity_x_categories", ["article_id"], name: "index_type_activity_x_categories_on_article_id"
-
->>>>>>> refs/remotes/origin/master
   create_table "types", force: :cascade do |t|
     t.string   "Name"
     t.text     "Description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
-  create_table "types_night_entretaiment_x_categories", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "types_night_entretaiment_x_categories", ["article_id"], name: "index_types_night_entretaiment_x_categories_on_article_id"
-
-  create_table "types_night_entretaiment_x_puntuations", force: :cascade do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "types_night_entretaiment_x_puntuations", ["article_id"], name: "index_types_night_entretaiment_x_puntuations_on_article_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -210,14 +98,8 @@ ActiveRecord::Schema.define(version: 20160707232209) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "username",               default: "", null: false
-    t.string   "name"
-    t.string   "last_name"
-    t.text     "bio"
-    t.string   "uid"
-    t.string   "provider"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -16,7 +16,7 @@
                             <div class="">
                                 <br> 
                                 <p>
-                                    <%= site.Name%>
+                                    <%= link_to site.Name, {:controller => "detalle", :action => "index", :site_id => site.id }%>
                                 </p>
                                 <hr>
                                 <h4 class="description">
