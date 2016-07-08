@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'questions/question'  
   root 'welcome#index'
   get 'turist/index'
-   get 'turist/lakatana'
+   get 'detalle/index'
   resources :sites do
     resources :photos
   end

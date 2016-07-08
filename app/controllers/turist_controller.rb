@@ -1,12 +1,11 @@
 class TuristController < ApplicationController
   def index	
-  	@sites = Site.select('sites.id AS id, sites.Name AS Name, 
-  						sites.Description AS Description,
-  						photos.SRC AS SRC').joins("LEFT JOIN photos ON photos.sites_id = sites.id ")
+  	@sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description,
+  						photos.SRC AS SRC').joins("LEFT JOIN photos ON photos.sites_id = sites.id ").where("photos.Section = 'Principal'")
     @types = Type.all
   	arraySiete = []
   	@resultSite = []
-  	i=1
+  	#i=1
 #       @sites.each do |site|
 #   		type = Type.where("sites_id =? "  site.id)
 #   		category = Clasification.where("sites_id = ?" ,  site.id)
