@@ -11,7 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160710165359) do
+ActiveRecord::Schema.define(version: 20160710184959) do
+
+  create_table "answer_x_clasifications", force: :cascade do |t|
+    t.integer  "answers_id"
+    t.integer  "clasifications_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "answer_x_clasifications", ["answers_id"], name: "index_answer_x_clasifications_on_answers_id"
+  add_index "answer_x_clasifications", ["clasifications_id"], name: "index_answer_x_clasifications_on_clasifications_id"
+
+  create_table "answer_x_types", force: :cascade do |t|
+    t.integer  "answers_id"
+    t.integer  "types_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "answer_x_types", ["answers_id"], name: "index_answer_x_types_on_answers_id"
+  add_index "answer_x_types", ["types_id"], name: "index_answer_x_types_on_types_id"
+
+  create_table "answers", force: :cascade do |t|
+    t.string   "Name"
+    t.text     "Description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "clasifications", force: :cascade do |t|
     t.string   "Name"
@@ -78,9 +105,24 @@ ActiveRecord::Schema.define(version: 20160710165359) do
   add_index "sites", ["businessmans_id"], name: "index_sites_on_businessmans_id"
   add_index "sites", ["scores_id"], name: "index_sites_on_scores_id"
 
+  create_table "survey_x_answers", force: :cascade do |t|
+    t.integer  "surveys_id"
+    t.integer  "answers_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "survey_x_answers", ["answers_id"], name: "index_survey_x_answers_on_answers_id"
+  add_index "survey_x_answers", ["surveys_id"], name: "index_survey_x_answers_on_surveys_id"
+
   create_table "surveys", force: :cascade do |t|
-    t.string   "questions"
-    t.string   "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "Questions"
+    t.string   "Type"
+  end
+
+  create_table "type_questions", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
