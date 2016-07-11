@@ -1,0 +1,32 @@
+<!--Imagen de perfil-->
+|
+<%= image_tag "perfilEmpresario/_CA17513.jpg" %>
+
+<!-- Formulario de perfil de empresario-->
+<%= form_tag :action => 'business' do %>
+<p>Nombre:</p>
+Rodolfo Vallesa Santos
+<p>Correo:</P> 
+rodolfovallesa@gmail.com
+<p>Teléfono:</p> 
+3141065003
+<p>Nombre de la empresa:</p>
+Comida express
+<p>Elegir clasificación:</p>
+Bar
+<input id="bar" name="bar" type="checkbox"/>
+Restaurant
+<input id="restaurant" name="restaurant" type="checkbox"/>
+Actividad Extrema
+<input id="Aextrema" name="Aextrema" type="checkbox"/>
+<p>Dirección de la empresa:</p>
+Plaza las palmas s/n
+<p>
+<textarea name="comentarios" rows="10" cols="40">Describe tu empresa</textarea>
+<p>
+<label class="btn btn-primary">Editar Información</label>
+<% end %>
+
+<!-- Formulario para subir imagenes -->
+<input type="text" name="subirfoto" class="btn-subirfoto"><label class="btn btn-primary">Subir Foto</label>
+
