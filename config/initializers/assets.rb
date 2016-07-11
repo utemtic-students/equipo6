@@ -16,6 +16,7 @@ Rails.application.config.assets.precompile += %w( application.js )
 Rails.application.config.assets.precompile += %w( empresario.js )
 Rails.application.config.assets.precompile += %w( welcome.js )
 Rails.application.config.assets.precompile += %w( searchSite.js )
+Rails.application.config.assets.precompile += %w( questions.js )
 
 Rails.application.config.assets.precompile += %w( application.css )
 Rails.application.config.assets.precompile += %w( empresario.scss )
