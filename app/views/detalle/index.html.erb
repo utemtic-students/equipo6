@@ -1,6 +1,8 @@
  	<div class="container">
-     	<center> <h1><%= @site.Name %> </h1>   </center>
-    </div>
+
+     	<center> <h1>La Katana </h1>   </center>
+
+      </div>
       <br>
  <div class="container-fluid">
 
@@ -20,17 +22,16 @@
                                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner">
-                                <% @photoPrincipal.each do |photo| %>
-                                    <div class="item active">
-                                        <%= image_tag photo.SRC %>
-                                    </div>
-                              <% end %>
-                              <% @photosGaleria.each do |photo| %>
-                                    <div class="item ">
-                                        <%= image_tag photo.SRC %>
-                                    </div>
-                              <% end %>
-                                
+                                <div class="item active">
+                                 <%= image_tag "restaurant/katana.jpg" %>
+
+                                </div>
+                                <div class="item">
+                          		 <%= image_tag "restaurant/katana1.jpg" %>
+                                </div>
+                                <div class="item">
+                          	 	<%= image_tag "restaurant/katana2.jpg" %>
+                                </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                                 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -42,7 +43,8 @@
                     </div>
 
                 </div>
-                    <div class="ratings">
+               
+                <div class="ratings">
                                 <p class="pull-right">15 reviews</p>
                                 <p>
                                     <span class="glyphicon glyphicon-star"></span>
@@ -87,22 +89,16 @@
      <div class="container">
   <div class="row">
       <div id="map-outer" class="col-md-12">
-          <div id="address" class="col-md-4">
-          <h2><center><%= @site.Description %>
-            <center> </h2><br><hr>
+          <div id="address" class="col-md-12">
+          <h2><center>Cocina de autor que integra la delicadeza de la cocina japonesa con la vesatibilidad y sabores explosivos de Tailandia y México algo unicó y delicioso<center> </h2><br><hr>
             <h2>Informacion</h2>
             <address>
-            <% @type.each do |item| %>
-                <strong><%= item.Name  %></strong>
-            <% end %>
-            <br>
-            <% @clasification.each do |item| %>
-                <strong><%= item.Name  %></strong>
-            <% end %>
-            <br>
-                <%= @site.Ubication %>
+            <strong>Cocina asiatica</strong><br>
+                Bulv Miguel de la Madrid<br>
+                #13000<br>
+                Manzanillo, Colima<br>
                 
-                <abbr>Tel: </abbr> 3143389288
+                <abbr> <strong>Tel:</strong> </abbr> 3143389288
            </address>
           </div>
         <div id="map-container" class="col-md-12"></div>

@@ -3,9 +3,11 @@
 
     <div class="row">
 
-        <div class="col-md-3 col-xs- 2" >
-            <center><h2>Estos lugares <strong>"Podrian gustarte"</strong></h2></center>
+        <div class="col-md-3 " >
+            <center><h2>Estos lugares</h2></center>
+            <center><h3><strong>"Podrian gustarte"</strong></h3></center>
         </div>
+
         <br>
         <div class="col-md-9">
             <div class="row">
@@ -15,18 +17,23 @@
                             <%= image_tag  site.SRC%>
                             <div class="">
                                 <br> 
-                                <p>
+                                
+                                <h3 id="titulo" class="description">
                                     <%= link_to site.Name, {:controller => "detalle", :action => "index", :site_id => site.id }%>
-                                </p>
+                                </h3>
                                 <hr>
                                 <h4 class="description">
-                                   <a class="typeSite" ><%= site.Description%></a> 
+                                  <p class="text-justify"> <%= site.Description%> </p>
                                 </h4>
+                                <h5 class="description">
                                 <p>
-                                    <a  href="extremeActivities"><strong>Actividades Extrema</strong> Categoria - <strong>Tour</strong></a> .<br>
-                          
+                                    <a  href=""><strong>Actividades Extrema</strong></a><br>
                                 </p>
-                                <center><button class="btn btn-primary">Ver Mas</button></center>
+                                <p>
+                                    <a  href=""> Categoria - <strong>Tour</strong></a><br>
+                                </p>
+                                </h5>
+                                <button class="btn btn-primary">Ver Mas</button>
 
                             </div>
                             <div class="ratings">
