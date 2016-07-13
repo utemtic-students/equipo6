@@ -11,17 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160709043840) do
-
-  create_table "answers", force: :cascade do |t|
-    t.integer  "numberansw"
-    t.string   "answers"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-=======
 ActiveRecord::Schema.define(version: 20160710184959) do
 
   create_table "answer_x_clasifications", force: :cascade do |t|
@@ -51,7 +40,6 @@ ActiveRecord::Schema.define(version: 20160710184959) do
     t.datetime "updated_at",  null: false
   end
 
->>>>>>> c195409d16ffa83f81c6bcac215aeec06d0f8a89
   create_table "clasifications", force: :cascade do |t|
     t.string   "Name"
     t.text     "Description"
@@ -117,20 +105,13 @@ ActiveRecord::Schema.define(version: 20160710184959) do
   add_index "sites", ["businessmans_id"], name: "index_sites_on_businessmans_id"
   add_index "sites", ["scores_id"], name: "index_sites_on_scores_id"
 
-<<<<<<< HEAD
-  create_table "surveys", force: :cascade do |t|
-    t.string   "questions"
-=======
   create_table "survey_x_answers", force: :cascade do |t|
     t.integer  "surveys_id"
     t.integer  "answers_id"
->>>>>>> c195409d16ffa83f81c6bcac215aeec06d0f8a89
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
-=======
   add_index "survey_x_answers", ["answers_id"], name: "index_survey_x_answers_on_answers_id"
   add_index "survey_x_answers", ["surveys_id"], name: "index_survey_x_answers_on_surveys_id"
 
@@ -146,7 +127,6 @@ ActiveRecord::Schema.define(version: 20160710184959) do
     t.datetime "updated_at", null: false
   end
 
->>>>>>> c195409d16ffa83f81c6bcac215aeec06d0f8a89
   create_table "types", force: :cascade do |t|
     t.string   "Name"
     t.text     "Description"
