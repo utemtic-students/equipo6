@@ -27,6 +27,7 @@ Rails.application.config.assets.precompile += %w( font-awesome.css )
 Rails.application.config.assets.precompile += %w( company.scss )
 Rails.application.config.assets.precompile += %w( morris.css )
 Rails.application.config.assets.precompile += %w( sb-admin-rtl.css )
+Rails.application.config.assets.precompile += %w( jquery.js )
 
 
 

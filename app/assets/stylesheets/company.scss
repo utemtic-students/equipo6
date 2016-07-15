@@ -29,9 +29,7 @@ body {
         padding-left: 225px;
     }
 
-    #page-wrapper {
-        padding: 10px;
-    }
+   
 }
 
 /* Top Navigation */
@@ -236,3 +234,8 @@ ul.alert-dropdown {
     overflow-x: hidden;
     padding-bottom: 40px;
 }
+
+.top-nav > li > a {
+   
+    color: #fffefe;
+ }

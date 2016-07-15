@@ -14,6 +14,14 @@ Rails.application.routes.draw do
   get 'turist/index'
   get 'detalle/index'
   get 'company/business'
+  get 'company/pagos'
+  get 'company/edit'
+  get 'company/mySite'
+  post 'company/insertSite'
+  get 'company/insertSite'
+
+  post "posts" => 'company#saveSite'
+  
   
    
   resources :sites do
