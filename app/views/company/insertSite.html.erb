@@ -17,37 +17,62 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <%= form_for :post do |f| %>
-                        <p>
-                            <%= f.label :Name %><br>
-                            <%= f.text_field :Name %>
-
-                            <%= f.label :Description %><br>
-                            <%= f.text_field :Description %>
-
-                            <%= f.submit %>
+                            <div class="form-group">
+                                <%= f.label :Nombre %>:<br>
+                                <%= f.text_field :Name,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Descripción %>:<br>
+                            <%= f.text_field :Description ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Teléfono %>:<br>
+                            <%= f.text_field :TelNumber ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Municipio %>:<br>
+                            <%= f.text_field :Municipality ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Estado %>:<br>
+                            <%= f.text_field :State ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Colonia %>:<br>
+                            <%= f.text_field :Colony ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Numero_Exterior %>:<br>
+                            <%= f.text_field :OutdoorNumber ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Numero_Interior %>:<br>
+                            <%= f.text_field :IndoorNumber ,:class=>"form-control" %>
+                            </div>
+                            <%= f.submit :Guardar ,:class=>"btn btn-info" %>
                         <% end %>
 
-                        <form role="form" >
+                        <!--<form role="form" >
                             <div class="form-group">
-                                <label>Nombre</label>
+                                <label>Nombre:</label>
                                 <input class="form-control">
                             </div>
                               <div class="form-group">
-                                <label> Descripcion del Negocio</label>
+                                <label> Descripción del Negocio:</label>
                                 <textarea class="form-control" rows="3"></textarea>
                             </div>
 
                               <div class="form-group">
-                                <label>Telefono</label>
+                                <label>Teléfono:</label>
                                 <input class="form-control">
                             </div>
                               <div class="form-group">
-                                <label>Ubicacion</label>
+                                <label>Ubicación:</label>
                                 <input class="form-control">
                             </div>
 
                              <div class="form-group">
-                                <label>Tipo de actividad</label>
+                                <label>Tipo de actividad:</label>
                                 <select class="form-control">
                                     <option></option>
                                     <option>Actividades Extremas</option>
@@ -55,13 +80,13 @@
                                     <option>Actividades nocturnas</option>
                                     
                                 </select>
-                            </div>
+                            </div> -->
 
                             <div class="form-group">
-                                <label> Subir Fotografia</label>
+                                <label> Subir Fotografía</label>
                                 <input type="file">
                             </div>
-                             <button type="submit" class="btn btn-info">Guardar</button>
+                             <!--<button type="submit" class="btn btn-info">Guardar</button>-->
                         </form>                            
                     </div>
 
