@@ -1,0 +1,1 @@
+function startPage(){$(".btnSiteType").click(function(){$(".btnSiteType").text();$.ajax({url:"/turist/index/showSites",dataType:"JSON",timeout:1e4,error:function(){alert("error")},success:function(t){t?alert(t):alert("")}})})}$(document).ready(function(){startPage()});

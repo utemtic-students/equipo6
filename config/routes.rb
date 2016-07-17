@@ -1,15 +1,13 @@
 Rails.application.routes.draw do  
-  get 'company/registrarEmpresa'
 
-  get 'questions/question'
-  get 'questions/question2'
-
-  get 'company/business'
-
-  devise_for :users, controllers:{
+   devise_for :users, controllers:{
     omniauth_callbacks: "users/omniauth_callbacks"
   }
 
+  get 'company/registrarEmpresa'
+  get 'questions/question'
+  get 'questions/question2'
+  get 'company/business'
   root 'welcome#index'
   get 'turist/index'
   get 'detalle/index'

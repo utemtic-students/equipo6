@@ -1,0 +1,65 @@
+/*!
+ * Start Bootstrap - Shop Homepage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+/* line 8, /home/personal/Documents/goturista1.0/app/assets/stylesheets/empresario.scss */
+body {
+  padding-top: 70px;
+  /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+/* line 12, /home/personal/Documents/goturista1.0/app/assets/stylesheets/empresario.scss */
+.slide-image {
+  width: 100%;
+}
+
+/* line 16, /home/personal/Documents/goturista1.0/app/assets/stylesheets/empresario.scss */
+.carousel-holder {
+  margin-bottom: 30px;
+}
+
+/* line 20, /home/personal/Documents/goturista1.0/app/assets/stylesheets/empresario.scss */
+.carousel-control,
+.item {
+  border-radius: 4px;
+}
+
+/* line 25, /home/personal/Documents/goturista1.0/app/assets/stylesheets/empresario.scss */
+.caption {
+  height: 130px;
+  overflow: hidden;
+}
+
+/* line 30, /home/personal/Documents/goturista1.0/app/assets/stylesheets/empresario.scss */
+.caption h4 {
+  white-space: nowrap;
+}
+
+/* line 34, /home/personal/Documents/goturista1.0/app/assets/stylesheets/empresario.scss */
+.thumbnail img {
+  width: 100%;
+}
+
+/* line 38, /home/personal/Documents/goturista1.0/app/assets/stylesheets/empresario.scss */
+.ratings {
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #d17581;
+}
+
+/* line 44, /home/personal/Documents/goturista1.0/app/assets/stylesheets/empresario.scss */
+.thumbnail {
+  padding: 0;
+}
+
+/* line 48, /home/personal/Documents/goturista1.0/app/assets/stylesheets/empresario.scss */
+.thumbnail .caption-full {
+  padding: 9px;
+  color: #333;
+}
+
+/* line 53, /home/personal/Documents/goturista1.0/app/assets/stylesheets/empresario.scss */
+footer {
+  margin: 50px 0;
+}
