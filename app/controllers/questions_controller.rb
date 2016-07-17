@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   def question
   	
-  Answer.all
+  Answers.all
   @Answerfirst = Answer.first
   
 
