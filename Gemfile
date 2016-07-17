@@ -15,7 +15,7 @@ source 'https://rubygems.org'
   gem 'omniauth-facebook'
   gem 'google-webfonts', '~> 0.2.0'
 
-  gem 'sqlite3'
+ #gem 'sqlite3'
   gem 'pg'
   gem 'taps'
  
