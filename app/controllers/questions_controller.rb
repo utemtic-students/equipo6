@@ -1,10 +1,7 @@
 class QuestionsController < ApplicationController
   def question
   	
-  Answers.all
-  @Answerfirst = Answer.first
-  
-
+ 
   render layout: "questions"
   end
 
