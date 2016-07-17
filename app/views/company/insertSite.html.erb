@@ -1,0 +1,111 @@
+ <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Registrar Negocio
+                        </h1>
+                        
+
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <%= form_for :post do |f| %>
+                            <div class="form-group">
+                                <%= f.label :Nombre %>:<br>
+                                <%= f.text_field :Name,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Descripción %>:<br>
+                            <%= f.text_field :Description ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Teléfono %>:<br>
+                            <%= f.text_field :TelNumber ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Municipio %>:<br>
+                            <%= f.text_field :Municipality ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Estado %>:<br>
+                            <%= f.text_field :State ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Colonia %>:<br>
+                            <%= f.text_field :Colony ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Numero_Exterior %>:<br>
+                            <%= f.text_field :OutdoorNumber ,:class=>"form-control" %>
+                            </div>
+                            <div class="form-group">
+                            <%= f.label :Numero_Interior %>:<br>
+                            <%= f.text_field :IndoorNumber ,:class=>"form-control" %>
+                            </div>
+                            <%= f.submit :Guardar ,:class=>"btn btn-info" %>
+                        <% end %>
+
+                        <!--<form role="form" >
+                            <div class="form-group">
+                                <label>Nombre:</label>
+                                <input class="form-control">
+                            </div>
+                              <div class="form-group">
+                                <label> Descripción del Negocio:</label>
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+
+                              <div class="form-group">
+                                <label>Teléfono:</label>
+                                <input class="form-control">
+                            </div>
+                              <div class="form-group">
+                                <label>Ubicación:</label>
+                                <input class="form-control">
+                            </div>
+
+                             <div class="form-group">
+                                <label>Tipo de actividad:</label>
+                                <select class="form-control">
+                                    <option></option>
+                                    <option>Actividades Extremas</option>
+                                    <option>Restaurantes</option>
+                                    <option>Actividades nocturnas</option>
+                                    
+                                </select>
+                            </div> -->
+
+                            <div class="form-group">
+                                <label> Subir Fotografía</label>
+                                <input type="file">
+                            </div>
+                             <!--<button type="submit" class="btn btn-info">Guardar</button>-->
+                        </form>                            
+                    </div>
+
+                <div class="col-lg-6">
+                <div class="thumbnail">
+                 <%= image_tag "casa.png" %>
+                 </div>
+
+                </div>
+                <!-- /.row -->
+
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+        </div>
+        </div>
+        </div>
