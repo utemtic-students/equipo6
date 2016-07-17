@@ -19,12 +19,13 @@ Rails.application.routes.draw do
   get 'company/mySite'
   post 'company/insertSite'
   get 'company/insertSite'
+  post 'company/insertClasification'
+  get 'company/insertClasification'
+  
 
-  post "posts" => 'company#saveSite'
-  
-  
+ 
    
   resources :sites do
-  resources :photos
+    resources :site_x_clasifications
   end
 end

@@ -1,12 +1,27 @@
 class TuristController < ApplicationController
   def index	
-    if params[:type_id]
+
+    if params[:type_id] && params[:clasification_id]
+      @sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
+                   .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
+                   .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")
+                   .joins("LEFT JOIN types ON types.id = site_x_types.types_id")
+                   .joins("LEFT JOIN site_x_clasifications ON  site_x_clasifications.sites_id = sites.id ")
+                   .joins("LEFT JOIN clasifications ON clasifications.id = site_x_clasifications.clasifications_id")
+                   .where("types.id = ? AND clasifications.id = ?",params[:type_id],params[:clasification_id]);
+    elsif params[:type_id]
       @sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
                    .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
                    .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")
                    .joins("LEFT JOIN types ON types.id = site_x_types.types_id")
                    .where("types.id = ?",params[:type_id]);
-    else 
+    elsif params[:clasification_id]
+        @sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
+                   .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
+                   .joins("LEFT JOIN site_x_clasifications ON  site_x_clasifications.sites_id = sites.id ")
+                   .joins("LEFT JOIN clasifications ON clasifications.id = site_x_clasifications.clasifications_id")
+                   .where("clasifications.id = ?",params[:clasification_id]);
+    else
       @sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
                  .joins("LEFT JOIN photos ON photos.sites_id = sites.id ")
                  .where("photos.Section = 'Principal'");
@@ -24,13 +39,6 @@ class TuristController < ApplicationController
 #       end
   	render layout: "turist"
   end
-  def showSites
-     @sites = Site.select('sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
-     .joins("LEFT JOIN photos ON photos.sites_id = sites.id ")
-     .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id")
-     .joins("LEFT JOIN types ON types.id = site_x_types.types_id")
-     .where("types.Name = 'Restaurant'");
-     render :json => @sites[0]
-  end
+  
 end
 
