@@ -1,13 +1,14 @@
 class QuestionsController < ApplicationController
   def question
   	
-  	Survey.all
-  	@Surveyfirst = Survey.first
-  	@SurveySecond = Survey.find(2)
-  	@SurveyThird = Survey.find(3)
+  Answer.all
+  @Answerfirst = Answer.first
+  
 
+  render layout: "questions"
+  end
 
-
-	render layout: "questions"
+  def question2
+  	
   end
 end

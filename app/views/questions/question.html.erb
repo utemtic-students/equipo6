@@ -2,7 +2,11 @@
         <label for="cerrar" id="btn-cerrar">X</label>
         <div class="modal">
             <div class="contenido">
-                <h2><%= @Surveyfirst.questions %></h2>
+            <div id="content">
+            <div id="empty">
+            <div id="question2">Hola mundo </div>
+               <%= @Answerfirst.answers %> 
+                <h2></h2>
                 <br>
                 <br>
                 <br>
@@ -19,13 +23,16 @@
                 <!-- <label id="write-button" class="btn btn-primary"> Tengo 18</label> -->
                 <label class=""> Tu edad es</label><a id="viewage" class=""></label>            
                 <input id="input-with-keypress" type="text"></input><a href=""> ?</a>
-<!--Boton de enviar respuesta-->
-              <br>
-              <label class="btn btn-primary" id="btn-sendRequest">Enviar resultado</label>
 
+                </div>
+<!--Boton de enviar respuesta-->
+                </div>
+                <br>
+               
+              <label class="btn btn-primary" id="btn-sendRequest">Enviar resultado</label>
+              </div>
             </div>
         </div>
-        
         <main>
             <h1>Responde estas tres preguntas</h1>
             <h1></h1>   

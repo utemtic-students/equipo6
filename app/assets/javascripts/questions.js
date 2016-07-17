@@ -31,6 +31,8 @@ keypressSlider.noUiSlider.on('update', function( values, handle ) {
 //var valueInput = document.getElementById('input-with-keypress');
 //var saveValueInput = valueInput.val().trim();
 
+//ocultando div id = "question2"
+$('#question2').hide();
 $('#btn-sendRequest').click(function (e) {
 
   e.preventDefault();
@@ -39,10 +41,12 @@ $('#btn-sendRequest').click(function (e) {
   console.log(answer1);
  //bloque para enviar parametros
   if(answer1 => 18.00){
-  	window.location.href = "question2";
+	 var emptyValue = document.getElementById('empty');
+	 var question2 = document.getElementById('question2');
+	 emptyValue.remove();
+	 $('#question2').toggle();
 	}if(answer1 < 18.00){
   	alert("Eres menor");
   }
-
-	});
+ });
 });
