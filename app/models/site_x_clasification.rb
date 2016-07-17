@@ -1,3 +1,3 @@
 class SiteXClasification < ActiveRecord::Base
-	has :clasification
+	belongs_to :site
 end
