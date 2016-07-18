@@ -133,10 +133,9 @@ ActiveRecord::Schema.define(version: 20160717225152) do
   add_index "survey_x_answers", ["surveys_id"], name: "index_survey_x_answers_on_surveys_id"
 
   create_table "surveys", force: :cascade do |t|
+    t.string   "questions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "Questions"
-    t.string   "Type"
   end
 
   create_table "type_questions", force: :cascade do |t|
