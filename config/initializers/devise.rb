@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '53cf347a231db781865c80c32b73ac87262044cebc4fb82eef76ea20e7ad905fb64df68df9c5a35978f5d852e3ddefa9c911bd44226bbae042cb63af84f4c887'
+  # config.secret_key = 'f8c3eb97f86dc5c1e1dfb4c095159931901de785eed0baba0cb30b7a853f2ecd1ec8396242a1d05d0b82c3480f8395ab57908f152d3efaa12107d246d5f4ca28'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -102,7 +102,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'bf23d7938477b8c0ccebfe80b51bd0ff002817806c32dbd7b768bbb230a71617c41c2e1b78b6ddb22d34adb18bd1f30179b4ed9294be9fb10840a0577c280879'
+  # config.pepper = 'a3c52fa31465aa451e135808edcea764537160da4dc27d54ff5737270942b26185480f12e0a44f256f25b5a21ff15c3e1db8051ad8ac3c1abe9cfc553785206b'
 
   # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
@@ -242,7 +242,8 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :facebook, "1546169515689645","902c80d386fc98d064be957f5d690a7e"
+    config.omniauth :facebook, "1546169515689645","902c80d386fc98d064be957f5d690a7e"
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
