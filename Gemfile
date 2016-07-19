@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
+   #gem 'sqlite3'
 
   gem 'rails', '>= 5.0.0.rc1', '< 5.1'
   gem 'sass-rails', '~> 5.0'
@@ -17,12 +18,14 @@ ruby '2.3.1'
   gem 'google-webfonts', '~> 0.2.0'
   gem 'puma'
   gem 'rack-timeout'
-
-  gem 'rails_12factor', group: :production
-
- #gem 'sqlite3'
+  gem 'nginx', '~> 0.0.2'
   gem 'pg'
  
+  
+  gem 'rails_12factor', group: :production
+
+
+
 group :production, :staging do
   gem "pg"
   gem "puma"
