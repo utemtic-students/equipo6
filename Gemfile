@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.4'
   gem 'rails', '4.2.6'
   gem 'sass-rails', '~> 5.0'
   gem 'uglifier', '>= 1.3.0'
@@ -14,18 +14,9 @@ source 'https://rubygems.org'
   gem 'devise'
   gem 'omniauth-facebook'
   gem 'google-webfonts', '~> 0.2.0'
-  gem 'puma'
-  gem 'rack-timeout'
-
-  gem 'rails_12factor', group: :production
-
- #gem 'sqlite3'
-  gem 'pg'
-  gem 'taps'
  
 group :production, :staging do
   gem "pg"
-  gem 'puma'
 end
 
 group :development, :test do
