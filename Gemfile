@@ -14,7 +14,7 @@ source 'https://rubygems.org'
   gem 'devise'
   gem 'omniauth-facebook'
   gem 'google-webfonts', '~> 0.2.0'
-  gem "unicorn"
+  gem 'puma'
   gem 'rack-timeout'
 
   gem 'rails_12factor', group: :production
@@ -25,7 +25,7 @@ source 'https://rubygems.org'
  
 group :production, :staging do
   gem "pg"
-  gem "unicorn"
+  gem 'puma'
 end
 
 group :development, :test do
