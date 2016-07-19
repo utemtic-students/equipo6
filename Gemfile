@@ -20,7 +20,10 @@ ruby '2.3.1'
   gem 'rack-timeout'
   gem 'nginx', '~> 0.0.2'
   gem 'pg'
- 
+  gem 'taps' 
+  gem 'heroku'
+  gem 'thin'
+
   
   gem 'rails_12factor', group: :production
 

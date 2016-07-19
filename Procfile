@@ -1,2 +1,3 @@
-web: bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}
-web: bundle exec puma -C config/puma.rb
+web:    bundle exec thin start -p $PORT
+worker: bundle exec rake resque:work QUEUE=*
+clock:  bundle exec rake resque:scheduler

@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -18,20 +17,18 @@ ActiveRecord::Schema.define(version: 20160710184959) do
     t.integer  "clasifications_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.index ["answers_id"], name: "index_answer_x_clasifications_on_answers_id"
+    t.index ["clasifications_id"], name: "index_answer_x_clasifications_on_clasifications_id"
   end
-
-  add_index "answer_x_clasifications", ["answers_id"], name: "index_answer_x_clasifications_on_answers_id"
-  add_index "answer_x_clasifications", ["clasifications_id"], name: "index_answer_x_clasifications_on_clasifications_id"
 
   create_table "answer_x_types", force: :cascade do |t|
     t.integer  "answers_id"
     t.integer  "types_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["answers_id"], name: "index_answer_x_types_on_answers_id"
+    t.index ["types_id"], name: "index_answer_x_types_on_types_id"
   end
-
-  add_index "answer_x_types", ["answers_id"], name: "index_answer_x_types_on_answers_id"
-  add_index "answer_x_types", ["types_id"], name: "index_answer_x_types_on_types_id"
 
   create_table "answers", force: :cascade do |t|
     t.string   "answers"
@@ -52,9 +49,8 @@ ActiveRecord::Schema.define(version: 20160710184959) do
     t.string   "Section"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["sites_id"], name: "index_photos_on_sites_id"
   end
-
-  add_index "photos", ["sites_id"], name: "index_photos_on_sites_id"
 
   create_table "scores", force: :cascade do |t|
     t.integer  "Star1"
@@ -71,20 +67,18 @@ ActiveRecord::Schema.define(version: 20160710184959) do
     t.integer  "clasifications_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.index ["clasifications_id"], name: "index_site_x_clasifications_on_clasifications_id"
+    t.index ["sites_id"], name: "index_site_x_clasifications_on_sites_id"
   end
-
-  add_index "site_x_clasifications", ["clasifications_id"], name: "index_site_x_clasifications_on_clasifications_id"
-  add_index "site_x_clasifications", ["sites_id"], name: "index_site_x_clasifications_on_sites_id"
 
   create_table "site_x_types", force: :cascade do |t|
     t.integer  "sites_id"
     t.integer  "types_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["sites_id"], name: "index_site_x_types_on_sites_id"
+    t.index ["types_id"], name: "index_site_x_types_on_types_id"
   end
-
-  add_index "site_x_types", ["sites_id"], name: "index_site_x_types_on_sites_id"
-  add_index "site_x_types", ["types_id"], name: "index_site_x_types_on_types_id"
 
   create_table "sites", force: :cascade do |t|
     t.string   "Name"
@@ -99,20 +93,18 @@ ActiveRecord::Schema.define(version: 20160710184959) do
     t.string   "Colony"
     t.integer  "OutdoorNumbe"
     t.integer  "IndoorNumbe"
+    t.index ["businessmans_id"], name: "index_sites_on_businessmans_id"
+    t.index ["scores_id"], name: "index_sites_on_scores_id"
   end
-
-  add_index "sites", ["businessmans_id"], name: "index_sites_on_businessmans_id"
-  add_index "sites", ["scores_id"], name: "index_sites_on_scores_id"
 
   create_table "survey_x_answers", force: :cascade do |t|
     t.integer  "surveys_id"
     t.integer  "answers_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["answers_id"], name: "index_survey_x_answers_on_answers_id"
+    t.index ["surveys_id"], name: "index_survey_x_answers_on_surveys_id"
   end
-
-  add_index "survey_x_answers", ["answers_id"], name: "index_survey_x_answers_on_answers_id"
-  add_index "survey_x_answers", ["surveys_id"], name: "index_survey_x_answers_on_surveys_id"
 
   create_table "surveys", force: :cascade do |t|
     t.string   "questions"
@@ -151,9 +143,8 @@ ActiveRecord::Schema.define(version: 20160710184959) do
     t.string   "provider"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
