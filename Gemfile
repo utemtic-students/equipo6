@@ -21,6 +21,7 @@ source 'https://rubygems.org'
  
 group :production, :staging do
   gem "pg"
+  gem "unicorn"
 end
 
 group :development, :test do
