@@ -14,6 +14,9 @@ source 'https://rubygems.org'
   gem 'devise'
   gem 'omniauth-facebook'
   gem 'google-webfonts', '~> 0.2.0'
+  gem "unicorn"
+  gem 'rack-timeout'
+
   gem 'rails_12factor', group: :production
 
  #gem 'sqlite3'
@@ -28,4 +31,3 @@ end
 group :development, :test do
   gem "sqlite3"
 end
-ruby "2.3.1"
