@@ -1,24 +1,24 @@
-Rails.application.routes.draw do  
-
-  devise_for :models
+Rails.application.routes.draw do
+  
    devise_for :users, controllers:{
     omniauth_callbacks: "users/omniauth_callbacks"
   }
-  root 'welcome#index'
+
   get 'company/registrarEmpresa'
   get 'questions/question'
   get 'questions/question2'
   get 'company/business'
+  root 'welcome#index'
   get 'turist/index'
   get 'detalle/index'
   get 'company/business'
   get 'company/pagos'
   get 'company/edit'
   get 'company/mySite'
-  get 'company/insertSite'
-  get 'company/insertClasification'
-  post 'company/insertClasification'
   post 'company/insertSite'
+  get 'company/insertSite'
+  post 'company/insertClasification'
+  get 'company/insertClasification'
   
 
  

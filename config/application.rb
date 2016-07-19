@@ -8,8 +8,6 @@ Bundler.require(*Rails.groups)
 
 module Goturista10
   class Application < Rails::Application
-     # the new line added for autoload of lib
-    config.autoload_paths += %W(#{config.root}/lib)
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -24,10 +22,5 @@ module Goturista10
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    config.assets.paths << "#{Rails}/vendor/assets/fonts"
-    config.assets.initialize_on_precompile = false
-
-
-
   end
 end
