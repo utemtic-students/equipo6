@@ -22,11 +22,10 @@ ruby '2.3.1'
 
  #gem 'sqlite3'
   gem 'pg'
-  gem 'taps'
  
 group :production, :staging do
   gem "pg"
-  gem 'puma'
+  gem "puma"
 end
 
 group :development, :test do
