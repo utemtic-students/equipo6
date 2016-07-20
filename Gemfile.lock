@@ -230,6 +230,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (~> 5.0.0.beta1)
   bootstrap-material-design
   bootstrap-sass
   coffee-rails (~> 4.1.0)

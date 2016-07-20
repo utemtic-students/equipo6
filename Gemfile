@@ -23,6 +23,7 @@ ruby '2.3.1'
   gem 'taps' 
   gem 'heroku'
   gem 'thin'
+  gem 'activesupport', '~> 5.0.0.beta1'
 
   
   gem 'rails_12factor', group: :production
