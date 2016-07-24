@@ -17,22 +17,10 @@ ruby '2.3.1'
   gem 'omniauth-facebook'
   gem 'google-webfonts', '~> 0.2.0'
   gem 'puma'
-  gem 'rack-timeout'
-  gem 'nginx', '~> 0.0.2'
   gem 'pg'
-  gem 'taps' 
-  gem 'heroku'
-  gem 'thin'
-  gem 'activesupport', '~> 5.0.0.beta1'
-
   
-  gem 'rails_12factor', group: :production
-
-
-
-group :production, :staging do
-  gem "pg"
-  gem "puma"
+group :production do
+gem 'mysql2','~> 0.3.9'
 end
 
 group :development, :test do
