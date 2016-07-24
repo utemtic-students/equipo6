@@ -17,6 +17,7 @@ ruby '2.3.1'
   gem 'omniauth-facebook'
   gem 'google-webfonts', '~> 0.2.0'
   gem 'puma'
+  gem 'mysql2'
   
 group :production do
 gem 'mysql2','~> 0.3.9'
