@@ -17,9 +17,13 @@ ruby '2.3.1'
   gem 'omniauth-facebook'
   gem 'google-webfonts', '~> 0.2.0'
   gem 'puma'
+  gem 'pg'
   
-group :production do
-gem 'mysql2','~> 0.3.9'
+  gem 'rails_12factor', group: :production
+
+group :production, :staging do
+  gem "pg"
+  gem "puma"
 end
 
 group :development, :test do
