@@ -1,0 +1,18 @@
+D, [2016-07-25T18:29:44.206201 #18293] DEBUG -- :   [1m[35m (468.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+D, [2016-07-25T18:29:44.520553 #18293] DEBUG -- :   [1m[35m (310.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+D, [2016-07-25T18:29:44.521162 #18293] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+D, [2016-07-25T18:29:44.521621 #18293] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4078865886164716185', 0);[0m
+D, [2016-07-25T18:29:44.536864 #18293] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (5.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2016-07-25T18:29:44.542405 #18293]  INFO -- : Migrating to DeviseCreateUsers (20160610050623)
+D, [2016-07-25T18:29:44.844225 #18293] DEBUG -- :   [1m[35m (297.3ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+D, [2016-07-25T18:29:45.213268 #18293] DEBUG -- :   [1m[35m (366.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+D, [2016-07-25T18:29:45.480932 #18293] DEBUG -- :   [1m[35m (265.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+D, [2016-07-25T18:29:45.485984 #18293] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+D, [2016-07-25T18:29:45.487843 #18293] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160610050623')[0m
+D, [2016-07-25T18:29:45.569962 #18293] DEBUG -- :   [1m[35m (81.6ms)[0m  [1m[35mCOMMIT[0m
+I, [2016-07-25T18:29:45.570187 #18293]  INFO -- : Migrating to CreateRestaurants (20160614235703)
+D, [2016-07-25T18:29:45.917669 #18293] DEBUG -- :   [1m[35m (344.2ms)[0m  [1m[35mCREATE TABLE `restaurants` (`id` int AUTO_INCREMENT PRIMARY KEY, `commenter` varchar(255), `body` text, `article_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_restaurants_on_article_id`  (`article_id`), CONSTRAINT `fk_rails_77166b7b7e`
+FOREIGN KEY (`article_id`)
+  REFERENCES `articles` (`id`)
+) ENGINE=InnoDB[0m
+D, [2016-07-25T18:29:45.918610 #18293] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
