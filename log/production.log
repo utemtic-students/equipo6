@@ -87,3 +87,30 @@ D, [2016-07-25T20:16:43.199977 #26017] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m
 D, [2016-07-25T20:16:43.201841 #26017] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
 D, [2016-07-25T20:16:43.202486 #26017] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
 >>>>>>> 16d389865cb46844d5d004679118ad8300513589
+D, [2016-07-25T21:38:59.378182 #27913] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (18.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2016-07-25T21:38:59.417809 #27913] DEBUG -- :   [1m[35m (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+D, [2016-07-25T21:39:10.022499 #27917] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+D, [2016-07-25T21:39:10.023481 #27917] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('4078865886164716185', 0);[0m
+D, [2016-07-25T21:39:10.046082 #27917] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2016-07-25T21:39:10.069318 #27917] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+D, [2016-07-25T21:39:10.079688 #27917] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+D, [2016-07-25T21:39:10.083769 #27917] DEBUG -- :   [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'production', '2016-07-26 01:39:10', '2016-07-26 01:39:10')[0m
+D, [2016-07-25T21:39:10.086635 #27917] DEBUG -- :   [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+D, [2016-07-25T21:39:10.087252 #27917] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
+D, [2016-07-25T21:41:53.355253 #27944] DEBUG -- :   [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+D, [2016-07-25T21:41:53.377668 #27944] DEBUG -- :   [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+D, [2016-07-25T21:41:53.378510 #27944] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+D, [2016-07-25T21:41:53.379183 #27944] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('4078865886164716185', 0);[0m
+D, [2016-07-25T21:41:53.396200 #27944] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2016-07-25T21:41:53.403020 #27944]  INFO -- : Migrating to DeviseCreateUsers (20160610050623)
+D, [2016-07-25T21:41:53.422986 #27944] DEBUG -- :   [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+D, [2016-07-25T21:41:53.441459 #27944] DEBUG -- :   [1m[35m (14.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+D, [2016-07-25T21:41:53.457985 #27944] DEBUG -- :   [1m[35m (14.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+D, [2016-07-25T21:41:53.462234 #27944] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2016-07-25T21:41:53.464272 #27944] DEBUG -- :   [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160610050623')[0m
+D, [2016-07-25T21:41:53.466081 #27944] DEBUG -- :   [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+D, [2016-07-25T21:41:53.471728 #27944] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+D, [2016-07-25T21:41:53.478132 #27944] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2016-07-25T21:41:53.481034 #27944] DEBUG -- :   [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'production', '2016-07-26 01:41:53', '2016-07-26 01:41:53')[0m
+D, [2016-07-25T21:41:53.483265 #27944] DEBUG -- :   [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2016-07-25T21:41:53.484165 #27944] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
