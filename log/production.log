@@ -16,3 +16,41 @@ FOREIGN KEY (`article_id`)
   REFERENCES `articles` (`id`)
 ) ENGINE=InnoDB[0m
 D, [2016-07-25T18:29:45.918610 #18293] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
+D, [2016-07-25T20:05:53.540850 #26876] DEBUG -- :   [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+D, [2016-07-25T20:05:53.565554 #26876] DEBUG -- :   [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+D, [2016-07-25T20:05:53.567285 #26876] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+D, [2016-07-25T20:05:53.568425 #26876] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('4078865886164716185', 0);[0m
+D, [2016-07-25T20:05:53.606922 #26876] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (22.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2016-07-25T20:05:53.615169 #26876]  INFO -- : Migrating to DeviseCreateUsers (20160610050623)
+D, [2016-07-25T20:05:53.633481 #26876] DEBUG -- :   [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+D, [2016-07-25T20:05:53.652846 #26876] DEBUG -- :   [1m[35m (14.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+D, [2016-07-25T20:05:53.669021 #26876] DEBUG -- :   [1m[35m (13.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+D, [2016-07-25T20:05:53.674938 #26876] DEBUG -- :   [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+D, [2016-07-25T20:05:53.677222 #26876] DEBUG -- :   [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20160610050623')[0m
+D, [2016-07-25T20:05:53.679869 #26876] DEBUG -- :   [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+I, [2016-07-25T20:05:53.680117 #26876]  INFO -- : Migrating to CreateRestaurants (20160614235703)
+D, [2016-07-25T20:05:53.701392 #26876] DEBUG -- :   [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE `restaurants` (`id` int AUTO_INCREMENT PRIMARY KEY, `commenter` varchar(255), `body` text, `article_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_restaurants_on_article_id`  (`article_id`), CONSTRAINT `fk_rails_77166b7b7e`
+FOREIGN KEY (`article_id`)
+  REFERENCES `articles` (`id`)
+) ENGINE=InnoDB[0m
+D, [2016-07-25T20:05:53.702228 #26876] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
+D, [2016-07-25T20:07:32.074784 #26892] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+D, [2016-07-25T20:07:32.075352 #26892] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4078865886164716185', 0);[0m
+D, [2016-07-25T20:07:32.088745 #26892] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2016-07-25T20:07:32.098138 #26892]  INFO -- : Migrating to CreateRestaurants (20160614235703)
+D, [2016-07-25T20:07:32.118514 #26892] DEBUG -- :   [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE `restaurants` (`id` int AUTO_INCREMENT PRIMARY KEY, `commenter` varchar(255), `body` text, `article_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_restaurants_on_article_id`  (`article_id`), CONSTRAINT `fk_rails_77166b7b7e`
+FOREIGN KEY (`article_id`)
+  REFERENCES `articles` (`id`)
+) ENGINE=InnoDB[0m
+D, [2016-07-25T20:07:32.119464 #26892] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
+D, [2016-07-25T20:08:30.821657 #26915] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+D, [2016-07-25T20:08:30.822481 #26915] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('4078865886164716185', 0);[0m
+D, [2016-07-25T20:08:30.833601 #26915] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2016-07-25T20:08:30.841121 #26915]  INFO -- : Migrating to CreateRestaurantXPuntuations (20160614235934)
+D, [2016-07-25T20:08:30.857372 #26915] DEBUG -- :   [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE `restaurant_x_puntuations` (`id` int AUTO_INCREMENT PRIMARY KEY, `commenter` varchar(255), `body` text, `article_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_restaurant_x_puntuations_on_article_id`  (`article_id`), CONSTRAINT `fk_rails_2ed4f9c0c9`
+FOREIGN KEY (`article_id`)
+  REFERENCES `articles` (`id`)
+) ENGINE=InnoDB[0m
+D, [2016-07-25T20:08:30.859077 #26915] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
+D, [2016-07-25T20:10:56.530582 #26945] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2016-07-25T20:10:56.545471 #26945] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
