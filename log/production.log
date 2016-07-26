@@ -16,6 +16,7 @@ FOREIGN KEY (`article_id`)
   REFERENCES `articles` (`id`)
 ) ENGINE=InnoDB[0m
 D, [2016-07-25T18:29:45.918610 #18293] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
+<<<<<<< HEAD
 D, [2016-07-25T20:05:53.540850 #26876] DEBUG -- :   [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
 D, [2016-07-25T20:05:53.565554 #26876] DEBUG -- :   [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
 D, [2016-07-25T20:05:53.567285 #26876] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[34mSELECT DATABASE() as db[0m
@@ -54,3 +55,35 @@ FOREIGN KEY (`article_id`)
 D, [2016-07-25T20:08:30.859077 #26915] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
 D, [2016-07-25T20:10:56.530582 #26945] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
 D, [2016-07-25T20:10:56.545471 #26945] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+=======
+D, [2016-07-25T20:12:36.897732 #25732] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+D, [2016-07-25T20:12:36.898324 #25732] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('4078865886164716185', 0);[0m
+D, [2016-07-25T20:12:36.909174 #25732] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2016-07-25T20:12:36.916821 #25732]  INFO -- : Migrating to CreateRestaurants (20160614235703)
+D, [2016-07-25T20:12:37.244928 #25732] DEBUG -- :   [1m[35m (323.2ms)[0m  [1m[35mCREATE TABLE `restaurants` (`id` int AUTO_INCREMENT PRIMARY KEY, `commenter` varchar(255), `body` text, `article_id` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_restaurants_on_article_id`  (`article_id`), CONSTRAINT `fk_rails_77166b7b7e`
+FOREIGN KEY (`article_id`)
+  REFERENCES `articles` (`id`)
+) ENGINE=InnoDB[0m
+D, [2016-07-25T20:12:37.245793 #25732] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
+D, [2016-07-25T20:14:12.627975 #25844] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+D, [2016-07-25T20:14:12.628731 #25844] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('4078865886164716185', 0);[0m
+D, [2016-07-25T20:14:12.646490 #25844] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2016-07-25T20:14:12.659222 #25844] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+D, [2016-07-25T20:14:12.665889 #25844] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+D, [2016-07-25T20:14:12.668459 #25844] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'production', '2016-07-26 01:14:12', '2016-07-26 01:14:12')[0m
+D, [2016-07-25T20:14:12.715123 #25844] DEBUG -- :   [1m[35m (46.2ms)[0m  [1m[35mCOMMIT[0m
+D, [2016-07-25T20:14:12.715757 #25844] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
+D, [2016-07-25T20:14:48.673012 #25866] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2016-07-25T20:14:48.686387 #25866] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+D, [2016-07-25T20:14:48.688073 #25866] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2016-07-25T20:14:48.690108 #25866] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+D, [2016-07-25T20:14:48.691531 #25866] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2016-07-25T20:14:48.693467 #25866] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+D, [2016-07-25T20:16:43.168940 #26017] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+D, [2016-07-25T20:16:43.169724 #26017] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('4078865886164716185', 0);[0m
+D, [2016-07-25T20:16:43.181230 #26017] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+D, [2016-07-25T20:16:43.194046 #26017] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+D, [2016-07-25T20:16:43.199977 #26017] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+D, [2016-07-25T20:16:43.201841 #26017] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+D, [2016-07-25T20:16:43.202486 #26017] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('4078865886164716185')[0m
+>>>>>>> 16d389865cb46844d5d004679118ad8300513589

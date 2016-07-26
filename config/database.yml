@@ -17,7 +17,7 @@ test:
 production:
   adapter: mysql2
   database: goturista
-  password: aeaf930814
+  password: root
   username: root
   host:  127.0.0.1
   port: 3306
