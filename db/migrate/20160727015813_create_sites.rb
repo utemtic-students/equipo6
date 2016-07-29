@@ -9,8 +9,8 @@ class CreateSites < ActiveRecord::Migration[5.0]
 		t.integer :IndoorNumbe
 		t.string :Name
 		t.text :Description
-		t.integer :Latitud
-		t.integer :Longitud
+		t.decimal :Latitud
+		t.decimal :Longitud
 		t.references :scores, index: true
 		t.references :businessmans, index: true
 		t.timestamps null: false

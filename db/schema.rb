@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20160727022648) do
     t.integer  "IndoorNumbe"
     t.string   "Name"
     t.text     "Description"
-    t.integer  "Latitud"
-    t.integer  "Longitud"
+    t.decimal  "Latitud"
+    t.decimal  "Longitud"
     t.integer  "scores_id"
     t.integer  "businessmans_id"
     t.datetime "created_at",      null: false
