@@ -18,6 +18,8 @@ source 'https://rubygems.org'
   gem 'puma'
   gem 'yaml_db'
   gem 'mysql2', '~> 0.3.9'
+  gem 'stripe'
+
 
 group :production do
  gem 'mysql2', '~> 0.3.9'

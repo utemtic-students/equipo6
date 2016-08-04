@@ -32,19 +32,19 @@ keypressSlider.noUiSlider.on('update', function( values, handle ) {
 //var saveValueInput = valueInput.val().trim();
 
 //ocultando div id = "question2"
-$('#question2').hide();
-$('#btn-sendRequest').click(function (e) {
 
+
+$('#btn-sendRequest').click(function (e) {
   e.preventDefault();
+  var emptyValue = document.getElementById('empty');
+  var question2 = document.getElementById('question2');
   var inputsetRequest = $('#input-with-keypress');
   var answer1 = parseInt($(inputsetRequest).val());
   console.log(answer1);
+
  //bloque para enviar parametros
   if(answer1 => 18.00){
-	 var emptyValue = document.getElementById('empty');
-	 var question2 = document.getElementById('question2');
-	 emptyValue.remove();
-	 $('#question2').toggle();
+	 $('#question2').show();
 	}if(answer1 < 18.00){
   	alert("Eres menor");
   }
