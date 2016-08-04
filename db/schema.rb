@@ -10,7 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160610050623) do
+ActiveRecord::Schema.define(version: 20160727022648) do
+
+  create_table "clasifications", force: :cascade do |t|
+    t.string   "Name"
+    t.text     "Description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.integer  "sites_id"
+    t.text     "SRC"
+    t.string   "Section"
+    t.integer  "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sites_id"], name: "index_photos_on_sites_id"
+  end
+
+  create_table "sites", force: :cascade do |t|
+    t.string   "TelNumber"
+    t.string   "Municipality"
+    t.string   "State"
+    t.string   "Colony"
+    t.integer  "OutdoorNumbe"
+    t.integer  "IndoorNumbe"
+    t.string   "Name"
+    t.text     "Description"
+    t.decimal  "Latitud"
+    t.decimal  "Longitud"
+    t.integer  "scores_id"
+    t.integer  "businessmans_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["businessmans_id"], name: "index_sites_on_businessmans_id"
+    t.index ["scores_id"], name: "index_sites_on_scores_id"
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string   "Name"
+    t.text     "Description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

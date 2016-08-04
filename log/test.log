@@ -1,0 +1,103 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "clasifications"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.731800', '2016-08-04 23:35:10.731800', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.731800', '2016-08-04 23:35:10.731800', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "photos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.737713', '2016-08-04 23:35:10.737713', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.737713', '2016-08-04 23:35:10.737713', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "types"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.740493', '2016-08-04 23:35:10.740493', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.740493', '2016-08-04 23:35:10.740493', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "sites"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.742742', '2016-08-04 23:35:10.742742', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.742742', '2016-08-04 23:35:10.742742', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.745891', '2016-08-04 23:35:10.745891', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.745891', '2016-08-04 23:35:10.745891', 298486374)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "clasifications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.756175', '2016-08-04 23:35:10.756175', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.756175', '2016-08-04 23:35:10.756175', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "photos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.757759', '2016-08-04 23:35:10.757759', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.757759', '2016-08-04 23:35:10.757759', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "types"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.759052', '2016-08-04 23:35:10.759052', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.759052', '2016-08-04 23:35:10.759052', 298486374)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "sites"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.760367', '2016-08-04 23:35:10.760367', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.760367', '2016-08-04 23:35:10.760367', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.762692', '2016-08-04 23:35:10.762692', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.762692', '2016-08-04 23:35:10.762692', 298486374)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "clasifications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.769580', '2016-08-04 23:35:10.769580', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.769580', '2016-08-04 23:35:10.769580', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "photos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.771114', '2016-08-04 23:35:10.771114', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.771114', '2016-08-04 23:35:10.771114', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "types"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.772476', '2016-08-04 23:35:10.772476', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.772476', '2016-08-04 23:35:10.772476', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "sites"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.773745', '2016-08-04 23:35:10.773745', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.773745', '2016-08-04 23:35:10.773745', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.775224', '2016-08-04 23:35:10.775224', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.775224', '2016-08-04 23:35:10.775224', 298486374)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "clasifications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.783002', '2016-08-04 23:35:10.783002', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.783002', '2016-08-04 23:35:10.783002', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "photos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.784621', '2016-08-04 23:35:10.784621', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.784621', '2016-08-04 23:35:10.784621', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "types"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.786171', '2016-08-04 23:35:10.786171', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.786171', '2016-08-04 23:35:10.786171', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "sites"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.787789', '2016-08-04 23:35:10.787789', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.787789', '2016-08-04 23:35:10.787789', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.789467', '2016-08-04 23:35:10.789467', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.789467', '2016-08-04 23:35:10.789467', 298486374)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "clasifications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.796316', '2016-08-04 23:35:10.796316', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.796316', '2016-08-04 23:35:10.796316', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "photos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.797873', '2016-08-04 23:35:10.797873', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.797873', '2016-08-04 23:35:10.797873', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "types"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.799229', '2016-08-04 23:35:10.799229', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.799229', '2016-08-04 23:35:10.799229', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "sites"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.800642', '2016-08-04 23:35:10.800642', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.800642', '2016-08-04 23:35:10.800642', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.802143', '2016-08-04 23:35:10.802143', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.802143', '2016-08-04 23:35:10.802143', 298486374)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "clasifications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.821051', '2016-08-04 23:35:10.821051', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "clasifications" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.821051', '2016-08-04 23:35:10.821051', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "photos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.822663', '2016-08-04 23:35:10.822663', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.822663', '2016-08-04 23:35:10.822663', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "types"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.824071', '2016-08-04 23:35:10.824071', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "types" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.824071', '2016-08-04 23:35:10.824071', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "sites"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.825333', '2016-08-04 23:35:10.825333', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "sites" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.825333', '2016-08-04 23:35:10.825333', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.826871', '2016-08-04 23:35:10.826871', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "id") VALUES ('2016-08-04 23:35:10.826871', '2016-08-04 23:35:10.826871', 298486374)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m

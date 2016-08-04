@@ -1,6 +1,6 @@
 $(document).ready(function(){
-
-//Obtencion del div para obtener stylos de la libreria noUiSlider
+		 
+		 //Obtencion del div para obtener stylos de la libreria noUiSlider
 var keypressSlider = document.getElementById('keypress');
 //Input donde se estara visualizando el valor que tiene el objeto noUiSalider
 var input = document.getElementById('input-with-keypress');
@@ -49,4 +49,8 @@ $('#btn-sendRequest').click(function (e) {
   	alert("Eres menor");
   }
  });
+		$('.carousel').carousel();
+		$(".img-check").click(function(){
+			$(this).toggleClass("check");
+		});
 });

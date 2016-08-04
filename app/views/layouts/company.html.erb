@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Goturista10</title>
+  <title>Goturista</title>
  
   <%= csrf_meta_tags %>
   
-  <%= stylesheet_link_tag    'company', media: 'all', 'data-turbolinks-track' => true %>
+ <!--<%= stylesheet_link_tag    'fileinput', media: 'all', 'data-turbolinks-track' => true %> -->
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'morris', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'shop-homepage', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'fileinput', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag'shop-homepage', media: 'all', 'data-turbolinks-track' => true %> 
 
   <%= javascript_include_tag 'jquery', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'fileinput', 'data-turbolinks-track' => true %>
@@ -149,7 +149,7 @@
                 </li>
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="collapse navbar-collapse navbar-ex1-collapse ">
                 <ul class="nav navbar-nav side-nav">
                     <li >
                         
@@ -174,12 +174,8 @@
        
      <%= yield %>
 
+      
+       </body>
+
        
-
-        </body>
         </html>
-  
-
-  
-
-

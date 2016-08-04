@@ -7,6 +7,7 @@ class CompanyController < ApplicationController
         if params[:postSite]
             site = Site.new
             site.Name = params[:postSite][:Name]
+            site.Name = params[:postSite][:Name]
             site.save
             site_id = Site.select("*").where("Name = ?",params[:postSite][:Name])
             redirect_to :controller => 'company', :action => 'insertClasification', :site_id => site.id

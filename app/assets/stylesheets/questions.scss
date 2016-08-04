@@ -1,3 +1,4 @@
+
 body {
     text-align: center;
     font-family: sans-serif;
@@ -31,7 +32,6 @@ body {
 #cerrar {
     display: none;
 }
-
 #cerrar + label {
     position: fixed;
     color: #fff;
@@ -53,6 +53,12 @@ body {
 
 #btn-cerrar:checked + label, #btn-cerrar:checked ~ .modal {
     display: none;
+}
+.check
+{
+    opacity:.7;
+	color:blue;
+	
 }
 
 @keyframes modal {

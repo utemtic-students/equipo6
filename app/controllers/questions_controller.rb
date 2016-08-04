@@ -1,11 +1,7 @@
 class QuestionsController < ApplicationController
   def question
   	
- 
-  render layout: "questions"
-  end
-
-  def question2
-  	
+ 	@types = Type.all;
+ 	render layout: "questions"
   end
 end
