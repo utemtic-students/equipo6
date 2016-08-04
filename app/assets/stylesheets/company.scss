@@ -1,3 +1,5 @@
+
+
 body {
     margin-top: 100px;
     background-color: white;
@@ -15,7 +17,6 @@ body {
 
 #page-wrapper {
     width: 100%;
-    padding: 0;
     background-color: #fff;
 }
 
@@ -29,7 +30,7 @@ body {
         padding-left: 225px;
     }
 
-   
+
 }
 
 /* Top Navigation */
@@ -215,27 +216,23 @@ ul.alert-dropdown {
 .panel-yellow > a:hover {
     color: #df8a13;
 }
-.side-nav {
-    right: 69;
-    right: auto;
+
+@media (min-width: 768px){
+  #wrapper {padding-left: 225px; padding-left: 0;}
+  .side-nav{left: 0;left: auto;}
 }
 
-.side-nav {
-    position: fixed;
-    top: 60px;
-    left: 0px;
-    width: 225px;
-    margin-left: -225px;
-    border: none;
-    border-radius: 0;
-    overflow-y: auto;
-    background-color: #222;
-    bottom: 0;
-    overflow-x: hidden;
-    padding-bottom: 40px;
-}
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+    }
 
-.top-nav > li > a {
    
-    color: #fffefe;
- }
+}
+
+.navbar-inverse.navbar {
+    background-color: #239ac9;
+    color: rgba(255, 255, 255, 0.84);
+}
+
+

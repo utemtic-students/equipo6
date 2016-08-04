@@ -14,6 +14,8 @@ Rails.application.config.assets.precompile += %w( empresario.js )
 Rails.application.config.assets.precompile += %w( welcome.js )
 Rails.application.config.assets.precompile += %w( searchSite.js )
 Rails.application.config.assets.precompile += %w( questions.js )
+Rails.application.config.assets.precompile += %w( materialize.js )
+
 
 Rails.application.config.assets.precompile += %w( application.css )
 Rails.application.config.assets.precompile += %w( empresario.scss )
@@ -27,3 +29,4 @@ Rails.application.config.assets.precompile += %w( sb-admin-rtl.css )
 Rails.application.config.assets.precompile += %w( jquery.js )
 Rails.application.config.assets.precompile += %w( fileinput.js )
 Rails.application.config.assets.precompile += %w( fileinput.css )
+Rails.application.config.assets.precompile += %w( materialize.css )
