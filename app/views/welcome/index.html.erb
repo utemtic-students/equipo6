@@ -1,9 +1,16 @@
-<div id="user_nav">
-  <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. Not you?
-    <%= link_to "Sign out", destroy_user_session_path %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> or
-    <%= link_to "Sign in", new_user_session_path %>
-  <% end %>
-</div> 
+<div class="contentImg">                            
+		<%= image_tag  "inicio/inicio.gif" %>
+</div>
+<div class="parallax-container" style="display:none;">
+	<div class="parallax"><%= image_tag  "inicio/surf.jpg" %></div>
+	
+</div>
+	<div class="section white">
+	<div class="row container">
+	<h2 class="header">Vive una aventura</h2>
+	<%= link_to "Explora Manzanillo", {:controller => "questions", :action => "question" }, :type=>"button", :class=>"btn btn-primary btn-lg btn-block"%>
+	</div>
+	</div>
+<div class="parallax-container" style="display:none;">
+	<div class="parallax"><%= image_tag  "inicio/tortuga.jpg" %></div>
+</div>

@@ -28,4 +28,5 @@ Rails.application.config.assets.precompile += %w( sb-admin-rtl.css )
 Rails.application.config.assets.precompile += %w( jquery.js )
 Rails.application.config.assets.precompile += %w( fileinput.js )
 Rails.application.config.assets.precompile += %w( fileinput.css )
+Rails.application.config.assets.precompile += %w( welcome.css )
 
