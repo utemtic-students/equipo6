@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   get 'company/registrarEmpresa'
   get 'questions/question'
-  get 'questions/question2'
   get 'company/business'
   root 'welcome#index'
   get 'turist/index'

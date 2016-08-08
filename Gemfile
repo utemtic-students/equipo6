@@ -19,6 +19,7 @@ source 'https://rubygems.org'
   gem 'yaml_db'
   gem 'mysql2', '~> 0.3.9'
   gem 'stripe'
+  gem 'paperclip'
 
 
 group :production do
