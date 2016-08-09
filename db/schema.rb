@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809013103) do
+ActiveRecord::Schema.define(version: 20160809044510) do
 
   create_table "attachments", force: :cascade do |t|
     t.integer  "product_id"
@@ -156,6 +156,7 @@ ActiveRecord::Schema.define(version: 20160809013103) do
     t.integer  "businessmans_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "IsFree"
   end
 
   add_index "sites", ["businessmans_id"], name: "index_sites_on_businessmans_id"
