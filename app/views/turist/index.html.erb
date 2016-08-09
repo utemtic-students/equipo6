@@ -1,0 +1,72 @@
+<div class="navbar navbar-info">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="javascript:void(0)">GoTurista!</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><%= link_to '¿Tienes un negocio?, Registrate', 'users/sign_up' %></li>
+                <li><%= link_to 'Ingresa', 'users/sign_in' %></li></li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 " >
+            <center><h2>Estos lugares</h2></center>
+            <center><h3><strong>"Podrian gustarte"</strong></h3></center>
+        </div>
+
+        <br>
+        <div class="col-md-9">
+            <div class="row">
+                <% @sites.each do |site| %>
+                <div class="col-sm-12 col-lg-6 col-md-6">
+                    <div class="thumbnail">
+                        <%= image_tag  site.SRC%>
+                        <div class="">
+                            <br> 
+                            
+                            <h3 id="titulo" class="description">
+                                <%= link_to site.Name, {:controller => "detalle", :action => "index", :site_id => site.id}%>
+                            </h3>
+                            <hr>
+                            <h4 class="description">
+                              <p class="text-justify"> <%= site.Description%> </p>
+                          </h4>
+                          <h5 class="description">
+                            <p>
+                                <a  href=""><strong>Actividades Extrema</strong></a><br>
+                            </p>
+                            <p>
+                                <a  href=""> Categoria - <strong>Tour</strong></a><br>
+                            </p>
+                        </h5>
+                        <%= link_to "Ver Más", {:controller => "detalle", :action => "index", :site_id => site.id }, :class=>"btn btn-primary"%>
+                    </div>
+                    <div class="ratings">
+                        <p class="pull-right">6 reviews</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>
