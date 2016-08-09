@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809003944) do
+ActiveRecord::Schema.define(version: 20160809013103) do
 
   create_table "attachments", force: :cascade do |t|
     t.integer  "product_id"
@@ -120,6 +120,26 @@ ActiveRecord::Schema.define(version: 20160809003944) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "site_x_clasifications", force: :cascade do |t|
+    t.integer  "sites_id"
+    t.integer  "clasifications_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "site_x_clasifications", ["clasifications_id"], name: "index_site_x_clasifications_on_clasifications_id"
+  add_index "site_x_clasifications", ["sites_id"], name: "index_site_x_clasifications_on_sites_id"
+
+  create_table "site_x_types", force: :cascade do |t|
+    t.integer  "sites_id"
+    t.integer  "types_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "site_x_types", ["sites_id"], name: "index_site_x_types_on_sites_id"
+  add_index "site_x_types", ["types_id"], name: "index_site_x_types_on_types_id"
 
   create_table "sites", force: :cascade do |t|
     t.string   "TelNumber"
