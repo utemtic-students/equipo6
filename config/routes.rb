@@ -1,28 +1,33 @@
-Rails.application.routes.draw do  
+Rails.application.routes.draw do
 
-   devise_for :users, controllers:{
-    omniauth_callbacks: "users/omniauth_callbacks"
-  }
+  resources :attachments, only: [:create,:destroy,:new,:show]
+  resources :products
+  resources :in_shopping_carts, only: [:create,:destroy]
+  devise_for :users
 
-  get 'company/registrarEmpresa'
-  get 'questions/question'
-  get 'company/business'
-  root 'welcome#index'
-  get 'turist/index'
-  get 'detalle/index'
-  get 'company/business'
-  get 'company/pagos'
-  get 'company/edit'
-  get 'company/mySite'
-  post 'company/insertSite'
-  get 'company/insertSite'
-  post 'company/insertClasification'
-  get 'company/insertClasification'
+  post "/emails/create", as: :create_email
+  post "/pagar", to: "payments#create"
+  post "/payments/cards", to:"payments#process_card"
+
+  get "/carrito", to: "shopping_carts#show"
+  get "/add/:product_id",as: :add_to_cart,to: "in_shopping_carts#create" 
+  get "/checkout", to: "payments#checkout"
+
+  get "/descargar/:id", to:"links#download"
+  get "/descargar/:id/archivo/:attachment_id", to:"links#download_attachment",as: :download_attachment
+  get "/invalid", to: "welcome#unregistered"
+
+  get "/ok", to: "welcome#payment_succed"
+
+  get "/ordenes", to: "ordenes#index"
   
+  authenticated :user do
+    root 'welcome#index'
+  end
 
- 
-   
-  resources :sites do
-    resources :site_x_clasifications
+  unauthenticated :user do
+    devise_scope :user do
+      root "welcome#unregistered", as: :unregistered_root
+    end
   end
 end

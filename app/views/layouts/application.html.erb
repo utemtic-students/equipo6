@@ -1,76 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Goturista10</title>
+  <title>GoTurista!</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track' => true %>
-
- 
-  <%= csrf_meta_tags %>
-  
-  <%= stylesheet_link_tag    'company', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'morris', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'shop-homepage', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'fileinput', media: 'all', 'data-turbolinks-track' => true %>
-
-  <%= javascript_include_tag 'jquery', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'fileinput', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'empresario', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'welcome', 'data-turbolinks-track' => true %>
-  
-
-
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
- 
-  
-
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Bienvenido a GoTurista</title>
-
+  <%= csrf_meta_tags %>
 </head>
 <body>
-    <title>Go Turista</title>
-</head>
-<body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+	<div class="blue white-text large-padding bold text-center" style="<%= "display:none;" if alert.nil? && notice.nil? %>">
+		<p class="no-padding no-margin inline-block"><%= notice %><%= alert %></p>
+		<span class="pull-right close-parent">X</span>
+	</div>
 
-<nav class="navbar navbar-inverse">
-  <div class="container">
-    <div class="navbar-header">
-      <%= link_to 'Simple Uploader', root_path, class: 'navbar-brand' %>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><%= link_to 'Photos', root_path %></li>
-        <li><%= link_to 'Upload Your Photo', new_photo_path %></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
-<div class="container">
-  <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>">
-      <%= value %>
-    </div>
-  <% end %>
+	<%= render "partials/nav" %>
 
-  <%= yield %>
-
-</div>
-
+	<div class="col-md-11 no-float center-block">
+		
+		<%= yield %>
+	</div>
 </body>
 </html>
-
