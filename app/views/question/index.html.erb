@@ -1,4 +1,4 @@
-<%= javascript_include_tag 'questions', 'data-turbolinks-track' => true %> 
+<%= stylesheet_link_tag    'question', media: 'all', 'data-turbolinks-track' => true %>
 <script type="text/javascript" src="../../js/materialize.js"></script>
 <link type="text/css" rel="stylesheet" href="../../css/materialize.css"  media="screen,projection"/>
 
@@ -27,24 +27,29 @@
 </div>
 <div class="carousel">
     <div class="carousel-item ">
-        <%= image_tag  "questions/Acompañantes/pareja/O6VQ0G0.jpg", :class=>"img-thumbnail img-check"%>
-        <input type="checkbox" name="chk1" id="item4" value="val1" class="hidden" autocomplete="off">
+        <%= image_tag  "questions/Acompañantes/pareja/O6VQ0G0.jpg", :class=>"img-thumbnail img-radio"%>
+        <label for="primary" type="button" class="btn btn-primary btn-radio">Me Gusta <input type="checkbox" id="primary" class="hidden badgebox btn-radio"><span class="badge btn-radio">&check;</span></label>
+        
     </div>
     <div class="carousel-item ">
-        <%= image_tag  "questions/Acompañantes/pareja/pareja.jpg", :class=>"img-thumbnail img-check"%>
-        <input type="checkbox" name="chk1" id="item4" value="val1" class="hidden" autocomplete="off">
+        <%= image_tag  "questions/Acompañantes/pareja/pareja.jpg", :class=>"img-thumbnail img-radio"%>
+        <button type="button" class="btn btn-primary btn-radio">Left</button>
+        <input type="checkbox"  class=" btn-radio">
     </div>
     <div class="carousel-item ">
-        <%= image_tag  "questions/Acompañantes/familia/familia.jpg", :class=>"img-thumbnail img-check"%>
-        <input type="checkbox" name="chk1" id="item4" value="val1" class="hidden" autocomplete="off">
+        <%= image_tag  "questions/Acompañantes/familia/familia.jpg", :class=>"img-thumbnail img-radio"%>
+        <button type="button" class="btn btn-primary btn-radio">Left</button>
+        <input type="checkbox" id="left-item" class=" btn-radio">
     </div>
     <div class="carousel-item ">
-        <%= image_tag  "questions/Acompañantes/amigos/amigos.jpg", :class=>"img-thumbnail img-check"%>
-        <input type="checkbox" name="chk1" id="item4" value="val1" class="hidden" autocomplete="off">
+        <%= image_tag  "questions/Acompañantes/amigos/amigos.jpg", :class=>"img-thumbnail img-radio"%>
+        <button type="button" class="btn btn-primary btn-radio">Left</button>
+        <input type="checkbox" id="left-item" class=" btn-radio">
     </div>
     <div class="carousel-item ">
-        <%= image_tag  "questions/Acompañantes/solo/solo.jpg", :class=>"img-thumbnail img-check"%>
-        <input type="checkbox" name="chk1" id="item4" value="val1" class="hidden" autocomplete="off">
+        <%= image_tag  "questions/Acompañantes/solo/solo.jpg", :class=>"img-thumbnail img-radio"%>
+        <button type="button" class="btn btn-primary btn-radio">Left</button>
+        <input type="checkbox" id="left-item" class=" btn-radio">
     </div>
 </div>
 <%= link_to "Siguiente", {:controller => "question", :action => "index" }, :type=>"button", :class=>"btn btn-primary btn-lg btn-block"%>
@@ -60,3 +65,5 @@
         </div>    
     </footer>
 </div>
+<br />
+<label for="primary" class="btn btn-primary">Primary <input type="checkbox" id="primary" class="badgebox"><span class="badge">&check;</span></label>
