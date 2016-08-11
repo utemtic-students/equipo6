@@ -6,7 +6,12 @@
 .materialize-red {
   background-color: #e51c23 !important;
 }
-
+.check
+{
+    opacity:.7;
+  color:blue;
+  
+}
 .materialize-red-text {
   color: #e51c23 !important;
 }
