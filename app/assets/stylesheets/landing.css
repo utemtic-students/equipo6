@@ -18,10 +18,6 @@
  body{
  	background-color: white;
  }
-<<<<<<< HEAD
-
-
-=======
 .fade-carousel {
     position: relative;
     height: 100vh;
@@ -114,21 +110,23 @@
 /********************************/
 .fade-carousel .slides .slide-1, 
 .fade-carousel .slides .slide-2,
-.fade-carousel .slides .slide-3 {
+.fade-carousel .slides .slide-3,
+.fade-carousel .slides .slide-4{ /* necesitas agregar un slider con un nuevo numero*/
   height: 100vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(inicio/inicio.gif); 
+  background-image: url(inicio/tortuga.jpg); 
 }
 .fade-carousel .slides .slide-2 {
   background-image: url(inicio/tortuga.jpg);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(inicio/surf.jpg);
+  background-image: url(inicio/playaDeOro.jpg);
 }
+
 
 /********************************/
 /*          Media Queries       */
@@ -139,4 +137,7 @@
 @media screen and (max-width: 640px){
     .hero h1 { font-size: 4em; }    
 }
->>>>>>> 1c3658e57bb2b5af2b105566be685960ccc7b867
+.navbar {
+    
+    margin-bottom: 0px;
+}

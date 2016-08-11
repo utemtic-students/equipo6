@@ -11,7 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809044510) do
+ActiveRecord::Schema.define(version: 20160810232018) do
+
+  create_table "answer_x_clasifications", force: :cascade do |t|
+    t.integer  "answers_id"
+    t.integer  "clasifications_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "answer_x_clasifications", ["answers_id"], name: "index_answer_x_clasifications_on_answers_id"
+  add_index "answer_x_clasifications", ["clasifications_id"], name: "index_answer_x_clasifications_on_clasifications_id"
+
+  create_table "answer_x_types", force: :cascade do |t|
+    t.integer  "answers_id"
+    t.integer  "types_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "answer_x_types", ["answers_id"], name: "index_answer_x_types_on_answers_id"
+  add_index "answer_x_types", ["types_id"], name: "index_answer_x_types_on_types_id"
+
+  create_table "anwers", force: :cascade do |t|
+    t.string   "Body"
+    t.string   "SRC"
+    t.string   "Description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "attachments", force: :cascade do |t|
     t.integer  "product_id"
@@ -113,6 +141,24 @@ ActiveRecord::Schema.define(version: 20160809044510) do
   end
 
   add_index "products", ["user_id"], name: "index_products_on_user_id"
+
+  create_table "question_x_answers", force: :cascade do |t|
+    t.integer  "questions_id"
+    t.integer  "answers_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "question_x_answers", ["answers_id"], name: "index_question_x_answers_on_answers_id"
+  add_index "question_x_answers", ["questions_id"], name: "index_question_x_answers_on_questions_id"
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "Question"
+    t.integer  "Section"
+    t.string   "Descriptions"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "shopping_carts", force: :cascade do |t|
     t.string   "status"
