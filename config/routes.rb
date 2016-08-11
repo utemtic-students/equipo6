@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
   get 'question/index'
   get 'turist/index'
+=======
+  get 'detail/index'
+
+  get 'question/index'
+  get 'turist/index'
+  get 'detail/index'
+  post 'detail/index'
+  
+>>>>>>> 403d4e4a4e458c262c06650a95a08fe5b846fc74
 
   resources :attachments, only: [:create,:destroy,:new,:show]
   resources :products
