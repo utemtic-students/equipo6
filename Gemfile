@@ -37,8 +37,7 @@ gem 'paperclip'
 gem 'paypal-sdk-rest'
 #Aasm para crear maquinas de estado
 gem 'aasm'
-#Credit Card Validator
-gem "credit_card_validator"
+
 
 
 # Use ActiveModel has_secure_password
