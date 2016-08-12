@@ -1,30 +1,9 @@
-<<<<<<< HEAD
-  <div class="navbar navbar-info">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="javascript:void(0)">GoTurista!</a>
-      </div>
-      <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><%= link_to '¿Tienes un negocio?, Registrate', 'users/sign_up' %></li>
-          <li><%= link_to 'Ingresa', 'users/sign_in' %></li></li>
-        </ul>
-        <form class="navbar-form navbar-left">
-          <div class="form-group">
-        </form>
-      </div>
-    </div>
-  </div>
+
+<div class="blue white-text large-padding bold text-center" style="<%= "display:none;" if alert.nil? && notice.nil? %>">
+    <p class="no-padding no-margin inline-block"><%= notice %><%= alert %></p>
+    <span class="pull-right close-parent">X</span>
   </div>
 
-
-  
-=======
 <div class="navbar navbar-info">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -90,4 +69,3 @@
     </div>
   </div> 
 </div>
->>>>>>> 403d4e4a4e458c262c06650a95a08fe5b846fc74
