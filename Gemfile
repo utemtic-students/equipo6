@@ -37,6 +37,7 @@ gem 'paperclip'
 gem 'paypal-sdk-rest'
 #Aasm para crear maquinas de estado
 gem 'aasm'
+gem 'mysql2','~>0.3.9'
 
 
 
