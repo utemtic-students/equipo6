@@ -10,7 +10,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  config.action_mailer.default_url_options = { host: 'fernandoamz148@gmail.com', port: 80}
+  config.action_mailer.default_url_options = { host: 'www.goturista.com', port: 80}
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
