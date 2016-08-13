@@ -111,20 +111,35 @@
 .fade-carousel .slides .slide-1, 
 .fade-carousel .slides .slide-2,
 .fade-carousel .slides .slide-3,
-.fade-carousel .slides .slide-4{ /* necesitas agregar un slider con un nuevo numero*/
+.fade-carousel .slides .slide-4,
+.fade-carousel .slides .slide-5,
+.fade-carousel .slides .slide-6,
+.fade-carousel .slides .slide-7{ /* necesitas agregar un slider con un nuevo numero*/
   height: 100vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(inicio/tortuga.jpg); 
+  background-image: url(inicio/pezVelaIzq.jpg); 
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(inicio/tortuga.jpg);
+  background-image: url(inicio/playaDeOro.jpg);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(inicio/playaDeOro.jpg);
+  background-image: url(inicio/tortuga.jpg);
+}
+.fade-carousel .slides .slide-4 {
+  background-image: url(inicio/playa.jpg);
+}
+.fade-carousel .slides .slide-5 {
+  background-image: url(inicio/playaTabla.jpg);
+}
+.fade-carousel .slides .slide-6 {
+  background-image: url(inicio/lasBrisas.jpg);
+}
+.fade-carousel .slides .slide-7 {
+  background-image: url(inicio/laMarina.jpg);
 }
 
 

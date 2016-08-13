@@ -1,4 +1,6 @@
-<%= stylesheet_link_tag    'question', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'question', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag  'question', media: 'all', 'data-turbolinks-track' => true %>
+
 
 <div class="navbar navbar-info">
     <div class="container-fluid">
@@ -8,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="javascript:void(0)">GoTurista!</a>
+            <a class="navbar-brand" href="../">GoTurista!</a>
         </div>
         <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
             <ul class="nav navbar-nav">
@@ -23,9 +25,21 @@
         </div>
     </div>
 </div>
-
+ <!--start-->
+<div style="padding:120px 0;">
+    <div id="thumbnail-slider">
+        <div class="inner">
+            <ul>
+                <li>
+                    <button type="button" class="btn btn-primary btn-radio">Me Gusta</button>
+                    <input type="checkbox" id="primary" class="hidden">
+                    <%= image_tag  "questions/Acompañantes/pareja/pareja.jpg", :class=>"img-responsive img-radio thumb" %>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 <%= link_to "Siguiente", {:controller => "question", :action => "index" }, :type=>"button", :class=>"btn btn-primary btn-lg btn-block"%>
-
 <div class="container">
     <hr>
     <!-- Footer -->
