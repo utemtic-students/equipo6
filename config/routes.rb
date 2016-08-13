@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'question/index'
+
   get 'detail/index'
   get 'question/index'
   get 'turist/index'
