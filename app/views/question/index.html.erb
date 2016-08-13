@@ -25,16 +25,24 @@
         </div>
     </div>
 </div>
+<div class="col-md-3  " >
+    <center><h2>Selecciona las imagenes con las que te identifiques</h2></center>
+    <% @questions.each do |question| %>
+    <center><h3><strong><%= question.Question %></strong></h3></center>
+    <% end %>
+</div>
  <!--start-->
-<div style="padding:120px 0;">
+<div style="padding:30px 0;">
     <div id="thumbnail-slider">
         <div class="inner">
             <ul>
-                <li>
-                    <button type="button" class="btn btn-primary btn-radio">Me Gusta</button>
-                    <input type="checkbox" id="primary" class="hidden">
-                    <%= image_tag  "questions/Acompañantes/pareja/pareja.jpg", :class=>"img-responsive img-radio thumb" %>
-                </li>
+                <% @answers.each do |answer| %>
+                    <li>
+                        <button type="button" class="btn btn-primary btn-radio"><%= answer.Body%></button>
+                        <input type="checkbox"  id="primary" class="hidden">
+                        <%= image_tag  answer.SRC, :class=>"img-responsive img-radio thumb" %>
+                    </li>
+                <% end %>
             </ul>
         </div>
     </div>
