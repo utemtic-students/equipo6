@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '5.0.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -37,8 +37,8 @@ gem 'paperclip'
 gem 'paypal-sdk-rest'
 #Aasm para crear maquinas de estado
 gem 'aasm'
-#Credit Card Validator
-gem "credit_card_validator"
+gem 'mysql2','~>0.3.9'
+
 
 
 # Use ActiveModel has_secure_password
