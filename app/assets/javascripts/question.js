@@ -3,13 +3,16 @@ $(document).ready(function(){
             .siblings('input:checkbox').prop('checked',false)
 			.siblings('.img-radio').css('opacity','0.5');  
 
+    var answers_id = [];
+    answers_id.push(document.getElementById("answers_id").value);
 	$('.btn-radio').click(function(e) {
         if( $(this).siblings('input:checkbox').prop("checked") != true)
         {
             $(this).addClass('active')
             .siblings('input').prop('checked',true)
     		.siblings('.img-radio').css('opacity','1');
-             document.getElementById("answers_id").value =  document.getElementById("answers_id").value + "," + String($(this).siblings('input:checkbox')[0].value);
+            answers_id.push($(this).siblings('input:checkbox')[0].value);
+            document.getElementById("answers_id").value =  answers_id;
         }
         else
         {
