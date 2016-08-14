@@ -25,29 +25,39 @@
         </div>
     </div>
 </div>
-<div class="col-md-3  " >
+<div class="col-md-12  " >
     <center><h2>Selecciona las imagenes con las que te identifiques</h2></center>
     <% @questions.each do |question| %>
     <center><h3><strong><%= question.Question %></strong></h3></center>
     <% end %>
 </div>
  <!--start-->
-<div style="padding:30px 0;">
-    <div id="thumbnail-slider">
-        <div class="inner">
-            <ul>
-                <% @answers.each do |answer| %>
-                    <li>
-                        <button type="button" class="btn btn-primary btn-radio"><%= answer.Body%></button>
-                        <input type="checkbox"  id="primary" class="hidden">
-                        <%= image_tag  answer.SRC, :class=>"img-responsive img-radio thumb" %>
-                    </li>
-                <% end %>
-            </ul>
+
+    
+
+
+   
+<%= form_tag({:controller => @fin != 1 ? 'question' : 'turist' , :action => "index"}, :method => "post") do %>
+    <%= text_field_tag :questions_id, @questions_id + 1, :class=>""%><br />
+    <%= text_field_tag :answers_id, @answers_id, :class=>""%><br />
+    <div style="padding:30px 0;">
+        <div id="thumbnail-slider">
+            <div class="inner">
+                <ul>
+                    <% @answers.each do |answer| %>
+                        <li>
+                            <button type="button" class="btn btn-primary btn-radio"><%= answer.Body%></button>
+                            <%= check_box_tag answer.Body, answer.id, :class=>"hidden"%>
+                            
+                            <%= image_tag  answer.SRC, :class=>"img-responsive img-radio thumb" %>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-<%= link_to "Siguiente", {:controller => "question", :action => "index" }, :type=>"button", :class=>"btn btn-primary btn-lg btn-block"%>
+        <%= submit_tag "Siguiente" , :class=>"btn btn-primary btn-lg btn-block"%>
+<% end %>
 <div class="container">
     <hr>
     <!-- Footer -->

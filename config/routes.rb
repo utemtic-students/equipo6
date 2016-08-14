@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
   get 'question/index'
+  post 'question/index'
+  
 
   get 'detail/index'
   get 'question/index'
   get 'turist/index'
+  post 'turist/index'
   get 'detail/index'
   post 'detail/index'
   

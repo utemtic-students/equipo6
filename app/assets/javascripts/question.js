@@ -8,14 +8,15 @@ $(document).ready(function(){
         {
             $(this).addClass('active')
             .siblings('input').prop('checked',true)
-    		.siblings('.img-radio').css('opacity','1');  
-    		$(this).value("No Me Gusta");  
+    		.siblings('.img-radio').css('opacity','1');
+             document.getElementById("answers_id").value =  document.getElementById("answers_id").value + "," + String($(this).siblings('input:checkbox')[0].value);
         }
         else
         {
 			$(this).removeClass('active')
             .siblings('input:checkbox').prop('checked',false)
-			.siblings('.img-radio').css('opacity','0.5');   
+			.siblings('.img-radio').css('opacity','0.5');
+            
         } 
     });
 });
