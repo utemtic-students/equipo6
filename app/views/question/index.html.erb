@@ -35,8 +35,8 @@
 <%= form_tag({:controller => @fin != 1 ? 'question' : 'turist' , :action => "index"}, :method => "post") do %>
     <div>
         <%= text_field_tag :inputHidden, :inputHidden %>
-        <%= text_field_tag :questions_id, @questions_id + 1, :type=>""%>
-        <%= text_field_tag :answers_id, @answers_id , :type=>""%>
+        <%= text_field_tag :questions_id, @questions_id + 1, :type=>"hidden"%>
+        <%= text_field_tag :answers_id, @answers_id , :type=>"hidden"%>
     </div>
     <div style="padding:5px 0;">
         <div id="thumbnail-slider">
@@ -45,7 +45,7 @@
                     <% @answers.each do |answer| %>
                         <li>
                             <button type="button" class="btn btn-primary btn-radio"><%= answer.Body%></button>
-                            <%= check_box_tag answer.Body, answer.id, :type=>"hidden" %>
+                            <%= check_box_tag answer.Body, answer.id, answer.id, :disabled=>"true" %>
                             
                             <%= image_tag  answer.SRC, :class=>"img-responsive img-radio thumb" %>
                         </li>
