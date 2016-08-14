@@ -19,7 +19,14 @@ $(document).ready(function(){
 			$(this).removeClass('active')
             .siblings('input:checkbox').prop('checked',false)
 			.siblings('.img-radio').css('opacity','0.5');
-            
+
+            answers_id = document.getElementById("answers_id").value.split(',');
+            for (var i = 0; i < answers_id.length; i++) {
+                if (answers_id[i] == $(this).siblings('input:checkbox')[0].value){
+                    answers_id.splice(i, 1);
+                    document.getElementById("answers_id").value = answers_id;
+                }
+            }
         } 
     });
 });
