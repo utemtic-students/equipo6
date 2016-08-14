@@ -1,6 +1,6 @@
-<%= stylesheet_link_tag    'question', media: 'all', 'data-turbolinks-track' => true %>
-<script type="text/javascript" src="../../js/materialize.js"></script>
-<link type="text/css" rel="stylesheet" href="../../css/materialize.css"  media="screen,projection"/>
+<%= javascript_include_tag 'question', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag  'question', media: 'all', 'data-turbolinks-track' => true %>
+
 
 <div class="navbar navbar-info">
     <div class="container-fluid">
@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="javascript:void(0)">GoTurista!</a>
+            <a class="navbar-brand" href="../">GoTurista!</a>
         </div>
         <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
             <ul class="nav navbar-nav">
@@ -25,35 +25,39 @@
         </div>
     </div>
 </div>
-<div class="carousel">
-    <div class="carousel-item ">
-        <%= image_tag  "questions/Acompañantes/pareja/O6VQ0G0.jpg", :class=>"img-thumbnail img-radio"%>
-        <label for="primary" type="button" class="btn btn-primary btn-radio">Me Gusta <input type="checkbox" id="primary" class="hidden badgebox btn-radio"><span class="badge btn-radio">&check;</span></label>
-        
-    </div>
-    <div class="carousel-item ">
-        <%= image_tag  "questions/Acompañantes/pareja/pareja.jpg", :class=>"img-thumbnail img-radio"%>
-        <button type="button" class="btn btn-primary btn-radio">Left</button>
-        <input type="checkbox"  class=" btn-radio">
-    </div>
-    <div class="carousel-item ">
-        <%= image_tag  "questions/Acompañantes/familia/familia.jpg", :class=>"img-thumbnail img-radio"%>
-        <button type="button" class="btn btn-primary btn-radio">Left</button>
-        <input type="checkbox" id="left-item" class=" btn-radio">
-    </div>
-    <div class="carousel-item ">
-        <%= image_tag  "questions/Acompañantes/amigos/amigos.jpg", :class=>"img-thumbnail img-radio"%>
-        <button type="button" class="btn btn-primary btn-radio">Left</button>
-        <input type="checkbox" id="left-item" class=" btn-radio">
-    </div>
-    <div class="carousel-item ">
-        <%= image_tag  "questions/Acompañantes/solo/solo.jpg", :class=>"img-thumbnail img-radio"%>
-        <button type="button" class="btn btn-primary btn-radio">Left</button>
-        <input type="checkbox" id="left-item" class=" btn-radio">
-    </div>
+<div class="col-md-12  " >
+    <center><h2>Selecciona las imagenes con las que te identifiques</h2></center>
+    <% @questions.each do |question| %>
+    <center><h3><strong><%= question.Question %></strong></h3></center>
+    <% end %>
 </div>
-<%= link_to "Siguiente", {:controller => "question", :action => "index" }, :type=>"button", :class=>"btn btn-primary btn-lg btn-block"%>
+ <!--start-->
 
+    
+
+
+   
+<%= form_tag({:controller => @fin != 1 ? 'question' : 'turist' , :action => "index"}, :method => "post") do %>
+    <%= text_field_tag :questions_id, @questions_id + 1, :class=>""%><br />
+    <%= text_field_tag :answers_id, @answers_id, :class=>""%><br />
+    <div style="padding:30px 0;">
+        <div id="thumbnail-slider">
+            <div class="inner">
+                <ul>
+                    <% @answers.each do |answer| %>
+                        <li>
+                            <button type="button" class="btn btn-primary btn-radio"><%= answer.Body%></button>
+                            <%= check_box_tag answer.Body, answer.id, :class=>"hidden"%>
+                            
+                            <%= image_tag  answer.SRC, :class=>"img-responsive img-radio thumb" %>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <%= submit_tag "Siguiente" , :class=>"btn btn-primary btn-lg btn-block"%>
+<% end %>
 <div class="container">
     <hr>
     <!-- Footer -->
@@ -65,5 +69,3 @@
         </div>    
     </footer>
 </div>
-<br />
-<label for="primary" class="btn btn-primary">Primary <input type="checkbox" id="primary" class="badgebox"><span class="badge">&check;</span></label>
