@@ -1,24 +1,24 @@
 $(document).ready(function(){
-	$('.btn-radio').removeClass('active')
+    $('.btn-radio').removeClass('active')
             .siblings('input:checkbox').prop('checked',false)
-			.siblings('.img-radio').css('opacity','0.5');  
+            .siblings('.img-radio').css('opacity','0.5');  
 
     var answers_id = [];
     answers_id.push(document.getElementById("answers_id").value);
-	$('.btn-radio').click(function(e) {
+    $('.btn-radio').click(function(e) {
         if( $(this).siblings('input:checkbox').prop("checked") != true)
         {
             $(this).addClass('active')
             .siblings('input').prop('checked',true)
-    		.siblings('.img-radio').css('opacity','1');
+            .siblings('.img-radio').css('opacity','1');
             answers_id.push($(this).siblings('input:checkbox')[0].value);
             document.getElementById("answers_id").value =  answers_id;
         }
         else
         {
-			$(this).removeClass('active')
+            $(this).removeClass('active')
             .siblings('input:checkbox').prop('checked',false)
-			.siblings('.img-radio').css('opacity','0.5');
+            .siblings('.img-radio').css('opacity','0.5');
 
             answers_id = document.getElementById("answers_id").value.split(',');
             for (var i = 0; i < answers_id.length; i++) {

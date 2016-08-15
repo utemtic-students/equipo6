@@ -1,6 +1,6 @@
 class TuristController < ApplicationController
   def index
-  	if params[:fin]
+    if params[:fin]
       answers_id = params[:answers_id].split(',');
         
       @sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
@@ -40,16 +40,7 @@ class TuristController < ApplicationController
                  .where("photos.Section = 'Principal'");
     end
     @types = Type.all;
-  	
-    #arraySiete = [];
-  	#@resultSite = [];
-  	#i=1
-#       @sites.each do |site|
-#   		type = Type.where("sites_id =? "  site.id)
-#   		category = Clasification.where("sites_id = ?" ,  site.id)
-#   		@resultSite[i] = {"type" => type, "category" => category, "site" => site}
-#   		i = i+1
-#       end
-  	render layout: "landing"
+
+    render layout: "landing"
   end
 end

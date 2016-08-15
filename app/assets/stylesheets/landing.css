@@ -16,7 +16,7 @@
  *= require_self
  */
  body{
- 	background-color: white;
+  background-color: white;
  }
 .fade-carousel {
     position: relative;
