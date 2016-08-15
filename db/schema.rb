@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160814181940) do
+ActiveRecord::Schema.define(version: 20160815045937) do
 
   create_table "answer_x_clasifications", force: :cascade do |t|
     t.integer  "answers_id"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20160814181940) do
 
   add_index "answer_x_clasifications", ["answers_id"], name: "index_answer_x_clasifications_on_answers_id"
   add_index "answer_x_clasifications", ["clasifications_id"], name: "index_answer_x_clasifications_on_clasifications_id"
+
+  create_table "answer_x_questions", force: :cascade do |t|
+    t.integer  "answers_id"
+    t.integer  "questions_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "answer_x_questions", ["answers_id"], name: "index_answer_x_questions_on_answers_id"
+  add_index "answer_x_questions", ["questions_id"], name: "index_answer_x_questions_on_questions_id"
 
   create_table "answer_x_types", force: :cascade do |t|
     t.integer  "answers_id"

@@ -651,3 +651,1248 @@ Started GET "/assets/inicio/lasBrisas.jpg" for 127.0.0.1 at 2016-08-14 19:03:06 
 
 
 Started GET "/assets/inicio/laMarina.jpg" for 127.0.0.1 at 2016-08-14 19:03:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAnswerXQuestions (20160815021354)
+  [1m[35m (1.6ms)[0m  begin transaction
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "answer_x_questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answers_id" integer, "questions_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  select sqlite_version(*)
+  [1m[36m (2.2ms)[0m  [1mCREATE  INDEX "index_answer_x_questions_on_answers_id" ON "answer_x_questions" ("answers_id")[0m
+  [1m[35m (1.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_questions_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_questions_on_answers_id' AND type='index'
+
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX "index_answer_x_questions_on_questions_id" ON "answer_x_questions" ("questions_id")[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160815021354"]]
+  [1m[36m (124.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (1.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_clasifications_on_clasifications_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_clasifications_on_clasifications_id' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_clasifications_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_clasifications_on_answers_id' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_questions_on_questions_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_questions_on_questions_id' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_questions_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_questions_on_answers_id' AND type='index'
+
+  [1m[36m (1.6ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_types_on_types_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_types_on_types_id' AND type='index'
+[0m
+  [1m[35m (1.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_types_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_types_on_answers_id' AND type='index'
+
+  [1m[36m (1.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attachments_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attachments_on_product_id' AND type='index'
+[0m
+  [1m[35m (4.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_in_shopping_carts_on_shopping_cart_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_in_shopping_carts_on_shopping_cart_id' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_in_shopping_carts_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_in_shopping_carts_on_product_id' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_link_attachments_on_attachment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_link_attachments_on_attachment_id' AND type='index'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_link_attachments_on_link_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_link_attachments_on_link_id' AND type='index'
+[0m
+  [1m[35m (1.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_links_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_links_on_product_id' AND type='index'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_my_payments_on_shopping_cart_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_my_payments_on_shopping_cart_id' AND type='index'
+[0m
+  [1m[35m (1.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_photos_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_photos_on_sites_id' AND type='index'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_user_id' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_question_x_answers_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_question_x_answers_on_answers_id' AND type='index'
+
+  [1m[36m (1.5ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_question_x_answers_on_questions_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_question_x_answers_on_questions_id' AND type='index'
+[0m
+  [1m[35m (2.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_clasifications_on_clasifications_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_clasifications_on_clasifications_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_clasifications_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_clasifications_on_sites_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_types_on_types_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_types_on_types_id' AND type='index'
+
+  [1m[36m (0.7ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_types_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_types_on_sites_id' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sites_on_businessmans_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sites_on_businessmans_id' AND type='index'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sites_on_scores_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sites_on_scores_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to InsertTypes (20160815034919)
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 1], ["Name", "Restaurantes"], ["created_at", "2016-08-15 04:03:37.673195"], ["updated_at", "2016-08-15 04:03:37.673195"]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 2], ["Name", "Actividades Extremas"], ["created_at", "2016-08-15 04:03:37.694085"], ["updated_at", "2016-08-15 04:03:37.694085"]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 3], ["Name", "Plazas"], ["created_at", "2016-08-15 04:03:37.703133"], ["updated_at", "2016-08-15 04:03:37.703133"]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 4], ["Name", "Bares"], ["created_at", "2016-08-15 04:03:37.712804"], ["updated_at", "2016-08-15 04:03:37.712804"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 5], ["Name", "Antros"], ["created_at", "2016-08-15 04:03:37.720960"], ["updated_at", "2016-08-15 04:03:37.720960"]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 6], ["Name", "Playas"], ["created_at", "2016-08-15 04:03:37.728822"], ["updated_at", "2016-08-15 04:03:37.728822"]]
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160815034919"]]
+  [1m[35m (192.6ms)[0m  commit transaction
+Migrating to InsertClasification (20160815040245)
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 1], ["Name", "Acuaticas"], ["created_at", "2016-08-15 04:03:38.044985"], ["updated_at", "2016-08-15 04:03:38.044985"]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 2], ["Name", "Extremas"], ["created_at", "2016-08-15 04:03:38.055646"], ["updated_at", "2016-08-15 04:03:38.055646"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 3], ["Name", "Tranquilas"], ["created_at", "2016-08-15 04:03:38.065024"], ["updated_at", "2016-08-15 04:03:38.065024"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 4], ["Name", "Deportivas"], ["created_at", "2016-08-15 04:03:38.071655"], ["updated_at", "2016-08-15 04:03:38.071655"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 5], ["Name", "Culturales"], ["created_at", "2016-08-15 04:03:38.077480"], ["updated_at", "2016-08-15 04:03:38.077480"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 6], ["Name", "Caminatas"], ["created_at", "2016-08-15 04:03:38.083019"], ["updated_at", "2016-08-15 04:03:38.083019"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 7], ["Name", "Conduccion"], ["created_at", "2016-08-15 04:03:38.089511"], ["updated_at", "2016-08-15 04:03:38.089511"]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 8], ["Name", "Relajacion"], ["created_at", "2016-08-15 04:03:38.097873"], ["updated_at", "2016-08-15 04:03:38.097873"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 9], ["Name", "Amigos"], ["created_at", "2016-08-15 04:03:38.106406"], ["updated_at", "2016-08-15 04:03:38.106406"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 10], ["Name", "Familia"], ["created_at", "2016-08-15 04:03:38.112376"], ["updated_at", "2016-08-15 04:03:38.112376"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 11], ["Name", "Pareja"], ["created_at", "2016-08-15 04:03:38.118069"], ["updated_at", "2016-08-15 04:03:38.118069"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 12], ["Name", "Solo"], ["created_at", "2016-08-15 04:03:38.123733"], ["updated_at", "2016-08-15 04:03:38.123733"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 13], ["Name", "Baile"], ["created_at", "2016-08-15 04:03:38.129402"], ["updated_at", "2016-08-15 04:03:38.129402"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 14], ["Name", "Disco"], ["created_at", "2016-08-15 04:03:38.135031"], ["updated_at", "2016-08-15 04:03:38.135031"]]
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 15], ["Name", "Reggae"], ["created_at", "2016-08-15 04:03:38.143309"], ["updated_at", "2016-08-15 04:03:38.143309"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 16], ["Name", "Rock"], ["created_at", "2016-08-15 04:03:38.153054"], ["updated_at", "2016-08-15 04:03:38.153054"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 17], ["Name", "Comida"], ["created_at", "2016-08-15 04:03:38.162319"], ["updated_at", "2016-08-15 04:03:38.162319"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 18], ["Name", "China"], ["created_at", "2016-08-15 04:03:38.170360"], ["updated_at", "2016-08-15 04:03:38.170360"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 19], ["Name", "Méxicana"], ["created_at", "2016-08-15 04:03:38.178780"], ["updated_at", "2016-08-15 04:03:38.178780"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 20], ["Name", "Mariscos"], ["created_at", "2016-08-15 04:03:38.187603"], ["updated_at", "2016-08-15 04:03:38.187603"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 21], ["Name", "Rapida"], ["created_at", "2016-08-15 04:03:38.196098"], ["updated_at", "2016-08-15 04:03:38.196098"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 22], ["Name", "Café"], ["created_at", "2016-08-15 04:03:38.204126"], ["updated_at", "2016-08-15 04:03:38.204126"]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 23], ["Name", "Japonesa"], ["created_at", "2016-08-15 04:03:38.214174"], ["updated_at", "2016-08-15 04:03:38.214174"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 24], ["Name", "Española"], ["created_at", "2016-08-15 04:03:38.223006"], ["updated_at", "2016-08-15 04:03:38.223006"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 25], ["Name", "Asiatica"], ["created_at", "2016-08-15 04:03:38.232255"], ["updated_at", "2016-08-15 04:03:38.232255"]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 26], ["Name", "Cortes Finos"], ["created_at", "2016-08-15 04:03:38.241225"], ["updated_at", "2016-08-15 04:03:38.241225"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 27], ["Name", "Tur"], ["created_at", "2016-08-15 04:03:38.249288"], ["updated_at", "2016-08-15 04:03:38.249288"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 28], ["Name", "Aéreo"], ["created_at", "2016-08-15 04:03:38.255667"], ["updated_at", "2016-08-15 04:03:38.255667"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 29], ["Name", "Juegos"], ["created_at", "2016-08-15 04:03:38.261157"], ["updated_at", "2016-08-15 04:03:38.261157"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 30], ["Name", "Apuestas"], ["created_at", "2016-08-15 04:03:38.267031"], ["updated_at", "2016-08-15 04:03:38.267031"]]
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 31], ["Name", "Romance"], ["created_at", "2016-08-15 04:03:38.273825"], ["updated_at", "2016-08-15 04:03:38.273825"]]
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160815040245"]]
+  [1m[35m (137.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_clasifications_on_clasifications_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_clasifications_on_clasifications_id' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_clasifications_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_clasifications_on_answers_id' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_questions_on_questions_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_questions_on_questions_id' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_questions_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_questions_on_answers_id' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_types_on_types_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_types_on_types_id' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_types_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_types_on_answers_id' AND type='index'
+[0m
+  [1m[35m (1.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attachments_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attachments_on_product_id' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_in_shopping_carts_on_shopping_cart_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_in_shopping_carts_on_shopping_cart_id' AND type='index'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_in_shopping_carts_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_in_shopping_carts_on_product_id' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_link_attachments_on_attachment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_link_attachments_on_attachment_id' AND type='index'
+[0m
+  [1m[35m (1.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_link_attachments_on_link_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_link_attachments_on_link_id' AND type='index'
+
+  [1m[36m (0.7ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_links_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_links_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_my_payments_on_shopping_cart_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_my_payments_on_shopping_cart_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_photos_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_photos_on_sites_id' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_user_id' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_question_x_answers_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_question_x_answers_on_answers_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_question_x_answers_on_questions_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_question_x_answers_on_questions_id' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_clasifications_on_clasifications_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_clasifications_on_clasifications_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_clasifications_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_clasifications_on_sites_id' AND type='index'
+
+  [1m[36m (0.7ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_types_on_types_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_types_on_types_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_types_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_types_on_sites_id' AND type='index'
+
+  [1m[36m (0.7ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sites_on_businessmans_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sites_on_businessmans_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sites_on_scores_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sites_on_scores_id' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["Question", "¿Que estas buscando?"], ["Section", 1], ["created_at", "2016-08-15 04:08:56.941907"], ["updated_at", "2016-08-15 04:08:56.941907"]]
+  [1m[36m (121.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["Body", "Restaurantes"], ["SRC", "questions/restaurantes/Restaurantes.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:08:57.179765"], ["updated_at", "2016-08-15 04:08:57.179765"]]
+  [1m[35m (116.9ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["questions_id", 1], ["answers_id", 1], ["created_at", "2016-08-15 04:08:57.402544"], ["updated_at", "2016-08-15 04:08:57.402544"]]
+  [1m[36m (116.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 1], ["answers_id", 1], ["created_at", "2016-08-15 04:08:57.727141"], ["updated_at", "2016-08-15 04:08:57.727141"]]
+  [1m[35m (122.4ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 2], ["Body", "Actividades Extremas"], ["SRC", "questions/actividadesExtremas/gotcha.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:08:57.915740"], ["updated_at", "2016-08-15 04:08:57.915740"]]
+  [1m[36m (112.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 2], ["questions_id", 1], ["answers_id", 2], ["created_at", "2016-08-15 04:08:58.066150"], ["updated_at", "2016-08-15 04:08:58.066150"]]
+  [1m[35m (138.1ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.4ms)[0m  INSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["Question", "¿Que estas buscando?"], ["Section", 1], ["created_at", "2016-08-15 04:10:15.178546"], ["updated_at", "2016-08-15 04:10:15.178546"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: questions.id: INSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["Body", "Restaurantes"], ["SRC", "questions/restaurantes/Restaurantes.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:10:15.242194"], ["updated_at", "2016-08-15 04:10:15.242194"]]
+  [1m[35m (185.8ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.0ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["questions_id", 1], ["answers_id", 1], ["created_at", "2016-08-15 04:10:15.496002"], ["updated_at", "2016-08-15 04:10:15.496002"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: question_x_answers.id: INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["answers_id", 1], ["types_id", 1], ["created_at", "2016-08-15 04:10:15.558160"], ["updated_at", "2016-08-15 04:10:15.558160"]]
+  [1m[35m (109.2ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 2], ["Body", "Actividades Extremas"], ["SRC", "questions/actividadesExtremas/gotcha.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:10:15.767024"], ["updated_at", "2016-08-15 04:10:15.767024"]]
+  [1m[36m (109.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (11.1ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 2], ["questions_id", 1], ["answers_id", 2], ["created_at", "2016-08-15 04:10:15.916872"], ["updated_at", "2016-08-15 04:10:15.916872"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: question_x_answers.id: INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["answers_id", 2], ["types_id", 2], ["created_at", "2016-08-15 04:10:43.303629"], ["updated_at", "2016-08-15 04:10:43.303629"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: answer_x_types.id: INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["Question", "¿Que estas buscando?"], ["Section", 1], ["created_at", "2016-08-15 04:11:32.585499"], ["updated_at", "2016-08-15 04:11:32.585499"]]
+  [1m[35m (127.3ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["Body", "Restaurantes"], ["SRC", "questions/restaurantes/Restaurantes.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:12:04.591918"], ["updated_at", "2016-08-15 04:12:04.591918"]]
+  [1m[36m (115.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (12.4ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["questions_id", 1], ["answers_id", 1], ["created_at", "2016-08-15 04:12:32.036463"], ["updated_at", "2016-08-15 04:12:32.036463"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: question_x_answers.id: INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["answers_id", 1], ["types_id", 1], ["created_at", "2016-08-15 04:10:43.303629"], ["updated_at", "2016-08-15 04:10:43.303629"]]
+  [1m[36m (190.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["Body", "Actividades Extremas"], ["SRC", "questions/actividadesExtremas/gotcha.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:12:32.354393"], ["updated_at", "2016-08-15 04:12:32.354393"]]
+  [1m[35m (115.4ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.9ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["questions_id", 1], ["answers_id", 2], ["created_at", "2016-08-15 04:12:32.512634"], ["updated_at", "2016-08-15 04:12:32.512634"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: question_x_answers.id: INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["Question", "¿Que estas buscando?"], ["Section", 1], ["created_at", "2016-08-15 04:13:40.490014"], ["updated_at", "2016-08-15 04:13:40.490014"]]
+  [1m[35m (115.1ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["Body", "Restaurantes"], ["SRC", "questions/restaurantes/Restaurantes.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:13:40.695647"], ["updated_at", "2016-08-15 04:13:40.695647"]]
+  [1m[36m (110.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["questions_id", 1], ["answers_id", 1], ["created_at", "2016-08-15 04:13:40.868325"], ["updated_at", "2016-08-15 04:13:40.868325"]]
+  [1m[35m (114.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["Question", "¿Que estas buscando?"], ["Section", 1], ["created_at", "2016-08-15 04:16:08.902079"], ["updated_at", "2016-08-15 04:16:08.902079"]]
+  [1m[36m (255.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (11.6ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["Body", "Restaurantes"], ["SRC", "questions/restaurantes/Restaurantes.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:16:15.751178"], ["updated_at", "2016-08-15 04:16:15.751178"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: answers.id: INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["questions_id", 1], ["answers_id", 1], ["created_at", "2016-08-15 04:16:15.803024"], ["updated_at", "2016-08-15 04:16:15.803024"]]
+  [1m[36m (118.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["answers_id", 1], ["types_id", 1], ["created_at", "2016-08-15 04:19:02.049837"], ["updated_at", "2016-08-15 04:19:02.049837"]]
+  [1m[35m (238.8ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 2], ["Body", "Actividades Extremas"], ["SRC", "questions/actividadesExtremas/gotcha.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:19:47.202723"], ["updated_at", "2016-08-15 04:19:47.202723"]]
+  [1m[36m (130.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 2], ["questions_id", 1], ["answers_id", 2], ["created_at", "2016-08-15 04:19:47.396699"], ["updated_at", "2016-08-15 04:19:47.396699"]]
+  [1m[35m (126.8ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["answers_id", 2], ["types_id", 2], ["created_at", "2016-08-15 04:19:51.282026"], ["updated_at", "2016-08-15 04:19:51.282026"]]
+  [1m[36m (165.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["Body", "Playas"], ["SRC", "questions/playa/playa.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:22:41.134234"], ["updated_at", "2016-08-15 04:22:41.134234"]]
+  [1m[35m (165.3ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 3], ["questions_id", 1], ["answers_id", 3], ["created_at", "2016-08-15 04:22:41.379517"], ["updated_at", "2016-08-15 04:22:41.379517"]]
+  [1m[36m (116.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 3], ["answers_id", 3], ["types_id", 3], ["created_at", "2016-08-15 04:22:42.891070"], ["updated_at", "2016-08-15 04:22:42.891070"]]
+  [1m[35m (121.7ms)[0m  commit transaction
+  [1m[36m (4.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 4], ["Body", "Bares"], ["SRC", "questions/bar/bar.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:29:03.293551"], ["updated_at", "2016-08-15 04:29:03.293551"]]
+  [1m[36m (201.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 4], ["questions_id", 1], ["answers_id", 4], ["created_at", "2016-08-15 04:29:03.565914"], ["updated_at", "2016-08-15 04:29:03.565914"]]
+  [1m[35m (122.8ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 4], ["answers_id", 4], ["types_id", 4], ["created_at", "2016-08-15 04:29:05.104627"], ["updated_at", "2016-08-15 04:29:05.104627"]]
+  [1m[36m (122.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["Question", "¿Quienes te acompañan?"], ["Section", 1], ["created_at", "2016-08-15 04:44:07.608876"], ["updated_at", "2016-08-15 04:44:07.608876"]]
+  [1m[35m (110.2ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["Body", "Solo"], ["SRC", "questions/acompañantes/solo/solo.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:44:15.881824"], ["updated_at", "2016-08-15 04:44:15.881824"]]
+  [1m[36m (237.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (10.4ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["questions_id", 1], ["answers_id", 1], ["created_at", "2016-08-15 04:44:25.085161"], ["updated_at", "2016-08-15 04:44:25.085161"]]
+  [1m[35m (122.0ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["answers_id", 1], ["clasifications_id", 12], ["created_at", "2016-08-15 04:44:26.932020"], ["updated_at", "2016-08-15 04:44:26.932020"]]
+  [1m[36m (128.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["Body", "Amigos"], ["SRC", "questions/acompañantes/amigos/amigos.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:44:33.168774"], ["updated_at", "2016-08-15 04:44:33.168774"]]
+  [1m[35m (113.7ms)[0m  commit transaction
+  [1m[36m (8.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["questions_id", 1], ["answers_id", 2], ["created_at", "2016-08-15 04:44:33.387633"], ["updated_at", "2016-08-15 04:44:33.387633"]]
+  [1m[36m (115.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 2], ["answers_id", 2], ["clasifications_id", 9], ["created_at", "2016-08-15 04:44:34.640214"], ["updated_at", "2016-08-15 04:44:34.640214"]]
+  [1m[35m (119.1ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 3], ["Body", "Familia"], ["SRC", "questions/acompañantes/familia/familia.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:44:41.871529"], ["updated_at", "2016-08-15 04:44:41.871529"]]
+  [1m[36m (120.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 3], ["questions_id", 1], ["answers_id", 3], ["created_at", "2016-08-15 04:44:42.062374"], ["updated_at", "2016-08-15 04:44:42.062374"]]
+  [1m[35m (116.8ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 3], ["answers_id", 3], ["clasifications_id", 10], ["created_at", "2016-08-15 04:44:42.248827"], ["updated_at", "2016-08-15 04:44:42.248827"]]
+  [1m[36m (113.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["Body", "Pareja"], ["SRC", "questions/acompañantes/pareja/pareja.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:45:02.272468"], ["updated_at", "2016-08-15 04:45:02.272468"]]
+  [1m[35m (196.6ms)[0m  commit transaction
+  [1m[36m (4.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 4], ["questions_id", 1], ["answers_id", 4], ["created_at", "2016-08-15 04:45:02.514354"], ["updated_at", "2016-08-15 04:45:02.514354"]]
+  [1m[36m (117.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (7.3ms)[0m  [1mINSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 4], ["answers_id", 4], ["clasifications_id", 11], ["created_at", "2016-08-15 04:45:02.701745"], ["updated_at", "2016-08-15 04:45:02.701745"]]
+  [1m[35m (110.9ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["Question", "¿Que estas buscando?"], ["Section", 1], ["created_at", "2016-08-15 04:45:14.857656"], ["updated_at", "2016-08-15 04:45:14.857656"]]
+  [1m[36m (121.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["Body", "Restaurantes"], ["SRC", "questions/restaurantes/Restaurantes.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:45:26.923061"], ["updated_at", "2016-08-15 04:45:26.923061"]]
+  [1m[35m (119.4ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 5], ["questions_id", 2], ["answers_id", 5], ["created_at", "2016-08-15 04:45:27.159237"], ["updated_at", "2016-08-15 04:45:27.159237"]]
+  [1m[36m (137.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["answers_id", 5], ["types_id", 1], ["created_at", "2016-08-15 04:45:28.454169"], ["updated_at", "2016-08-15 04:45:28.454169"]]
+  [1m[35m (141.6ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 6], ["Body", "Actividades Extremas"], ["SRC", "questions/actividadesExtremas/gotcha.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:45:36.766011"], ["updated_at", "2016-08-15 04:45:36.766011"]]
+  [1m[36m (138.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 6], ["questions_id", 2], ["answers_id", 6], ["created_at", "2016-08-15 04:45:36.994957"], ["updated_at", "2016-08-15 04:45:36.994957"]]
+  [1m[35m (112.3ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["answers_id", 6], ["types_id", 2], ["created_at", "2016-08-15 04:45:37.186295"], ["updated_at", "2016-08-15 04:45:37.186295"]]
+  [1m[36m (121.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["Body", "Playas"], ["SRC", "questions/playa/playa.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:45:44.052423"], ["updated_at", "2016-08-15 04:45:44.052423"]]
+  [1m[35m (140.2ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 7], ["questions_id", 2], ["answers_id", 7], ["created_at", "2016-08-15 04:45:44.239105"], ["updated_at", "2016-08-15 04:45:44.239105"]]
+  [1m[36m (130.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 3], ["answers_id", 7], ["types_id", 6], ["created_at", "2016-08-15 04:45:45.391440"], ["updated_at", "2016-08-15 04:45:45.391440"]]
+  [1m[35m (131.7ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 8], ["Body", "Bares"], ["SRC", "questions/bar/bar.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:45:55.411855"], ["updated_at", "2016-08-15 04:45:55.411855"]]
+  [1m[36m (150.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 8], ["questions_id", 2], ["answers_id", 8], ["created_at", "2016-08-15 04:45:55.686057"], ["updated_at", "2016-08-15 04:45:55.686057"]]
+  [1m[35m (132.4ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 4], ["answers_id", 4], ["types_id", 4], ["created_at", "2016-08-15 04:45:55.906721"], ["updated_at", "2016-08-15 04:45:55.906721"]]
+  [1m[36m (160.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["Body", "Plazas"], ["SRC", "questions/plaza/plaza.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:46:02.651083"], ["updated_at", "2016-08-15 04:46:02.651083"]]
+  [1m[35m (147.7ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 9], ["questions_id", 2], ["answers_id", 9], ["created_at", "2016-08-15 04:46:02.866544"], ["updated_at", "2016-08-15 04:46:02.866544"]]
+  [1m[36m (135.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 5], ["answers_id", 9], ["types_id", 3], ["created_at", "2016-08-15 04:46:04.085091"], ["updated_at", "2016-08-15 04:46:04.085091"]]
+  [1m[35m (142.5ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 10], ["Body", "Antros"], ["SRC", "questions/antro/antro.jpg"], ["Description", ""], ["created_at", "2016-08-15 04:46:11.272186"], ["updated_at", "2016-08-15 04:46:11.272186"]]
+  [1m[36m (143.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 10], ["questions_id", 2], ["answers_id", 10], ["created_at", "2016-08-15 04:46:11.476955"], ["updated_at", "2016-08-15 04:46:11.476955"]]
+  [1m[35m (152.6ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.2ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 6], ["answers_id", 10], ["types_id", 5], ["created_at", "2016-08-15 04:46:12.581733"], ["updated_at", "2016-08-15 04:46:12.581733"]]
+  [1m[36m (120.8ms)[0m  [1mcommit transaction[0m
+  [1m[36m (182.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  select sqlite_version(*)
+  [1m[36m (136.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20151017000349)
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35m (4.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (2.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151017000349"]]
+  [1m[36m (159.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMyEmails (20151019044120)
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "my_emails" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "ip" varchar, "state" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151019044120"]]
+  [1m[36m (134.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProducts (20151025010437)
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "pricing" decimal(10,2), "description" text, "user_id" integer, "avatar_file_name" varchar, "avatar_content_type" varchar, "avatar_file_size" integer, "avatar_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151025010437"]]
+  [1m[35m (115.2ms)[0m  commit transaction
+Migrating to CreateAttachments (20151103034412)
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (6.1ms)[0m  CREATE TABLE "attachments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "archivo_file_name" varchar, "archivo_content_type" varchar, "archivo_file_size" integer, "archivo_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.9ms)[0m  [1mCREATE  INDEX "index_attachments_on_product_id" ON "attachments" ("product_id")[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151103034412"]]
+  [1m[36m (117.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMyPayments (20151110050501)
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "my_payments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "ip" varchar, "status" varchar, "fee" decimal(6,2), "paypal_id" varchar, "total" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (3.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151110050501"]]
+  [1m[36m (160.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateShoppingCarts (20151112002829)
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "shopping_carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "status" integer DEFAULT 0, "ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151112002829"]]
+  [1m[36m (134.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateInShoppingCarts (20151112002919)
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36m (5.6ms)[0m  [1mCREATE TABLE "in_shopping_carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "shopping_cart_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (5.8ms)[0m  CREATE  INDEX "index_in_shopping_carts_on_product_id" ON "in_shopping_carts" ("product_id")
+  [1m[36m (1.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_in_shopping_carts_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_in_shopping_carts_on_product_id' AND type='index'
+[0m
+  [1m[35m (1.7ms)[0m  CREATE  INDEX "index_in_shopping_carts_on_shopping_cart_id" ON "in_shopping_carts" ("shopping_cart_id")
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151112002919"]]
+  [1m[35m (150.2ms)[0m  commit transaction
+Migrating to ChangePricingFromDecimalToInteger (20151122162554)
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (3.6ms)[0m  CREATE TEMPORARY TABLE "aproducts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "pricing" decimal(10,2), "description" text, "user_id" integer, "avatar_file_name" varchar, "avatar_content_type" varchar, "avatar_file_size" integer, "avatar_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_user_id' AND type='index'
+[0m
+  [1m[35m (1.4ms)[0m  CREATE  INDEX "tindex_aproducts_on_user_id" ON "aproducts" ("user_id")
+  [1m[36m (1.4ms)[0m  [1mSELECT * FROM "products"[0m
+  [1m[35m (2.8ms)[0m  DROP TABLE "products"
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "pricing" integer, "description" text, "user_id" integer, "avatar_file_name" varchar, "avatar_content_type" varchar, "avatar_file_size" integer, "avatar_updated_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aproducts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aproducts_on_user_id' AND type='index'
+
+  [1m[36m (2.3ms)[0m  [1mCREATE  INDEX "index_products_on_user_id" ON "products" ("user_id")[0m
+  [1m[35m (1.5ms)[0m  SELECT * FROM "aproducts"
+  [1m[36m (3.0ms)[0m  [1mDROP TABLE "aproducts"[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151122162554"]]
+  [1m[36m (150.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddColumnShoppingCartIdToMyPayments (20151208060922)
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36m (26.5ms)[0m  [1mALTER TABLE "my_payments" ADD "shopping_cart_id" integer[0m
+  [1m[35m (6.4ms)[0m  CREATE  INDEX "index_my_payments_on_shopping_cart_id" ON "my_payments" ("shopping_cart_id")
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151208060922"]]
+  [1m[35m (132.6ms)[0m  commit transaction
+Migrating to ChangeStatusColumnToStringInShoppingCart (20151214004135)
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.9ms)[0m  CREATE TEMPORARY TABLE "ashopping_carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "status" integer DEFAULT 0, "ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mSELECT * FROM "shopping_carts"[0m
+  [1m[35m (10.9ms)[0m  DROP TABLE "shopping_carts"
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "shopping_carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "status" varchar DEFAULT '0', "ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  SELECT * FROM "ashopping_carts"
+  [1m[36m (6.2ms)[0m  [1mDROP TABLE "ashopping_carts"[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214004135"]]
+  [1m[36m (130.4ms)[0m  [1mcommit transaction[0m
+Migrating to DropDefaultFromShoppingCartsStatus (20151214004735)
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36m (2.4ms)[0m  [1mCREATE TEMPORARY TABLE "ashopping_carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "status" varchar DEFAULT '0', "ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  SELECT * FROM "shopping_carts"
+  [1m[36m (6.9ms)[0m  [1mDROP TABLE "shopping_carts"[0m
+  [1m[35m (2.3ms)[0m  CREATE TABLE "shopping_carts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "status" varchar, "ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mSELECT * FROM "ashopping_carts"[0m
+  [1m[35m (1.7ms)[0m  DROP TABLE "ashopping_carts"
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151214004735"]]
+  [1m[35m (133.0ms)[0m  commit transaction
+Migrating to CreateLinks (20160108154328)
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (3.8ms)[0m  CREATE TABLE "links" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_id" integer, "expiration_date" datetime, "downloads" integer, "downloads_limit" integer, "custom_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.5ms)[0m  [1mCREATE  INDEX "index_links_on_product_id" ON "links" ("product_id")[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160108154328"]]
+  [1m[36m (166.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddColumnEmailToLinks (20160108161518)
+  [1m[35m (7.1ms)[0m  begin transaction
+  [1m[36m (7.9ms)[0m  [1mALTER TABLE "links" ADD "email" varchar[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160108161518"]]
+  [1m[36m (158.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLinkAttachments (20160126174359)
+  [1m[35m (2.9ms)[0m  begin transaction
+  [1m[36m (7.3ms)[0m  [1mCREATE TABLE "link_attachments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "link_id" integer, "expiration_date" datetime, "attachment_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.6ms)[0m  CREATE  INDEX "index_link_attachments_on_link_id" ON "link_attachments" ("link_id")
+  [1m[36m (1.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_link_attachments_on_link_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_link_attachments_on_link_id' AND type='index'
+[0m
+  [1m[35m (2.0ms)[0m  CREATE  INDEX "index_link_attachments_on_attachment_id" ON "link_attachments" ("attachment_id")
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160126174359"]]
+  [1m[35m (153.1ms)[0m  commit transaction
+Migrating to CreateSites (20160809003715)
+  [1m[36m (1.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (3.5ms)[0m  CREATE TABLE "sites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "TelNumber" varchar, "Municipality" varchar, "State" varchar, "Colony" varchar, "OutdoorNumbe" integer, "IndoorNumbe" integer, "Name" varchar, "Description" text, "Latitud" decimal, "Longitud" decimal, "scores_id" integer, "businessmans_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.1ms)[0m  [1mCREATE  INDEX "index_sites_on_scores_id" ON "sites" ("scores_id")[0m
+  [1m[35m (5.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sites_on_scores_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sites_on_scores_id' AND type='index'
+
+  [1m[36m (2.1ms)[0m  [1mCREATE  INDEX "index_sites_on_businessmans_id" ON "sites" ("businessmans_id")[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160809003715"]]
+  [1m[36m (166.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTypes (20160809003827)
+  [1m[35m (0.9ms)[0m  begin transaction
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Name" varchar, "Description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (5.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160809003827"]]
+  [1m[36m (131.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateClasifications (20160809003835)
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "clasifications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Name" varchar, "Description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (5.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160809003835"]]
+  [1m[36m (130.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePhotos (20160809003944)
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36m (7.9ms)[0m  [1mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sites_id" integer, "SRC" text, "Section" varchar, "position" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (2.5ms)[0m  CREATE  INDEX "index_photos_on_sites_id" ON "photos" ("sites_id")
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160809003944"]]
+  [1m[35m (128.7ms)[0m  commit transaction
+Migrating to CreateSiteXTypes (20160809012322)
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35m (7.5ms)[0m  CREATE TABLE "site_x_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sites_id" integer, "types_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.7ms)[0m  [1mCREATE  INDEX "index_site_x_types_on_sites_id" ON "site_x_types" ("sites_id")[0m
+  [1m[35m (1.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_types_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_types_on_sites_id' AND type='index'
+
+  [1m[36m (2.3ms)[0m  [1mCREATE  INDEX "index_site_x_types_on_types_id" ON "site_x_types" ("types_id")[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160809012322"]]
+  [1m[36m (154.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateSiteXClasifications (20160809013103)
+  [1m[35m (0.9ms)[0m  begin transaction
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "site_x_clasifications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sites_id" integer, "clasifications_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (13.3ms)[0m  CREATE  INDEX "index_site_x_clasifications_on_sites_id" ON "site_x_clasifications" ("sites_id")
+  [1m[36m (3.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_clasifications_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_clasifications_on_sites_id' AND type='index'
+[0m
+  [1m[35m (2.7ms)[0m  CREATE  INDEX "index_site_x_clasifications_on_clasifications_id" ON "site_x_clasifications" ("clasifications_id")
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160809013103"]]
+  [1m[35m (152.8ms)[0m  commit transaction
+Migrating to AddFree (20160809044510)
+  [1m[36m (140.8ms)[0m  [1mALTER TABLE "sites" ADD "IsFree" integer[0m
+  [1m[35m (0.9ms)[0m  begin transaction
+  [1m[36mSQL (8.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160809044510"]]
+  [1m[35m (106.6ms)[0m  commit transaction
+Migrating to CreateQuestions (20160810231558)
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Question" varchar, "Section" integer, "Descriptions" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160810231558"]]
+  [1m[35m (113.2ms)[0m  commit transaction
+Migrating to CreateAnwers (20160810231914)
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "anwers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Body" varchar, "SRC" varchar, "Description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160810231914"]]
+  [1m[35m (166.8ms)[0m  commit transaction
+Migrating to CreateQuestionXAnswers (20160810231942)
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "question_x_answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "questions_id" integer, "answers_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.4ms)[0m  [1mCREATE  INDEX "index_question_x_answers_on_questions_id" ON "question_x_answers" ("questions_id")[0m
+  [1m[35m (1.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_question_x_answers_on_questions_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_question_x_answers_on_questions_id' AND type='index'
+
+  [1m[36m (2.9ms)[0m  [1mCREATE  INDEX "index_question_x_answers_on_answers_id" ON "question_x_answers" ("answers_id")[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160810231942"]]
+  [1m[36m (132.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnswerXTypes (20160810232010)
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "answer_x_types" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answers_id" integer, "types_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE  INDEX "index_answer_x_types_on_answers_id" ON "answer_x_types" ("answers_id")
+  [1m[36m (1.5ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_types_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_types_on_answers_id' AND type='index'
+[0m
+  [1m[35m (1.9ms)[0m  CREATE  INDEX "index_answer_x_types_on_types_id" ON "answer_x_types" ("types_id")
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160810232010"]]
+  [1m[35m (158.9ms)[0m  commit transaction
+Migrating to CreateAnswerXClasifications (20160810232018)
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (8.5ms)[0m  CREATE TABLE "answer_x_clasifications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answers_id" integer, "clasifications_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (6.7ms)[0m  [1mCREATE  INDEX "index_answer_x_clasifications_on_answers_id" ON "answer_x_clasifications" ("answers_id")[0m
+  [1m[35m (6.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_clasifications_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_clasifications_on_answers_id' AND type='index'
+
+  [1m[36m (2.3ms)[0m  [1mCREATE  INDEX "index_answer_x_clasifications_on_clasifications_id" ON "answer_x_clasifications" ("clasifications_id")[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160810232018"]]
+  [1m[36m (159.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnswers (20160814181839)
+  [1m[35m (5.0ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/asdf/goturista/db/migrate/20160814181839_create_answers.rb:8)
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Body" varchar, "SRC" varchar, "Description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160814181839"]]
+  [1m[36m (112.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddFinQuestion (20160814181940)
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (7.2ms)[0m  [1mALTER TABLE "questions" ADD "Fin" integer[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160814181940"]]
+  [1m[36m (133.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAnswerXQuestions (20160815021354)
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36m (10.5ms)[0m  [1mCREATE TABLE "answer_x_questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answers_id" integer, "questions_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE  INDEX "index_answer_x_questions_on_answers_id" ON "answer_x_questions" ("answers_id")
+  [1m[36m (1.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_questions_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_questions_on_answers_id' AND type='index'
+[0m
+  [1m[35m (9.3ms)[0m  CREATE  INDEX "index_answer_x_questions_on_questions_id" ON "answer_x_questions" ("questions_id")
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160815021354"]]
+  [1m[35m (149.8ms)[0m  commit transaction
+Migrating to InsertTypes (20160815034919)
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 1], ["Name", "Restaurantes"], ["created_at", "2016-08-15 05:00:57.304107"], ["updated_at", "2016-08-15 05:00:57.304107"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 2], ["Name", "Actividades Extremas"], ["created_at", "2016-08-15 05:00:57.323548"], ["updated_at", "2016-08-15 05:00:57.323548"]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 3], ["Name", "Plazas"], ["created_at", "2016-08-15 05:00:57.337510"], ["updated_at", "2016-08-15 05:00:57.337510"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 4], ["Name", "Bares"], ["created_at", "2016-08-15 05:00:57.352625"], ["updated_at", "2016-08-15 05:00:57.352625"]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 5], ["Name", "Antros"], ["created_at", "2016-08-15 05:00:57.367865"], ["updated_at", "2016-08-15 05:00:57.367865"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "types" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 6], ["Name", "Playas"], ["created_at", "2016-08-15 05:00:57.380699"], ["updated_at", "2016-08-15 05:00:57.380699"]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160815034919"]]
+  [1m[36m (141.0ms)[0m  [1mcommit transaction[0m
+Migrating to InsertClasification (20160815040245)
+  [1m[35m (5.2ms)[0m  begin transaction
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 1], ["Name", "Acuaticas"], ["created_at", "2016-08-15 05:00:57.725975"], ["updated_at", "2016-08-15 05:00:57.725975"]]
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 2], ["Name", "Extremas"], ["created_at", "2016-08-15 05:00:57.748814"], ["updated_at", "2016-08-15 05:00:57.748814"]]
+  [1m[36mSQL (5.4ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 3], ["Name", "Tranquilas"], ["created_at", "2016-08-15 05:00:57.767835"], ["updated_at", "2016-08-15 05:00:57.767835"]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 4], ["Name", "Deportivas"], ["created_at", "2016-08-15 05:00:57.788569"], ["updated_at", "2016-08-15 05:00:57.788569"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 5], ["Name", "Culturales"], ["created_at", "2016-08-15 05:00:57.818892"], ["updated_at", "2016-08-15 05:00:57.818892"]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 6], ["Name", "Caminatas"], ["created_at", "2016-08-15 05:00:57.842487"], ["updated_at", "2016-08-15 05:00:57.842487"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 7], ["Name", "Conduccion"], ["created_at", "2016-08-15 05:00:57.862805"], ["updated_at", "2016-08-15 05:00:57.862805"]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 8], ["Name", "Relajacion"], ["created_at", "2016-08-15 05:00:57.883683"], ["updated_at", "2016-08-15 05:00:57.883683"]]
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 9], ["Name", "Amigos"], ["created_at", "2016-08-15 05:00:57.900086"], ["updated_at", "2016-08-15 05:00:57.900086"]]
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 10], ["Name", "Familia"], ["created_at", "2016-08-15 05:00:57.919319"], ["updated_at", "2016-08-15 05:00:57.919319"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 11], ["Name", "Pareja"], ["created_at", "2016-08-15 05:00:57.937012"], ["updated_at", "2016-08-15 05:00:57.937012"]]
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 12], ["Name", "Solo"], ["created_at", "2016-08-15 05:00:57.955470"], ["updated_at", "2016-08-15 05:00:57.955470"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 13], ["Name", "Baile"], ["created_at", "2016-08-15 05:00:57.970292"], ["updated_at", "2016-08-15 05:00:57.970292"]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 14], ["Name", "Disco"], ["created_at", "2016-08-15 05:00:57.985118"], ["updated_at", "2016-08-15 05:00:57.985118"]]
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 15], ["Name", "Reggae"], ["created_at", "2016-08-15 05:00:58.000614"], ["updated_at", "2016-08-15 05:00:58.000614"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 16], ["Name", "Rock"], ["created_at", "2016-08-15 05:00:58.017187"], ["updated_at", "2016-08-15 05:00:58.017187"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 17], ["Name", "Comida"], ["created_at", "2016-08-15 05:00:58.031471"], ["updated_at", "2016-08-15 05:00:58.031471"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 18], ["Name", "China"], ["created_at", "2016-08-15 05:00:58.046498"], ["updated_at", "2016-08-15 05:00:58.046498"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 19], ["Name", "Méxicana"], ["created_at", "2016-08-15 05:00:58.066957"], ["updated_at", "2016-08-15 05:00:58.066957"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 20], ["Name", "Mariscos"], ["created_at", "2016-08-15 05:00:58.080114"], ["updated_at", "2016-08-15 05:00:58.080114"]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 21], ["Name", "Rapida"], ["created_at", "2016-08-15 05:00:58.093616"], ["updated_at", "2016-08-15 05:00:58.093616"]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 22], ["Name", "Café"], ["created_at", "2016-08-15 05:00:58.110057"], ["updated_at", "2016-08-15 05:00:58.110057"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 23], ["Name", "Japonesa"], ["created_at", "2016-08-15 05:00:58.127573"], ["updated_at", "2016-08-15 05:00:58.127573"]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 24], ["Name", "Española"], ["created_at", "2016-08-15 05:00:58.143294"], ["updated_at", "2016-08-15 05:00:58.143294"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 25], ["Name", "Asiatica"], ["created_at", "2016-08-15 05:00:58.157956"], ["updated_at", "2016-08-15 05:00:58.157956"]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 26], ["Name", "Cortes Finos"], ["created_at", "2016-08-15 05:00:58.174615"], ["updated_at", "2016-08-15 05:00:58.174615"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 27], ["Name", "Tur"], ["created_at", "2016-08-15 05:00:58.189266"], ["updated_at", "2016-08-15 05:00:58.189266"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 28], ["Name", "Aéreo"], ["created_at", "2016-08-15 05:00:58.201109"], ["updated_at", "2016-08-15 05:00:58.201109"]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 29], ["Name", "Juegos"], ["created_at", "2016-08-15 05:00:58.214128"], ["updated_at", "2016-08-15 05:00:58.214128"]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["id", 30], ["Name", "Apuestas"], ["created_at", "2016-08-15 05:00:58.230349"], ["updated_at", "2016-08-15 05:00:58.230349"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "clasifications" ("id", "Name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["id", 31], ["Name", "Romance"], ["created_at", "2016-08-15 05:00:58.243492"], ["updated_at", "2016-08-15 05:00:58.243492"]]
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160815040245"]]
+  [1m[36m (147.9ms)[0m  [1mcommit transaction[0m
+Migrating to InsertQuestionGen (20160815045937)
+  [1m[35m (5.3ms)[0m  begin transaction
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["Question", "¿Quienes te acompañan?"], ["Section", 1], ["created_at", "2016-08-15 05:00:58.591360"], ["updated_at", "2016-08-15 05:00:58.591360"]]
+  [1m[35mSQL (4.8ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 1], ["Body", "Solo"], ["SRC", "questions/acompañantes/solo/solo.jpg"], ["Description", ""], ["created_at", "2016-08-15 05:00:58.706814"], ["updated_at", "2016-08-15 05:00:58.706814"]]
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["questions_id", 1], ["answers_id", 1], ["created_at", "2016-08-15 05:00:58.834421"], ["updated_at", "2016-08-15 05:00:58.834421"]]
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["answers_id", 1], ["clasifications_id", 12], ["created_at", "2016-08-15 05:00:58.932031"], ["updated_at", "2016-08-15 05:00:58.932031"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["Body", "Amigos"], ["SRC", "questions/acompañantes/amigos/amigos.jpg"], ["Description", ""], ["created_at", "2016-08-15 05:00:58.958998"], ["updated_at", "2016-08-15 05:00:58.958998"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["questions_id", 1], ["answers_id", 2], ["created_at", "2016-08-15 05:00:58.986147"], ["updated_at", "2016-08-15 05:00:58.986147"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 2], ["answers_id", 2], ["clasifications_id", 9], ["created_at", "2016-08-15 05:00:59.003169"], ["updated_at", "2016-08-15 05:00:59.003169"]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 3], ["Body", "Familia"], ["SRC", "questions/acompañantes/familia/familia.jpg"], ["Description", ""], ["created_at", "2016-08-15 05:00:59.021031"], ["updated_at", "2016-08-15 05:00:59.021031"]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 3], ["questions_id", 1], ["answers_id", 3], ["created_at", "2016-08-15 05:00:59.038818"], ["updated_at", "2016-08-15 05:00:59.038818"]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 3], ["answers_id", 3], ["clasifications_id", 10], ["created_at", "2016-08-15 05:00:59.056596"], ["updated_at", "2016-08-15 05:00:59.056596"]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["Body", "Pareja"], ["SRC", "questions/acompañantes/pareja/pareja.jpg"], ["Description", ""], ["created_at", "2016-08-15 05:00:59.074951"], ["updated_at", "2016-08-15 05:00:59.074951"]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 4], ["questions_id", 1], ["answers_id", 4], ["created_at", "2016-08-15 05:00:59.094076"], ["updated_at", "2016-08-15 05:00:59.094076"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 4], ["answers_id", 4], ["clasifications_id", 11], ["created_at", "2016-08-15 05:00:59.110352"], ["updated_at", "2016-08-15 05:00:59.110352"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["Question", "¿Que estas buscando?"], ["Section", 1], ["created_at", "2016-08-15 05:00:59.130038"], ["updated_at", "2016-08-15 05:00:59.130038"]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["Body", "Restaurantes"], ["SRC", "questions/restaurantes/Restaurantes.jpg"], ["Description", ""], ["created_at", "2016-08-15 05:00:59.149056"], ["updated_at", "2016-08-15 05:00:59.149056"]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 5], ["questions_id", 2], ["answers_id", 5], ["created_at", "2016-08-15 05:00:59.166543"], ["updated_at", "2016-08-15 05:00:59.166543"]]
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["answers_id", 5], ["types_id", 1], ["created_at", "2016-08-15 05:00:59.273019"], ["updated_at", "2016-08-15 05:00:59.273019"]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 6], ["Body", "Actividades Extremas"], ["SRC", "questions/actividadesExtremas/gotcha.jpg"], ["Description", ""], ["created_at", "2016-08-15 05:00:59.293267"], ["updated_at", "2016-08-15 05:00:59.293267"]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 6], ["questions_id", 2], ["answers_id", 6], ["created_at", "2016-08-15 05:00:59.310596"], ["updated_at", "2016-08-15 05:00:59.310596"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["answers_id", 6], ["types_id", 2], ["created_at", "2016-08-15 05:00:59.330008"], ["updated_at", "2016-08-15 05:00:59.330008"]]
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["Body", "Playas"], ["SRC", "questions/playa/playa.jpg"], ["Description", ""], ["created_at", "2016-08-15 05:00:59.345113"], ["updated_at", "2016-08-15 05:00:59.345113"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 7], ["questions_id", 2], ["answers_id", 7], ["created_at", "2016-08-15 05:00:59.359780"], ["updated_at", "2016-08-15 05:00:59.359780"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 3], ["answers_id", 7], ["types_id", 6], ["created_at", "2016-08-15 05:00:59.378070"], ["updated_at", "2016-08-15 05:00:59.378070"]]
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 8], ["Body", "Bares"], ["SRC", "questions/bar/bar.jpg"], ["Description", ""], ["created_at", "2016-08-15 05:00:59.394702"], ["updated_at", "2016-08-15 05:00:59.394702"]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 8], ["questions_id", 2], ["answers_id", 8], ["created_at", "2016-08-15 05:00:59.411192"], ["updated_at", "2016-08-15 05:00:59.411192"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 4], ["answers_id", 4], ["types_id", 4], ["created_at", "2016-08-15 05:00:59.426898"], ["updated_at", "2016-08-15 05:00:59.426898"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["Body", "Plazas"], ["SRC", "questions/plaza/plaza.jpg"], ["Description", ""], ["created_at", "2016-08-15 05:00:59.441955"], ["updated_at", "2016-08-15 05:00:59.441955"]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 9], ["questions_id", 2], ["answers_id", 9], ["created_at", "2016-08-15 05:00:59.459992"], ["updated_at", "2016-08-15 05:00:59.459992"]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 5], ["answers_id", 9], ["types_id", 3], ["created_at", "2016-08-15 05:00:59.476345"], ["updated_at", "2016-08-15 05:00:59.476345"]]
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 10], ["Body", "Antros"], ["SRC", "questions/antro/antro.jpg"], ["Description", ""], ["created_at", "2016-08-15 05:00:59.495183"], ["updated_at", "2016-08-15 05:00:59.495183"]]
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 10], ["questions_id", 2], ["answers_id", 10], ["created_at", "2016-08-15 05:00:59.518123"], ["updated_at", "2016-08-15 05:00:59.518123"]]
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 6], ["answers_id", 10], ["types_id", 5], ["created_at", "2016-08-15 05:00:59.542844"], ["updated_at", "2016-08-15 05:00:59.542844"]]
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160815045937"]]
+  [1m[35m (161.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (3.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_clasifications_on_clasifications_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_clasifications_on_clasifications_id' AND type='index'
+
+  [1m[36m (2.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_clasifications_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_clasifications_on_answers_id' AND type='index'
+[0m
+  [1m[35m (2.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_questions_on_questions_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_questions_on_questions_id' AND type='index'
+
+  [1m[36m (2.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_questions_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_questions_on_answers_id' AND type='index'
+[0m
+  [1m[35m (2.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_types_on_types_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_types_on_types_id' AND type='index'
+
+  [1m[36m (2.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_types_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_types_on_answers_id' AND type='index'
+[0m
+  [1m[35m (1.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attachments_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attachments_on_product_id' AND type='index'
+
+  [1m[36m (2.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_in_shopping_carts_on_shopping_cart_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_in_shopping_carts_on_shopping_cart_id' AND type='index'
+[0m
+  [1m[35m (2.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_in_shopping_carts_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_in_shopping_carts_on_product_id' AND type='index'
+
+  [1m[36m (2.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_link_attachments_on_attachment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_link_attachments_on_attachment_id' AND type='index'
+[0m
+  [1m[35m (2.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_link_attachments_on_link_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_link_attachments_on_link_id' AND type='index'
+
+  [1m[36m (1.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_links_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_links_on_product_id' AND type='index'
+[0m
+  [1m[35m (2.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_my_payments_on_shopping_cart_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_my_payments_on_shopping_cart_id' AND type='index'
+
+  [1m[36m (1.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_photos_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_photos_on_sites_id' AND type='index'
+[0m
+  [1m[35m (1.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_user_id' AND type='index'
+
+  [1m[36m (1.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_question_x_answers_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_question_x_answers_on_answers_id' AND type='index'
+[0m
+  [1m[35m (2.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_question_x_answers_on_questions_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_question_x_answers_on_questions_id' AND type='index'
+
+  [1m[36m (2.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_clasifications_on_clasifications_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_clasifications_on_clasifications_id' AND type='index'
+[0m
+  [1m[35m (2.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_clasifications_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_clasifications_on_sites_id' AND type='index'
+
+  [1m[36m (2.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_types_on_types_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_types_on_types_id' AND type='index'
+[0m
+  [1m[35m (2.5ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_types_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_types_on_sites_id' AND type='index'
+
+  [1m[36m (2.5ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sites_on_businessmans_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sites_on_businessmans_id' AND type='index'
+[0m
+  [1m[35m (2.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sites_on_scores_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sites_on_scores_id' AND type='index'
+
+  [1m[36m (1.7ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (2.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
