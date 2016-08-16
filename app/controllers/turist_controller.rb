@@ -1,6 +1,20 @@
 class TuristController < ApplicationController
   def index
-  	if params[:type_id] && params[:clasification_id]
+    if params[:answers_id]
+      answers_id = params[:answers_id].split(',');
+        
+      @sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
+                   .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
+                   .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")
+                   .joins("LEFT JOIN types ON types.id = site_x_types.types_id")
+                   .joins("LEFT JOIN site_x_clasifications ON  site_x_clasifications.sites_id = sites.id ")
+                   .joins("LEFT JOIN clasifications ON clasifications.id = site_x_clasifications.clasifications_id")
+                   .joins("LEFT JOIN answer_x_types  ON answer_x_types.types_id = types.id")
+                   .joins("LEFT JOIN answer_x_clasifications  ON answer_x_clasifications.clasifications_id = clasifications.id")
+                   .where("answer_x_clasifications.answers_id IN (?)", answers_id).distinct();
+
+
+    elsif params[:type_id] && params[:clasification_id]
       @sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
                    .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
                    .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")
@@ -26,16 +40,7 @@ class TuristController < ApplicationController
                  .where("photos.Section = 'Principal'");
     end
     @types = Type.all;
-  	
-    #arraySiete = [];
-  	#@resultSite = [];
-  	#i=1
-#       @sites.each do |site|
-#   		type = Type.where("sites_id =? "  site.id)
-#   		category = Clasification.where("sites_id = ?" ,  site.id)
-#   		@resultSite[i] = {"type" => type, "category" => category, "site" => site}
-#   		i = i+1
-#       end
-  	render layout: "landing"
+
+    render layout: "landing"
   end
 end

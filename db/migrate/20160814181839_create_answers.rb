@@ -1,4 +1,4 @@
-class CreateAnswers < ActiveRecord::Migration[5.0]
+class CreateAnswers < ActiveRecord::Migration
   def change
     create_table :answers do |t|
 		t.string :Body
@@ -6,6 +6,7 @@ class CreateAnswers < ActiveRecord::Migration[5.0]
     	t.string :Description
 	    t.timestamps null: false
       	t.timestamps
+      	t.timestamps null: false
     end
   end
 end

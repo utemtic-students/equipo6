@@ -16,7 +16,7 @@
  *= require_self
  */
  body{
- 	background-color: white;
+  background-color: white;
  }
 .fade-carousel {
     position: relative;
@@ -120,27 +120,7 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
-.fade-carousel .slides .slide-1 {
-  background-image: url(inicio/pezVelaIzq.jpg); 
-}
-.fade-carousel .slides .slide-2 {
-  background-image: url(inicio/playaDeOro.jpg);
-}
-.fade-carousel .slides .slide-3 {
-  background-image: url(inicio/tortuga.jpg);
-}
-.fade-carousel .slides .slide-4 {
-  background-image: url(inicio/playa.jpg);
-}
-.fade-carousel .slides .slide-5 {
-  background-image: url(inicio/playaTabla.jpg);
-}
-.fade-carousel .slides .slide-6 {
-  background-image: url(inicio/lasBrisas.jpg);
-}
-.fade-carousel .slides .slide-7 {
-  background-image: url(inicio/laMarina.jpg);
-}
+
 
 
 /********************************/

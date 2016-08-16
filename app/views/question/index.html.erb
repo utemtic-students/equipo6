@@ -32,22 +32,23 @@
     <% end %>
 </div>
  <!--start-->
-
-    
-
-
-   
 <%= form_tag({:controller => @fin != 1 ? 'question' : 'turist' , :action => "index"}, :method => "post") do %>
-    <%= text_field_tag :questions_id, @questions_id + 1, :class=>""%><br />
-    <%= text_field_tag :answers_id, @answers_id, :class=>""%><br />
-    <div style="padding:30px 0;">
+    <div>
+        <%= text_field_tag :inputHidden, :inputHidden %>
+        <%= text_field_tag :questions_id, @questions_id + 1, :type=>"hidden"%>
+        <%= text_field_tag :answers_id, @answers_id , :type=>"hidden"%>
+        <%= text_field_tag :answers_sec, @answers_sec , :type=>"hidden"%>
+        <%= text_field_tag :answers_del, @answers_del , :type=>"hidden"%>
+        <%= text_field_tag :allQuest, @allQuest , :type=>"hidden"%>
+    </div>
+    <div style="padding:5px 0;">
         <div id="thumbnail-slider">
             <div class="inner">
                 <ul>
                     <% @answers.each do |answer| %>
                         <li>
                             <button type="button" class="btn btn-primary btn-radio"><%= answer.Body%></button>
-                            <%= check_box_tag answer.Body, answer.id, :class=>"hidden"%>
+                            <%= check_box_tag answer.Body, answer.id, answer.id, :disabled=>"true" %>
                             
                             <%= image_tag  answer.SRC, :class=>"img-responsive img-radio thumb" %>
                         </li>
