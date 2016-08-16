@@ -3,10 +3,10 @@
 		%ul.no-list.no-padding.text-center
 			%li.col-md-4.inline-block.tall-padding.white-text
 				-if user_signed_in?
-					=link_to 'products/new', class:"right-space white-text" do
+					=link_to root_path, class:"right-space white-text" do
 						%i.mdi-action-shopping-basket
 							Mi negocio
-					=link_to root_path, class:"right-space white-text" do
+					=link_to 'products/new', class:"right-space white-text" do
 						%i.mdi-action-trending-up
 							Pagos
 			%li.col-md-4.inline-block.text-center.tall-padding.white-text

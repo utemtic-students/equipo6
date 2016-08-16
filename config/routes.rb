@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'client/index'
+
   get 'question/index'
   post 'question/index'
-  
+   
+  get 'client/index'
 
   get 'detail/index'
   get 'question/index'
