@@ -6724,3 +6724,1033 @@ Processing by ProductsController#show as HTML
   Rendered products/admin.haml within layouts/application (4.8ms)
   Rendered partials/_nav.haml (0.6ms)
 Completed 200 OK in 143ms (Views: 138.7ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (20.0ms)[0m  INSERT INTO "sites" ("id", "TelNumber", "Municipality", "State", "Colony", "OutdoorNumbe", "IndoorNumbe", "Name", "Description", "IsFree", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["id", 1], ["TelNumber", "3322089"], ["Municipality", "Manzanillo"], ["State", "Colima"], ["Colony", "Barrio 5 calle Mango"], ["OutdoorNumbe", 10], ["IndoorNumbe", 6], ["Name", "La Katana"], ["Description", "Disfruta de una deliciosa comida asiática"], ["IsFree", 0], ["created_at", "2016-08-15 23:48:00.318989"], ["updated_at", "2016-08-15 23:48:00.318989"]]
+  [1m[36m (177.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "photos" ("sites_id", "SRC", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sites_id", 1], ["SRC", "restaurant/Logo.jpg"], ["Section", "Principal"], ["created_at", "2016-08-15 23:48:00.631583"], ["updated_at", "2016-08-15 23:48:00.631583"]]
+  [1m[35m (171.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "photos" ("sites_id", "SRC", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["sites_id", 1], ["SRC", "restaurant/katana.jpg"], ["Section", "Galeria"], ["created_at", "2016-08-15 23:48:00.811165"], ["updated_at", "2016-08-15 23:48:00.811165"]]
+  [1m[36m (180.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "photos" ("sites_id", "SRC", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["sites_id", 1], ["SRC", "restaurant/katana1.jpg"], ["Section", "Galeria"], ["created_at", "2016-08-15 23:48:01.000782"], ["updated_at", "2016-08-15 23:48:01.000782"]]
+  [1m[35m (168.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "photos" ("sites_id", "SRC", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["sites_id", 1], ["SRC", "restaurant/katana2.jpg"], ["Section", "Galeria"], ["created_at", "2016-08-15 23:48:01.177673"], ["updated_at", "2016-08-15 23:48:01.177673"]]
+  [1m[36m (169.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "site_x_clasifications" ("sites_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["sites_id", 1], ["clasifications_id", 17], ["created_at", "2016-08-15 23:48:01.361325"], ["updated_at", "2016-08-15 23:48:01.361325"]]
+  [1m[35m (163.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "site_x_types" ("sites_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["sites_id", 1], ["types_id", 1], ["created_at", "2016-08-15 23:48:06.410011"], ["updated_at", "2016-08-15 23:48:06.410011"]]
+  [1m[36m (138.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-15 18:49:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#unregistered as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "shopping_carts" ("ip", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ip", "127.0.0.1"], ["status", "created"], ["created_at", "2016-08-15 23:49:06.133467"], ["updated_at", "2016-08-15 23:49:06.133467"]]
+  [1m[35m (97.0ms)[0m  commit transaction
+  Rendered welcome/unregistered.html.erb within layouts/landing (5.7ms)
+Completed 200 OK in 1418ms (Views: 1242.6ms | ActiveRecord: 98.1ms)
+
+
+Started GET "/assets/common.self-fb5406eb06f27d5999bd3c68a032312c0ff8ddf5d79f654e4d692a40e8db6935.css?body=1" for 127.0.0.1 at 2016-08-15 18:49:07 -0500
+
+
+Started GET "/assets/landing.self-56fde21f489b8e059973d3fccf1879302be3f7bb157d5fb7f8920f60bcfbd806.css?body=1" for 127.0.0.1 at 2016-08-15 18:49:07 -0500
+
+
+Started GET "/inicio/laMarina.jpg" for 127.0.0.1 at 2016-08-15 18:50:33 -0500
+
+ActionController::RoutingError (No route matches [GET] "/inicio/laMarina.jpg"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (20.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (74.9ms)
+
+
+Started GET "/question/index" for 127.0.0.1 at 2016-08-15 18:54:02 -0500
+Processing by QuestionController#index as HTML
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT * FROM "questions" WHERE (questions.id = 1 )
+  [1m[36mType Load (0.2ms)[0m  [1mSELECT "types".* FROM "types"[0m
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 1 )
+  Rendered question/index.html.erb within layouts/landing (155.4ms)
+Completed 200 OK in 375ms (Views: 288.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/question.self-b265073c5dc35b4b890efe6ad066c0954e808fd7e5c1295edc3bd1d9e2e3580d.js?body=1" for 127.0.0.1 at 2016-08-15 18:54:02 -0500
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["Question", "¿Quienes te acompañan?"], ["Section", 1], ["created_at", "2016-08-15 23:54:40.820829"], ["updated_at", "2016-08-15 23:54:40.820829"]]
+  [1m[36m (124.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["Body", "Solo"], ["SRC", "questions/acompañantes/solo/solo.jpg"], ["Description", ""], ["created_at", "2016-08-15 23:54:40.967140"], ["updated_at", "2016-08-15 23:54:40.967140"]]
+  [1m[35m (135.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["questions_id", 1], ["answers_id", 1], ["created_at", "2016-08-15 23:54:41.127598"], ["updated_at", "2016-08-15 23:54:41.127598"]]
+  [1m[36m (127.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["answers_id", 1], ["clasifications_id", 12], ["created_at", "2016-08-15 23:54:41.272891"], ["updated_at", "2016-08-15 23:54:41.272891"]]
+  [1m[35m (128.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 2], ["Body", "Amigos"], ["SRC", "questions/acompañantes/amigos/amigos.jpg"], ["Description", ""], ["created_at", "2016-08-15 23:54:41.412705"], ["updated_at", "2016-08-15 23:54:41.412705"]]
+  [1m[36m (133.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 2], ["questions_id", 1], ["answers_id", 2], ["created_at", "2016-08-15 23:54:41.556819"], ["updated_at", "2016-08-15 23:54:41.556819"]]
+  [1m[35m (112.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 2], ["answers_id", 2], ["clasifications_id", 9], ["created_at", "2016-08-15 23:54:41.677850"], ["updated_at", "2016-08-15 23:54:41.677850"]]
+  [1m[36m (90.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["Body", "Familia"], ["SRC", "questions/acompañantes/familia/familia.jpg"], ["Description", ""], ["created_at", "2016-08-15 23:54:41.780586"], ["updated_at", "2016-08-15 23:54:41.780586"]]
+  [1m[35m (74.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 3], ["questions_id", 1], ["answers_id", 3], ["created_at", "2016-08-15 23:54:41.866659"], ["updated_at", "2016-08-15 23:54:41.866659"]]
+  [1m[36m (90.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 3], ["answers_id", 3], ["clasifications_id", 10], ["created_at", "2016-08-15 23:54:41.967526"], ["updated_at", "2016-08-15 23:54:41.967526"]]
+  [1m[35m (88.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 4], ["Body", "Pareja"], ["SRC", "questions/acompañantes/pareja/pareja.jpg"], ["Description", ""], ["created_at", "2016-08-15 23:54:42.065579"], ["updated_at", "2016-08-15 23:54:42.065579"]]
+  [1m[36m (79.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 4], ["questions_id", 1], ["answers_id", 4], ["created_at", "2016-08-15 23:54:42.154463"], ["updated_at", "2016-08-15 23:54:42.154463"]]
+  [1m[35m (80.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answer_x_clasifications" ("id", "answers_id", "clasifications_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 4], ["answers_id", 4], ["clasifications_id", 11], ["created_at", "2016-08-15 23:54:42.245044"], ["updated_at", "2016-08-15 23:54:42.245044"]]
+  [1m[36m (77.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("id", "Question", "Section", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 2], ["Question", "¿Que estas buscando?"], ["Section", 1], ["created_at", "2016-08-15 23:54:42.332913"], ["updated_at", "2016-08-15 23:54:42.332913"]]
+  [1m[35m (67.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 5], ["Body", "Restaurantes"], ["SRC", "questions/restaurantes/Restaurantes.jpg"], ["Description", ""], ["created_at", "2016-08-15 23:54:42.410754"], ["updated_at", "2016-08-15 23:54:42.410754"]]
+  [1m[36m (78.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 5], ["questions_id", 2], ["answers_id", 5], ["created_at", "2016-08-15 23:54:42.497021"], ["updated_at", "2016-08-15 23:54:42.497021"]]
+  [1m[35m (81.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 1], ["answers_id", 5], ["types_id", 1], ["created_at", "2016-08-15 23:54:42.595675"], ["updated_at", "2016-08-15 23:54:42.595675"]]
+  [1m[36m (81.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["Body", "Actividades Extremas"], ["SRC", "questions/actividadesExtremas/gotcha.jpg"], ["Description", ""], ["created_at", "2016-08-15 23:54:42.687331"], ["updated_at", "2016-08-15 23:54:42.687331"]]
+  [1m[35m (90.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 6], ["questions_id", 2], ["answers_id", 6], ["created_at", "2016-08-15 23:54:42.785825"], ["updated_at", "2016-08-15 23:54:42.785825"]]
+  [1m[36m (92.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 2], ["answers_id", 6], ["types_id", 2], ["created_at", "2016-08-15 23:54:42.885770"], ["updated_at", "2016-08-15 23:54:42.885770"]]
+  [1m[35m (91.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 7], ["Body", "Playas"], ["SRC", "questions/playa/playa.jpg"], ["Description", ""], ["created_at", "2016-08-15 23:54:42.984082"], ["updated_at", "2016-08-15 23:54:42.984082"]]
+  [1m[36m (82.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 7], ["questions_id", 2], ["answers_id", 7], ["created_at", "2016-08-15 23:54:43.074193"], ["updated_at", "2016-08-15 23:54:43.074193"]]
+  [1m[35m (103.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 3], ["answers_id", 7], ["types_id", 6], ["created_at", "2016-08-15 23:54:43.186328"], ["updated_at", "2016-08-15 23:54:43.186328"]]
+  [1m[36m (90.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["Body", "Bares"], ["SRC", "questions/bar/bar.jpg"], ["Description", ""], ["created_at", "2016-08-15 23:54:43.285531"], ["updated_at", "2016-08-15 23:54:43.285531"]]
+  [1m[35m (91.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 8], ["questions_id", 2], ["answers_id", 8], ["created_at", "2016-08-15 23:54:43.385101"], ["updated_at", "2016-08-15 23:54:43.385101"]]
+  [1m[36m (92.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 4], ["answers_id", 4], ["types_id", 4], ["created_at", "2016-08-15 23:54:43.486041"], ["updated_at", "2016-08-15 23:54:43.486041"]]
+  [1m[35m (89.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 9], ["Body", "Plazas"], ["SRC", "questions/plaza/plaza.jpg"], ["Description", ""], ["created_at", "2016-08-15 23:54:43.584632"], ["updated_at", "2016-08-15 23:54:43.584632"]]
+  [1m[36m (80.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 9], ["questions_id", 2], ["answers_id", 9], ["created_at", "2016-08-15 23:54:43.673252"], ["updated_at", "2016-08-15 23:54:43.673252"]]
+  [1m[35m (70.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 5], ["answers_id", 9], ["types_id", 3], ["created_at", "2016-08-15 23:54:43.752078"], ["updated_at", "2016-08-15 23:54:43.752078"]]
+  [1m[36m (90.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "answers" ("id", "Body", "SRC", "Description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 10], ["Body", "Antros"], ["SRC", "questions/antro/antro.jpg"], ["Description", ""], ["created_at", "2016-08-15 23:54:43.850766"], ["updated_at", "2016-08-15 23:54:43.850766"]]
+  [1m[35m (110.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "question_x_answers" ("id", "questions_id", "answers_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["id", 10], ["questions_id", 2], ["answers_id", 10], ["created_at", "2016-08-15 23:54:43.968913"], ["updated_at", "2016-08-15 23:54:43.968913"]]
+  [1m[36m (83.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answer_x_types" ("id", "answers_id", "types_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["id", 6], ["answers_id", 10], ["types_id", 5], ["created_at", "2016-08-15 23:54:45.245653"], ["updated_at", "2016-08-15 23:54:45.245653"]]
+  [1m[35m (104.9ms)[0m  commit transaction
+
+
+Started GET "/question/index" for 127.0.0.1 at 2016-08-15 18:55:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionController#index as HTML
+  [1m[35mShoppingCart Load (0.3ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  [1m[35mType Load (0.3ms)[0m  SELECT "types".* FROM "types"
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 1 )[0m
+  Rendered question/index.html.erb within layouts/landing (346.9ms)
+Completed 200 OK in 635ms (Views: 575.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/common.self-fb5406eb06f27d5999bd3c68a032312c0ff8ddf5d79f654e4d692a40e8db6935.css?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/lan.self-2928b58a0a70d251d0814be093cae933ef70cac68ebea53195f784456453b144.css?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/bootstrap-material-design/snackbar.self-7fbc09b4c83aec44967aa4f2b4fbba3c3f62c95560f2a99321af99e72d60664e.css?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/bootstrap-material-design/index.self-f9ecc503685523b804a0f02a2ae501bb190b025b8354ec053661d70988296034.css?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/bootstrap-material-design/ripples.self-138c042e103000c2c279cbbe8cf30d1c48f18c24b7100658173a02680c73bb1f.css?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/bootstrap-material-design/material.self-a269dc7413ed51d1938473ca64105719ee2887e81346a8302ff3a8848e38140c.css?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/landing.self-56fde21f489b8e059973d3fccf1879302be3f7bb157d5fb7f8920f60bcfbd806.css?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/bootstrap-material-design/jquery.nouislider.self-14a408d2e3a637aad5505ea30dd659b99660f0beac7b100510f6abf6dd67728f.js?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/bootstrap-material-design/material.self-5aae70c7a657f0096b3b64d2f7c073024912d5c525488d25ccfc580590647a69.js?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/bootstrap-material-design/ripples.self-568842904f97a152a76ff3ed5995d21aabf5bd56e9f658b9929744dc581778ef.js?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/bootstrap-material-design/snackbar.self-020091f46c96844f46d9e6baa338d932f5cf4c9e998e7fe2136ab5d420d9b0c3.js?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/bootstrap-material-design/index.self-545c38b0922de19734fbffde62792c37c2aef6a3216cfa472449173165220f7d.js?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/question.self-b265073c5dc35b4b890efe6ad066c0954e808fd7e5c1295edc3bd1d9e2e3580d.js?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/question.self-d9414de081ffefb194acc319a19f7b547f1a4f378bb94c98fd581098a79f58f8.css?body=1" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/questions/acompa%C3%B1antes/solo/solo-36268d982fa8c6126cbacc5ba61dd3487be3d9e1fa5df63744e2c524784df7f2.jpg" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/questions/acompa%C3%B1antes/familia/familia-749a8532ee565245eba14de132a4a1acd08b08b76204d2ccc996caa00b3fc94e.jpg" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/questions/acompa%C3%B1antes/amigos/amigos-94627bbff4bd5ff7a50c73a39e122c16216d1354816bdef2215b8ecfc11c3dc6.jpg" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started GET "/assets/questions/acompa%C3%B1antes/pareja/pareja-974a38176d9b1985e3550feec0039afdd45493ef99736374b97f46f83a93dbde.jpg" for 127.0.0.1 at 2016-08-15 18:55:02 -0500
+
+
+Started POST "/question/index" for 127.0.0.1 at 2016-08-15 18:56:05 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ACkwglVnhOUD92ZKGXciKWK6xesQoSO3hqmAFm5GbwPuZiolRTb2iCgCQyd//nQf5MbEmQOSiaIn6J950pPN0g==", "inputHidden"=>"inputHidden", "questions_id"=>"2", "answers_id"=>"0,3", "fin"=>"", "commit"=>"Siguiente"}
+  [1m[35mShoppingCart Load (0.1ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT * FROM "questions" WHERE (questions.id = 2 )[0m
+  [1m[35mType Load (0.5ms)[0m  SELECT "types".* FROM "types"
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 2 )[0m
+  Rendered question/index.html.erb within layouts/landing (290.4ms)
+Completed 200 OK in 436ms (Views: 432.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/questions/restaurantes/Restaurantes-99a60e1e7f0cd763a50dd8c404a04b1fd8b9ca546452fd9e565f66b384b2b473.jpg" for 127.0.0.1 at 2016-08-15 18:56:06 -0500
+
+
+Started GET "/images/questions/actividadesExtremas/gotcha.jpg" for 127.0.0.1 at 2016-08-15 18:56:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/questions/actividadesExtremas/gotcha.jpg"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (47.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (42.0ms)
+
+
+Started GET "/images/questions/playa/playa.jpg" for 127.0.0.1 at 2016-08-15 18:56:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/questions/playa/playa.jpg"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.9ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (56.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.1ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (38.7ms)
+
+
+Started GET "/images/questions/plaza/plaza.jpg" for 127.0.0.1 at 2016-08-15 18:56:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/questions/plaza/plaza.jpg"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (40.9ms)
+
+
+Started GET "/images/questions/bar/bar.jpg" for 127.0.0.1 at 2016-08-15 18:56:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/questions/bar/bar.jpg"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (24.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (44.6ms)
+
+
+Started GET "/images/questions/antro/antro.jpg" for 127.0.0.1 at 2016-08-15 18:56:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/questions/antro/antro.jpg"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.1ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (23.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (43.2ms)
+
+
+Started GET "/turis/index" for 127.0.0.1 at 2016-08-15 18:56:35 -0500
+
+ActionController::RoutingError (No route matches [GET] "/turis/index"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.1ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (43.6ms)
+
+
+Started GET "/turist/index" for 127.0.0.1 at 2016-08-15 18:56:42 -0500
+Processing by TuristController#index as HTML
+  [1m[35mShoppingCart Load (0.2ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mType Load (0.2ms)[0m  [1mSELECT "types".* FROM "types"[0m
+  [1m[35mSite Load (0.1ms)[0m  SELECT sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC FROM "sites" LEFT JOIN photos ON photos.sites_id = sites.id WHERE (photos.Section = 'Principal')
+  Rendered turist/index.html.erb within layouts/landing (41.8ms)
+Completed 200 OK in 199ms (Views: 195.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2016-08-15 18:56:42 -0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff2"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.2ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (38.9ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2016-08-15 18:56:42 -0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.0ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.7ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2016-08-15 18:56:43 -0500
+
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.ttf"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/personal/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.0ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/personal/.rvm/gems/ruby-2.3.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (36.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-08-15 18:57:08 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (189.8ms)
+  Rendered partials/_nav.haml (3.4ms)
+Completed 200 OK in 695ms (Views: 678.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-08-15 18:57:09 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mShoppingCart Load (0.2ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.5ms)
+  Rendered partials/_nav.haml (0.7ms)
+Completed 200 OK in 152ms (Views: 150.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-08-15 18:57:14 -0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.1ms)
+  Rendered partials/_nav.haml (0.6ms)
+Completed 200 OK in 167ms (Views: 161.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-08-15 18:57:23 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wZWwZkJg2QHV+au3hSqz257azdRmW/iKRCGHi5tJ7Qgv2qrBUjGrbP4Mjtrjo+XtGKbMpnVoUp/lYJjkJ5xP2Q==", "user"=>{"email"=>"fernandoamz148@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mShoppingCart Load (0.1ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "fernandoamz148@gmail.com"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-08-15 02:32:22.914930"], ["current_sign_in_at", "2016-08-15 23:57:23.795168"], ["sign_in_count", 7], ["updated_at", "2016-08-15 23:57:23.796856"], ["id", 1]]
+  [1m[35m (190.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 512ms (ActiveRecord: 191.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-15 18:57:24 -0500
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by WelcomeController#index as HTML
+  [1m[35mShoppingCart Load (0.1ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "my_payments" INNER JOIN "shopping_carts" ON "my_payments"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "in_shopping_carts" ON "shopping_carts"."id" = "in_shopping_carts"."shopping_cart_id" WHERE "in_shopping_carts"."product_id" = ? AND "my_payments"."status" = 'payed'  [["product_id", 1]]
+  Rendered products/_product.haml (32.2ms)
+  [1m[36mMyPayment Load (0.4ms)[0m  [1mSELECT "my_payments".* FROM "my_payments" INNER JOIN "shopping_carts" ON "shopping_carts"."id" = "my_payments"."shopping_cart_id" INNER JOIN "in_shopping_carts" ON "in_shopping_carts"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "products" ON "products"."id" = "in_shopping_carts"."product_id" LEFT JOIN users ON products.user_id = users.id WHERE "users"."id" = 1  ORDER BY created_at desc[0m
+  Rendered payments/_index.haml (21.3ms)
+  Rendered welcome/index.haml within layouts/application (173.7ms)
+  Rendered partials/_nav.haml (1.0ms)
+Completed 200 OK in 406ms (Views: 348.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2016-08-15 18:57:31 -0500
+Processing by ProductsController#new as HTML
+  [1m[35mShoppingCart Load (0.2ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_form.html.haml (90.1ms)
+  Rendered products/new.html.haml within layouts/application (121.7ms)
+  Rendered partials/_nav.haml (4.2ms)
+Completed 200 OK in 308ms (Views: 304.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-15 18:57:35 -0500
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by WelcomeController#index as HTML
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "my_payments" INNER JOIN "shopping_carts" ON "my_payments"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "in_shopping_carts" ON "shopping_carts"."id" = "in_shopping_carts"."shopping_cart_id" WHERE "in_shopping_carts"."product_id" = ? AND "my_payments"."status" = 'payed'[0m  [["product_id", 1]]
+  Rendered products/_product.haml (5.8ms)
+  [1m[35mMyPayment Load (0.5ms)[0m  SELECT "my_payments".* FROM "my_payments" INNER JOIN "shopping_carts" ON "shopping_carts"."id" = "my_payments"."shopping_cart_id" INNER JOIN "in_shopping_carts" ON "in_shopping_carts"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "products" ON "products"."id" = "in_shopping_carts"."product_id" LEFT JOIN users ON products.user_id = users.id WHERE "users"."id" = 1  ORDER BY created_at desc
+  Rendered payments/_index.haml (5.8ms)
+  Rendered welcome/index.haml within layouts/application (18.4ms)
+  Rendered partials/_nav.haml (0.8ms)
+Completed 200 OK in 190ms (Views: 188.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-08-15 18:57:39 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.3ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered attachments/_form.haml (6.2ms)
+  Rendered products/admin.haml within layouts/application (42.5ms)
+  Rendered partials/_nav.haml (0.7ms)
+Completed 200 OK in 235ms (Views: 202.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/1?client=true" for 127.0.0.1 at 2016-08-15 18:57:46 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"client"=>"true", "id"=>"1"}
+  [1m[35mShoppingCart Load (0.1ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.haml within layouts/application (7.8ms)
+  Rendered partials/_nav.haml (0.8ms)
+Completed 200 OK in 144ms (Views: 139.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-15 18:58:16 -0500
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by WelcomeController#index as HTML
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "my_payments" INNER JOIN "shopping_carts" ON "my_payments"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "in_shopping_carts" ON "shopping_carts"."id" = "in_shopping_carts"."shopping_cart_id" WHERE "in_shopping_carts"."product_id" = ? AND "my_payments"."status" = 'payed'[0m  [["product_id", 1]]
+  Rendered products/_product.haml (3.5ms)
+  [1m[35mMyPayment Load (0.3ms)[0m  SELECT "my_payments".* FROM "my_payments" INNER JOIN "shopping_carts" ON "shopping_carts"."id" = "my_payments"."shopping_cart_id" INNER JOIN "in_shopping_carts" ON "in_shopping_carts"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "products" ON "products"."id" = "in_shopping_carts"."product_id" LEFT JOIN users ON products.user_id = users.id WHERE "users"."id" = 1  ORDER BY created_at desc
+  Rendered payments/_index.haml (1.7ms)
+  Rendered welcome/index.haml within layouts/application (8.5ms)
+  Rendered partials/_nav.haml (0.7ms)
+Completed 200 OK in 138ms (Views: 135.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-08-15 18:59:21 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6xcscckkxDwRgB8+JBw3maNXfJo8sWu3ti+HWYJ74xIwWr/f8tLM8J6y4VZ9E4LBuqpnX0UTRd3D0GMspZV9cQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mShoppingCart Load (0.1ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 200ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-15 18:59:22 -0500
+Processing by WelcomeController#unregistered as HTML
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered welcome/unregistered.html.erb within layouts/landing (3.4ms)
+Completed 200 OK in 133ms (Views: 131.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-15 23:27:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by WelcomeController#index as HTML
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "my_payments" INNER JOIN "shopping_carts" ON "my_payments"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "in_shopping_carts" ON "shopping_carts"."id" = "in_shopping_carts"."shopping_cart_id" WHERE "in_shopping_carts"."product_id" = ? AND "my_payments"."status" = 'payed'[0m  [["product_id", 1]]
+  Rendered products/_product.haml (39.2ms)
+  [1m[35mMyPayment Load (0.3ms)[0m  SELECT "my_payments".* FROM "my_payments" INNER JOIN "shopping_carts" ON "shopping_carts"."id" = "my_payments"."shopping_cart_id" INNER JOIN "in_shopping_carts" ON "in_shopping_carts"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "products" ON "products"."id" = "in_shopping_carts"."product_id" LEFT JOIN users ON products.user_id = users.id WHERE "users"."id" = 1  ORDER BY created_at desc
+  Rendered payments/_index.haml (12.2ms)
+  Rendered welcome/index.haml within layouts/application (174.5ms)
+  Rendered partials/_nav.haml (4.1ms)
+Completed 200 OK in 1065ms (Views: 902.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/bootstrap-material-design/material.self-a269dc7413ed51d1938473ca64105719ee2887e81346a8302ff3a8848e38140c.css?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/common.self-4cd3d610211ea5be48ac227646b023292e67a92b4d2ea158e16d845df79f5fd7.css?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/bootstrap-material-design/ripples.self-138c042e103000c2c279cbbe8cf30d1c48f18c24b7100658173a02680c73bb1f.css?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/bootstrap-material-design/snackbar.self-7fbc09b4c83aec44967aa4f2b4fbba3c3f62c95560f2a99321af99e72d60664e.css?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/bootstrap-material-design/index.self-f9ecc503685523b804a0f02a2ae501bb190b025b8354ec053661d70988296034.css?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/app.self-cc955d0d02717888bac01d12f75b365e5619bab78e6fea0bfa5635f4c89ac182.css?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/application.self-b75102c6d28381b84cfbd311460b0999c7908250c2a16a5355add577737ba385.css?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/bootstrap-material-design/jquery.nouislider.self-14a408d2e3a637aad5505ea30dd659b99660f0beac7b100510f6abf6dd67728f.js?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/bootstrap-material-design/material.self-5aae70c7a657f0096b3b64d2f7c073024912d5c525488d25ccfc580590647a69.js?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/bootstrap-material-design/ripples.self-568842904f97a152a76ff3ed5995d21aabf5bd56e9f658b9929744dc581778ef.js?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/bootstrap-material-design/snackbar.self-020091f46c96844f46d9e6baa338d932f5cf4c9e998e7fe2136ab5d420d9b0c3.js?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/bootstrap-material-design/index.self-545c38b0922de19734fbffde62792c37c2aef6a3216cfa472449173165220f7d.js?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/assets/Material-Design-Icons-390a078d38457ed583be9495cdfb5caa5d4b2853477c55d2d48de31759396582.woff?-g7cqhn" for 127.0.0.1 at 2016-08-15 23:27:46 -0500
+
+
+Started GET "/products/1" for 127.0.0.1 at 2016-08-15 23:27:48 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAttachment Load (0.8ms)[0m  [1mSELECT "attachments".* FROM "attachments" WHERE "attachments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered attachments/_form.haml (69.5ms)
+  Rendered products/admin.haml within layouts/application (105.5ms)
+  Rendered partials/_nav.haml (3.1ms)
+Completed 200 OK in 303ms (Views: 260.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/1?client=true" for 127.0.0.1 at 2016-08-15 23:27:49 -0500
+Processing by ProductsController#show as HTML
+  Parameters: {"client"=>"true", "id"=>"1"}
+  [1m[35mShoppingCart Load (0.1ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/show.html.haml within layouts/application (5.9ms)
+  Rendered partials/_nav.haml (0.9ms)
+Completed 200 OK in 142ms (Views: 138.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2016-08-15 23:27:55 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fSSi+yo/cCZUXGiO6mFUQyk3t0OXsAS/sUtLXYyvEzoZ9oPbC7eSSd/H90PuwO9XUNJrh2SGgDQoRlHITwLenw=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 201ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-15 23:27:56 -0500
+Processing by WelcomeController#unregistered as HTML
+  [1m[35mShoppingCart Load (0.2ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered welcome/unregistered.html.erb within layouts/landing (4.9ms)
+Completed 200 OK in 232ms (Views: 230.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/lan.self-2928b58a0a70d251d0814be093cae933ef70cac68ebea53195f784456453b144.css?body=1" for 127.0.0.1 at 2016-08-15 23:27:56 -0500
+
+
+Started GET "/assets/landing.self-56fde21f489b8e059973d3fccf1879302be3f7bb157d5fb7f8920f60bcfbd806.css?body=1" for 127.0.0.1 at 2016-08-15 23:27:56 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-15 23:28:32 -0500
+Processing by WelcomeController#unregistered as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (19.1ms)[0m  INSERT INTO "shopping_carts" ("ip", "status", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["ip", "127.0.0.1"], ["status", "created"], ["created_at", "2016-08-16 04:28:32.957063"], ["updated_at", "2016-08-16 04:28:32.957063"]]
+  [1m[36m (199.3ms)[0m  [1mcommit transaction[0m
+  Rendered welcome/unregistered.html.erb within layouts/landing (3.2ms)
+Completed 200 OK in 379ms (Views: 156.2ms | ActiveRecord: 218.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-08-15 23:28:38 -0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mShoppingCart Load (0.2ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.7ms)
+  Rendered partials/_nav.haml (0.7ms)
+Completed 200 OK in 237ms (Views: 212.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-08-15 23:28:38 -0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+  Rendered partials/_nav.haml (0.7ms)
+Completed 200 OK in 147ms (Views: 144.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-08-15 23:28:46 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8o4eFbiYZ4U50YBZAd6VrI3qRf/b4ACfIOXhaw7qoWArgEvsosLmyGszBJnJ79DKX8B+1+7xgjqV3YBP5HUuZg==", "user"=>{"email"=>"fernandoamz148@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mShoppingCart Load (0.2ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "fernandoamz148@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-08-15 23:57:23.795168"], ["current_sign_in_at", "2016-08-16 04:28:47.283832"], ["sign_in_count", 8], ["updated_at", "2016-08-16 04:28:47.285128"], ["id", 1]]
+  [1m[35m (166.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 681ms (ActiveRecord: 167.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-15 23:28:47 -0500
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by WelcomeController#index as HTML
+  [1m[35mShoppingCart Load (0.1ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "my_payments" INNER JOIN "shopping_carts" ON "my_payments"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "in_shopping_carts" ON "shopping_carts"."id" = "in_shopping_carts"."shopping_cart_id" WHERE "in_shopping_carts"."product_id" = ? AND "my_payments"."status" = 'payed'  [["product_id", 1]]
+  Rendered products/_product.haml (4.0ms)
+  [1m[36mMyPayment Load (0.3ms)[0m  [1mSELECT "my_payments".* FROM "my_payments" INNER JOIN "shopping_carts" ON "shopping_carts"."id" = "my_payments"."shopping_cart_id" INNER JOIN "in_shopping_carts" ON "in_shopping_carts"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "products" ON "products"."id" = "in_shopping_carts"."product_id" LEFT JOIN users ON products.user_id = users.id WHERE "users"."id" = 1  ORDER BY created_at desc[0m
+  Rendered payments/_index.haml (1.5ms)
+  Rendered welcome/index.haml within layouts/application (9.4ms)
+  Rendered partials/_nav.haml (0.8ms)
+Completed 200 OK in 163ms (Views: 160.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2016-08-15 23:28:52 -0500
+Processing by ProductsController#new as HTML
+  [1m[35mShoppingCart Load (0.2ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_form.html.haml (5.0ms)
+  Rendered products/new.html.haml within layouts/application (24.4ms)
+  Rendered partials/_nav.haml (1.0ms)
+Completed 200 OK in 191ms (Views: 188.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-15 23:30:20 -0500
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Processing by WelcomeController#index as HTML
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "my_payments" INNER JOIN "shopping_carts" ON "my_payments"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "in_shopping_carts" ON "shopping_carts"."id" = "in_shopping_carts"."shopping_cart_id" WHERE "in_shopping_carts"."product_id" = ? AND "my_payments"."status" = 'payed'[0m  [["product_id", 1]]
+  Rendered products/_product.haml (6.6ms)
+  [1m[35mMyPayment Load (0.4ms)[0m  SELECT "my_payments".* FROM "my_payments" INNER JOIN "shopping_carts" ON "shopping_carts"."id" = "my_payments"."shopping_cart_id" INNER JOIN "in_shopping_carts" ON "in_shopping_carts"."shopping_cart_id" = "shopping_carts"."id" INNER JOIN "products" ON "products"."id" = "in_shopping_carts"."product_id" LEFT JOIN users ON products.user_id = users.id WHERE "users"."id" = 1  ORDER BY created_at desc
+  Rendered payments/_index.haml (7.5ms)
+  Rendered welcome/index.haml within layouts/application (21.0ms)
+  Rendered partials/_nav.haml (0.8ms)
+Completed 200 OK in 172ms (Views: 170.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2016-08-15 23:30:25 -0500
+Processing by ProductsController#new as HTML
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered products/_form.html.haml (3.3ms)
+  Rendered products/new.html.haml within layouts/application (4.5ms)
+  Rendered partials/_nav.haml (0.7ms)
+Completed 200 OK in 145ms (Views: 141.7ms | ActiveRecord: 0.3ms)
