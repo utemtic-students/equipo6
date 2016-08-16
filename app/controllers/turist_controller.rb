@@ -1,6 +1,6 @@
 class TuristController < ApplicationController
   def index
-    if params[:fin]
+    if params[:answers_id]
       answers_id = params[:answers_id].split(',');
         
       @sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')

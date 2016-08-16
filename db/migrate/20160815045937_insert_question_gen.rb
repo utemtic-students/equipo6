@@ -101,8 +101,8 @@ class InsertQuestionGen < ActiveRecord::Migration
 
 	a = Answer.new
 	a.id = 6
-	a.Body = 'Actividades Extremas'
-	a.SRC = 'questions/actividadesExtremas/gotcha.jpg'
+	a.Body = 'Actividades'
+	a.SRC = 'questions/actividades/actividades.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new

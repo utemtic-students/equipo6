@@ -6,7 +6,7 @@ class InsertTypes < ActiveRecord::Migration
 	t.save
 	t = Type.new
 	t.id = 2
-	t.Name = "Actividades Extremas"
+	t.Name = "Actividades"
 	t.save
 	t = Type.new
 	t.id = 3
