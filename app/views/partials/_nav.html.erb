@@ -1,0 +1,47 @@
+				
+<div class="navbar navbar-info">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class=" navbar-brand" href="javascript:void(0)">GoTurista!</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
+    	<ul class="nav navbar-nav">
+        <% if user_signed_in? %>
+        <i class="mdi-action-shopping-basket navbar-brand">
+            <a>
+            <%= link_to "Mi negocio",   client_index_path,class: "white-text" %>
+            </a>
+        </i>
+         <i class="mdi-action-trending-up navbar-brand">
+            <a>
+            <%= link_to "Pagos", root_path,class: "white-text" %>
+            </a>
+            </i>
+        <i class="mdi-action-trending-up navbar-brand">
+            <a>
+            <%= link_to " Agregar productos", new_product_path,class: "white-text" %>
+            </a>
+            </i>
+           <ul class="nav navbar-nav navbar-right">
+            <i>
+            	<a>
+            	<%= link_to "Cerrar sesión", destroy_user_session_path,method: :delete, class:"white-text navbar-nav navbar-right" %>
+            	</a>
+            </i>
+            </ul>	
+       <% else %>
+         <li class="active"><%= link_to '¿Tienes un negocio?, Registrate',  new_user_registration_path  %></li>
+        <li><%= link_to 'Ingresa', new_user_session_path %></li></li>
+        <li class="no-list" class="no-padding" class="text-center">
+		</li>
+        <% end %> 
+      	</ul>
+    </div>
+  </div>
+</div>
+

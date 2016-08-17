@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   post 'question/index'
    
   get 'client/index'
-
+  get '/client/new'
+  post '/client/new'
+  
   get 'detail/index'
   get 'question/index'
   get 'turist/index'

@@ -1,9 +1,9 @@
 = form_for @product,builder: BootstrapFormBuilder do |f|
   = f.errors
   = f.text_field :name
-  %small Precio estimado que se podria gastar en tu negocio
+  %small Precio 
   = f.text_field :pricing
   = f.file_field :avatar
   = f.text_area :description
-  =f.submit "Enviar informacion"
+  =f.submit "Enviar"
   
