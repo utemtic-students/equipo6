@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'turist_prod/index'
+
   get 'question/index'
   post 'question/index'
   
@@ -10,6 +12,8 @@ Rails.application.routes.draw do
   post 'turist/index'
   get 'detail/index'
   post 'detail/index'
+  get 'turist_prod/index'
+  post 'turist_prod/index'
   
 
   resources :attachments, only: [:create,:destroy,:new,:show]
