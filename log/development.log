@@ -34620,6 +34620,1253 @@ Completed 200 OK in 2606ms (Views: 2476.7ms | ActiveRecord: 11.6ms)
 
 Started POST "/question/index" for 127.0.0.1 at 2016-08-16 06:21:11 -0500
 Processing by QuestionController#index as HTML
+<<<<<<< HEAD
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered question/index.html.erb within layouts/landing (10.1ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions/question" for ::1 at 2016-08-13 13:47:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/questions/question"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [47 times] (23.2ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (164.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (90.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (188.9ms)
+Started GET "/" for ::1 at 2016-08-13 14:02:26 -0500
+Processing by WelcomeController#unregistered as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "shopping_carts" ("status", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["status", "created"], ["ip", "::1"], ["created_at", 2016-08-13 19:02:26 UTC], ["updated_at", 2016-08-13 19:02:26 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering welcome/unregistered.html.erb within layouts/landing
+  Rendered welcome/unregistered.html.erb within layouts/landing (1.4ms)
+Completed 200 OK in 53ms (Views: 48.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/apple-touch-icon-precomposed.png" for ::1 at 2016-08-13 14:02:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [47 times] (12.2ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (112.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (156.3ms)
+Started GET "/apple-touch-icon.png" for ::1 at 2016-08-13 14:02:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered collection of /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [47 times] (16.8ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (205.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.2ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (161.2ms)
+Started GET "/" for ::1 at 2016-08-13 14:02:27 -0500
+Processing by WelcomeController#unregistered as HTML
+  [1m[35m (2.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "shopping_carts" ("status", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["status", "created"], ["ip", "::1"], ["created_at", 2016-08-13 19:02:27 UTC], ["updated_at", 2016-08-13 19:02:27 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering welcome/unregistered.html.erb within layouts/landing
+  Rendered welcome/unregistered.html.erb within layouts/landing (7.7ms)
+Completed 200 OK in 168ms (Views: 158.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/apple-touch-icon-precomposed.png" for ::1 at 2016-08-13 14:02:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [47 times] (13.5ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (119.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (158.3ms)
+Started GET "/apple-touch-icon.png" for ::1 at 2016-08-13 14:02:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [47 times] (11.2ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (116.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.2ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (156.8ms)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/macbookpro/Documents/goturista/app/models/user.rb:20)
+=======
+>>>>>>> 737312c9b7d177380a4b78926709bf2f58403089
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/macbookpro/Documents/goturista/app/models/user.rb:20)
+Started GET "/" for ::1 at 2016-08-13 22:45:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (100.7ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (204.9ms)
+Started GET "/turist/index" for ::1 at 2016-08-13 22:45:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.6ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (161.4ms)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/macbookpro/Documents/goturista/app/models/user.rb:20)
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAnswers (20160813220454)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Body" varchar, "SRC" varchar, "Description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160813220454"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddFinQuestion (20160814013209)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "questions" ADD "Fin" integer[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160814013209"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-08-14 03:46:09 UTC], ["updated_at", 2016-08-14 03:46:09 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_clasifications_on_clasifications_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_clasifications_on_clasifications_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_clasifications_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_clasifications_on_answers_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_types_on_types_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_types_on_types_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_answer_x_types_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_answer_x_types_on_answers_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attachments_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attachments_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_in_shopping_carts_on_shopping_cart_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_in_shopping_carts_on_shopping_cart_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_in_shopping_carts_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_in_shopping_carts_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_link_attachments_on_attachment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_link_attachments_on_attachment_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_link_attachments_on_link_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_link_attachments_on_link_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_links_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_links_on_product_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_my_payments_on_shopping_cart_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_my_payments_on_shopping_cart_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_photos_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_photos_on_sites_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_products_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_products_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_question_x_answers_on_answers_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_question_x_answers_on_answers_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_question_x_answers_on_questions_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_question_x_answers_on_questions_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_clasifications_on_clasifications_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_clasifications_on_clasifications_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_clasifications_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_clasifications_on_sites_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_types_on_types_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_types_on_types_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_site_x_types_on_sites_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_site_x_types_on_sites_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sites_on_businessmans_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sites_on_businessmans_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sites_on_scores_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sites_on_scores_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/macbookpro/Documents/goturista/app/models/user.rb:20)
+Started GET "/turist/index" for ::1 at 2016-08-13 22:46:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TuristController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "shopping_carts" ("status", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["status", "created"], ["ip", "::1"], ["created_at", 2016-08-14 03:46:16 UTC], ["updated_at", 2016-08-14 03:46:16 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering turist/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mSite Load (0.1ms)[0m  [1m[34mSELECT sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC FROM "sites" LEFT JOIN photos ON photos.sites_id = sites.id WHERE (photos.Section = 'Principal')[0m
+  Rendered turist/index.html.erb within layouts/landing (1528.0ms)
+Completed 200 OK in 1817ms (Views: 1775.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/landing.self-24e6389cb8ad5f7d63544926ae87082356301faa9db737ccd92702fb2b95673e.css?body=1" for ::1 at 2016-08-13 22:46:18 -0500
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for ::1 at 2016-08-13 22:46:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [50 times] (17.4ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (131.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (135.0ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (257.1ms)
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2016-08-13 22:46:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [50 times] (11.4ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (129.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (76.5ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (170.5ms)
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for ::1 at 2016-08-13 22:46:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [50 times] (11.2ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (126.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.2ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (165.8ms)
+Started GET "/question/index" for ::1 at 2016-08-13 22:46:23 -0500
+Processing by QuestionController#index as HTML
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 1 )[0m
+  Rendered question/index.html.erb within layouts/landing (30.4ms)
+Completed 200 OK in 104ms (Views: 87.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/question.self-78e7995e9eaf9604335125faa0d51763b46a3fb92012481546f2d9d2f5a98592.js?body=1" for ::1 at 2016-08-13 22:46:23 -0500
+Started GET "/assets/question.self-76abed0ad26581723a951838c6df3a3c4ee0e41f2e76908cc8188fe05918e86c.css?body=1" for ::1 at 2016-08-13 22:46:23 -0500
+Started GET "/turist/index?type_id=4" for ::1 at 2016-08-13 22:46:32 -0500
+Processing by TuristController#index as HTML
+  Parameters: {"type_id"=>"4"}
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering turist/index.html.erb within layouts/landing
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mSite Load (0.3ms)[0m  [1m[34mSELECT sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC FROM "sites" LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal' LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id LEFT JOIN types ON types.id = site_x_types.types_id WHERE (types.id = '4')[0m
+  Rendered turist/index.html.erb within layouts/landing (4.9ms)
+Completed 200 OK in 85ms (Views: 82.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/turist/index?type_id=4" for ::1 at 2016-08-13 22:46:34 -0500
+Processing by TuristController#index as HTML
+  Parameters: {"type_id"=>"4"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering turist/index.html.erb within layouts/landing
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mSite Load (0.2ms)[0m  [1m[34mSELECT sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC FROM "sites" LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal' LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id LEFT JOIN types ON types.id = site_x_types.types_id WHERE (types.id = '4')[0m
+  Rendered turist/index.html.erb within layouts/landing (6.7ms)
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/turist/index?type_id=1" for ::1 at 2016-08-13 22:46:35 -0500
+Processing by TuristController#index as HTML
+  Parameters: {"type_id"=>"1"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering turist/index.html.erb within layouts/landing
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mSite Load (0.2ms)[0m  [1m[34mSELECT sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC FROM "sites" LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal' LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id LEFT JOIN types ON types.id = site_x_types.types_id WHERE (types.id = '1')[0m
+  Rendered turist/index.html.erb within layouts/landing (5.4ms)
+Completed 200 OK in 67ms (Views: 65.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/turist/index?type_id=2" for ::1 at 2016-08-13 22:46:37 -0500
+Processing by TuristController#index as HTML
+  Parameters: {"type_id"=>"2"}
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering turist/index.html.erb within layouts/landing
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mSite Load (0.4ms)[0m  [1m[34mSELECT sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC FROM "sites" LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal' LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id LEFT JOIN types ON types.id = site_x_types.types_id WHERE (types.id = '2')[0m
+  Rendered turist/index.html.erb within layouts/landing (9.4ms)
+Completed 200 OK in 88ms (Views: 85.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/turist/index?type_id=3" for ::1 at 2016-08-13 22:46:38 -0500
+Processing by TuristController#index as HTML
+  Parameters: {"type_id"=>"3"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering turist/index.html.erb within layouts/landing
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mSite Load (0.2ms)[0m  [1m[34mSELECT sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC FROM "sites" LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal' LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id LEFT JOIN types ON types.id = site_x_types.types_id WHERE (types.id = '3')[0m
+  Rendered turist/index.html.erb within layouts/landing (7.0ms)
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/turist/users/sign_in" for ::1 at 2016-08-13 22:46:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/turist/users/sign_in"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered collection of /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [50 times] (24.0ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (152.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.4ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/macbookpro/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (148.9ms)
+Started GET "/" for ::1 at 2016-08-13 22:46:47 -0500
+Processing by WelcomeController#unregistered as HTML
+  [1m[36mShoppingCart Load (0.4ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering welcome/unregistered.html.erb within layouts/landing
+  Rendered welcome/unregistered.html.erb within layouts/landing (4.0ms)
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/inicio/pezVelaIzq.jpg" for ::1 at 2016-08-13 22:46:48 -0500
+Started GET "/assets/inicio/playaDeOro.jpg" for ::1 at 2016-08-13 22:47:03 -0500
+Started GET "/assets/inicio/tortuga.jpg" for ::1 at 2016-08-13 22:47:09 -0500
+Started GET "/assets/inicio/playa.jpg" for ::1 at 2016-08-13 22:47:15 -0500
+Started GET "/assets/inicio/playaTabla.jpg" for ::1 at 2016-08-13 22:47:21 -0500
+Started GET "/question/index" for ::1 at 2016-08-13 22:47:25 -0500
+Processing by QuestionController#index as HTML
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 1 )[0m
+  Rendered question/index.html.erb within layouts/landing (9.1ms)
+Completed 200 OK in 99ms (Views: 96.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:28 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7cVVxuvu/mot5uR8HhyucDbgPTOyBCFebmzny8vywyybKaDC5rdnRMHe2UEeKVkYap2y5zzZEfH2xiBeyDRPYA==", "questions_id"=>"2", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 2 )[0m
+  Rendered question/index.html.erb within layouts/landing (11.0ms)
+Completed 200 OK in 57ms (Views: 52.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:29 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SZM2j46i+4MumT0NrWpag2Gwqdz7gsYdoZRD05EvXG0/f8OLg/tircKhADCtX63rPc0mCHVf9rI5PoRGkunQIQ==", "questions_id"=>"3", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.5ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 3 )[0m
+  Rendered question/index.html.erb within layouts/landing (14.2ms)
+Completed 200 OK in 66ms (Views: 59.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:30 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wx1KgZALmIu+CFCrl/C4kQspO7JWMiXgWbawS1zQ/Tot8b+FnVIBpVIwbZaXxU/5V1S0ZtjvFU/BHHfeXxZxdg==", "questions_id"=>"4", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 4 )[0m
+  Rendered question/index.html.erb within layouts/landing (7.9ms)
+Completed 200 OK in 108ms (Views: 105.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:31 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YfDp8Icy7L/+Dw0dsIy2SCfpczUvi0bZgL/NwHeRaG8XHBz0imt1kRI3MCCwuUEge5T84aFWdnYYFQpVdFfkIw==", "questions_id"=>"5", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 5 )[0m
+  Rendered question/index.html.erb within layouts/landing (12.7ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:39 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YfDp8Icy7L/+Dw0dsIy2SCfpczUvi0bZgL/NwHeRaG8XHBz0imt1kRI3MCCwuUEge5T84aFWdnYYFQpVdFfkIw==", "questions_id"=>"5", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 5 )[0m
+  Rendered question/index.html.erb within layouts/landing (6.9ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:39 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3PrH+3zDEAJgD8F0UDAXH1F1oaApcMea9m3wAh5JrSCqFjL/cZqJLIw3/ElQBeB3DQgudKet9zVuxzeXHY8hbA==", "questions_id"=>"6", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 6 )[0m
+  Rendered question/index.html.erb within layouts/landing (17.9ms)
+Completed 200 OK in 113ms (Views: 110.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:40 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZonHqYnnDChPVP2VMvLOjVUyw+ujUUbHgEcFMGJUtjcQZTKthL6VBqNswKgyxznlCU9MPy2MdmgY7cKlYZI6ew==", "questions_id"=>"7", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.8ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 7 )[0m
+  Rendered question/index.html.erb within layouts/landing (11.6ms)
+Completed 200 OK in 70ms (Views: 66.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:41 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2PGStnj0O6HvJHsntcOxtLcfYBCqJUBiJArxy2RRIBquHWeyda2ijwMcRhq19kbc62LvxCT4cM28oDZeZ5esVg==", "questions_id"=>"8", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.5ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 8 )[0m
+  Rendered question/index.html.erb within layouts/landing (10.6ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:42 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ikgxUvr3+aZOAjQq72EeRx9hJEyxV+JTNXe8FpwCfj78pMRW965giKI6CRfvVOkvQxyrmD+K0vyt3XuDn8Tycg==", "questions_id"=>"9", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 9 )[0m
+  Rendered question/index.html.erb within layouts/landing (23.5ms)
+Completed 200 OK in 98ms (Views: 95.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:43 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OKXFj00/TiY9Hs8jNEMP5O6K2S58h3c6BihsReu5OeROSTCLQGbXCNEm8h40dviMsvdW+vJaR5WegqvQ6H+1qA==", "questions_id"=>"10", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.8ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.7ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 10 )[0m
+  Rendered question/index.html.erb within layouts/landing (12.7ms)
+Completed 200 OK in 84ms (Views: 77.7ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:43 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a7bRntnGt480XbBvSyHQmQDQgWKSkAeUAJ8JEicQxTAdWiSa1J8uodhljVJLFCfxXK0OthxNNzuYNc6HJNZJfA==", "questions_id"=>"11", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.5ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 11 )[0m
+  Rendered question/index.html.erb within layouts/landing (12.6ms)
+Completed 200 OK in 84ms (Views: 76.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:43 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IQOtIevgjKv3uH2Ei6g36ocNC1Fiey2Cgh8Qxy6PR4NX71gl5rkVhRuAQLmLncCC23CEheymHS0atddSLUnLzw==", "questions_id"=>"12", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 12 )[0m
+  Rendered question/index.html.erb within layouts/landing (7.3ms)
+Completed 200 OK in 87ms (Views: 84.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:44 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ouv7olplP4EUc06JFE4FR5q78PgNWuOIX/0MOMG5anvUBw6mVzymr/hLc7QUe/IvxsZ/LIOH0yfHV8utwn/mNw==", "questions_id"=>"13", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.5ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 13 )[0m
+  Rendered question/index.html.erb within layouts/landing (14.5ms)
+Completed 200 OK in 85ms (Views: 81.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:44 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+ShzQZiamvInzxkVBGE3Lj1WW+FD61Le7tlp2DJxr96PxIZFlcMD3Mv3JCgEVMBGYSvUNc02YnF2c65NMbcjkg==", "questions_id"=>"14", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 14 )[0m
+  Rendered question/index.html.erb within layouts/landing (10.8ms)
+Completed 200 OK in 91ms (Views: 88.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:45 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5wDhPMXoQ/R16JaVtOuHwbb5aTYgYl7g17HEPBaJczyR7BQ4yLHa2pnQq6i03nCp6oTm4q6/bk9PGwOpFU//cA==", "questions_id"=>"15", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 15 )[0m
+  Rendered question/index.html.erb within layouts/landing (8.2ms)
+Completed 200 OK in 77ms (Views: 72.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:45 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mgDOTw8WpYN7Ps02WU6Ntp1utKIWCeE4GaPB33aPo6Hs7DtLAk88rZcG8AtZe3rewRM7dpjU0ZeBCQZKdUkv7Q==", "questions_id"=>"16", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 16 )[0m
+  Rendered question/index.html.erb within layouts/landing (11.1ms)
+Completed 200 OK in 77ms (Views: 73.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:46 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4upMJpVhBDldtMxKGu/TI++Y/n7zqlpPZy3x5F0GBfWUBrkimDidF7GM8Xca2iRLs+Vxqn13auD/hzZxXsCJuQ==", "questions_id"=>"17", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 17 )[0m
+  Rendered question/index.html.erb within layouts/landing (12.1ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:46 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n+lLIm8/kxTsyUpILC71QrlA0SwRC11qUaOrvVl4vUjpBb4mYmYKOgDxd3UsGwIq5T1e+J/WbcXJCWwoWr4xBA==", "questions_id"=>"18", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 18 )[0m
+  Rendered question/index.html.erb within layouts/landing (6.6ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:46 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+yHwE1IIM8G4FKO5SVAQMxi4CynTVT9GYCMVoZISLu6NzQUXX1Gq71QsnoRJZedbRMWE/V2ID+n4idI0kdSiog==", "questions_id"=>"19", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 19 )[0m
+  Rendered question/index.html.erb within layouts/landing (7.4ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:47 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qbwth80klhoFy1W60O2hkaZUU3emkGGqKY9szE7UMz03UNiDwH0PNOnzaIfQ2Fb5+incoyhNUQWxJatZTRK/cQ==", "questions_id"=>"20", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 20 )[0m
+  Rendered question/index.html.erb within layouts/landing (16.7ms)
+Completed 200 OK in 91ms (Views: 84.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:47 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fw37VeXAZ4CZtEI5G83EoqsS/8G7ZD7B/2eBUfPd+o5h4Q5R6Jn+rnWMfwQb+DPK929wFTW5Dm5nzUbE8Bt2wg==", "questions_id"=>"21", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 21 )[0m
+  Rendered question/index.html.erb within layouts/landing (7.6ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/question/index" for ::1 at 2016-08-13 22:47:47 -0500
+Processing by QuestionController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vWL4GvDx/P7eloalPZ2/BlwjhHc8teh8GbrhRbzEtQ7Ljg0e/ahl0DKuu5g9qEhuAF4Lo7Jo2NOBECbQvwI5Qg==", "questions_id"=>"22", "answers_id"=>"", "commit"=>"Siguiente"}
+  [1m[36mShoppingCart Load (0.2ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.5ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 22 )[0m
+  Rendered question/index.html.erb within layouts/landing (12.0ms)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/question/index" for ::1 at 2016-08-13 22:47:54 -0500
+Processing by QuestionController#index as HTML
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT * FROM "questions" WHERE (questions.id = 1 )[0m
+  Rendering question/index.html.erb within layouts/landing
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT * FROM "answers" LEFT JOIN question_x_answers AS qxa ON qxa.answers_id = answers.id WHERE (qxa.questions_id = 1 )[0m
+  Rendered question/index.html.erb within layouts/landing (14.6ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-08-13 22:47:54 -0500
+Processing by WelcomeController#unregistered as HTML
+  [1m[36mShoppingCart Load (0.1ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering welcome/unregistered.html.erb within layouts/landing
+  Rendered welcome/unregistered.html.erb within layouts/landing (3.4ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/inicio/pezVelaIzq.jpg" for ::1 at 2016-08-13 22:47:54 -0500
+Started GET "/turist/index?type_id=3" for ::1 at 2016-08-13 22:47:54 -0500
+Processing by TuristController#index as HTML
+  Parameters: {"type_id"=>"3"}
+  [1m[36mShoppingCart Load (0.3ms)[0m  [1m[34mSELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering turist/index.html.erb within layouts/landing
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  [1m[36mSite Load (0.3ms)[0m  [1m[34mSELECT sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC FROM "sites" LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal' LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id LEFT JOIN types ON types.id = site_x_types.types_id WHERE (types.id = '3')[0m
+  Rendered turist/index.html.erb within layouts/landing (3.8ms)
+Completed 200 OK in 81ms (Views: 77.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/inicio/laMarina.jpg" for ::1 at 2016-08-13 22:48:00 -0500
+Started GET "/assets/inicio/lasBrisas.jpg" for ::1 at 2016-08-13 22:48:03 -0500
+Started GET "/assets/inicio/playaTabla.jpg" for ::1 at 2016-08-13 22:48:16 -0500
+Started GET "/assets/inicio/playa.jpg" for ::1 at 2016-08-13 22:48:19 -0500
+Started GET "/assets/inicio/tortuga.jpg" for ::1 at 2016-08-13 22:48:27 -0500
+Started GET "/assets/inicio/playaDeOro.jpg" for ::1 at 2016-08-13 22:48:28 -0500
+=======
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"QGwaojyYmS1tCYzuOBcvc7hxlriK0/yvVXUfq1vFaJGi0wFffYlO+bGCVnyaWLEUkY8WzLAOmbHUCOx0aBC4VA==", "inputHidden"=>"inputHidden", "questions_id"=>"3", "answers_id"=>"0,5,8", "answers_sec"=>"0", "answers_del"=>"0", "allQuest"=>"0", "commit"=>"Siguiente"}
   [1m[35mShoppingCart Load (2.5ms)[0m  SELECT  "shopping_carts".* FROM "shopping_carts" WHERE "shopping_carts"."id" = ? LIMIT 1  [["id", 1]]
   [1m[36mAnswerXQuestion Load (1.5ms)[0m  [1mSELECT "answer_x_questions"."questions_id" FROM "answer_x_questions" WHERE (answers_id = 5 )[0m
@@ -34647,6 +35894,7 @@ Processing by TuristController#index as HTML
   [1m[36mSite Load (2.4ms)[0m  [1mSELECT DISTINCT sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC FROM "sites" LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal' LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id LEFT JOIN types ON types.id = site_x_types.types_id LEFT JOIN site_x_clasifications ON  site_x_clasifications.sites_id = sites.id LEFT JOIN clasifications ON clasifications.id = site_x_clasifications.clasifications_id LEFT JOIN answer_x_types  ON answer_x_types.types_id = types.id LEFT JOIN answer_x_clasifications  ON answer_x_clasifications.clasifications_id = clasifications.id WHERE (answer_x_clasifications.answers_id IN ('0','5','8'))[0m
   Rendered turist/index.html.erb within layouts/landing (59.6ms)
 Completed 200 OK in 1597ms (Views: 1563.5ms | ActiveRecord: 6.9ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for 127.0.0.1 at 2016-08-16 19:33:53 -0500
@@ -47074,3 +48322,6 @@ Migrating to InsertQuestionGen (20160815045937)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+=======
+>>>>>>> ef726051c10ba1b4dbc57defdc21d0bbf956cb3c
+>>>>>>> e116bdbd82ac606024b8e3df1741d35dc57e1f60
