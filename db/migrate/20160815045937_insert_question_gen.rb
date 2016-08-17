@@ -463,6 +463,68 @@ class InsertQuestionGen < ActiveRecord::Migration
 	q.Section = 1
 	q.save
 
+	a = Answer.new
+	a.id = 24
+	a.Body = 'Disco'
+	a.SRC = 'questions/musica/disco/disco.jpg'
+	a.Description = ""
+	a.save
+	qxa = QuestionXAnswer.new
+	qxa.id = 24
+	qxa.questions_id = 7
+	qxa.answers_id =24
+	qxa.save
+	axc = AnswerXClasification.new
+	axc.id = 24
+	axc.answers_id = 24
+	axc.clasifications_id = 14
+	axc.save
+
+	a = Answer.new
+	a.id = 25
+	a.Body = 'Rock'
+	a.SRC = 'questions/musica/rock/rock.jpg'
+	a.Description = ""
+	a.save
+	qxa = QuestionXAnswer.new
+	qxa.id = 25
+	qxa.questions_id = 7
+	qxa.answers_id = 25
+	qxa.save
+	axc = AnswerXClasification.new
+	axc.id = 25
+	axc.answers_id = 25
+	axc.clasifications_id = 16
+	axc.save
+
+	a = Answer.new
+	a.id = 26
+	a.Body = 'Reggae'
+	a.SRC = 'questions/musica/reggae/reggae.jpg'
+	a.Description = ""
+	a.save
+	qxa = QuestionXAnswer.new
+	qxa.id = 26
+	qxa.questions_id = 7
+	qxa.answers_id = 26
+	qxa.save
+	axc = AnswerXClasification.new
+	axc.id = 26
+	axc.answers_id = 26
+	axc.clasifications_id = 15
+	axc.save
+
+	axq = AnswerXQuestion.new
+	axq.id = 7
+	axq.answers_id = 21
+	axq.questions_id = 7
+	axq.save
+
+	axq = AnswerXQuestion.new
+	axq.id = 8
+	axq.answers_id = 22
+	axq.questions_id = 7
+	axq.save
 
   end
 end
