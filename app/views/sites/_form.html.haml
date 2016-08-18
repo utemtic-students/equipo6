@@ -1,0 +1,46 @@
+= form_for @site do |f|
+  - if @site.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@site.errors.count, "error")} prohibited this site from being saved:"
+      %ul
+        - @site.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :TelNumber
+    = f.text_field :TelNumber
+  .field
+    = f.label :Municipality
+    = f.text_field :Municipality
+  .field
+    = f.label :State
+    = f.text_area :State
+  .field
+    = f.label :Colony
+    = f.text_area :Colony
+  .field
+    = f.label :OutdoorNumbe
+    = f.text_field :OutdoorNumbe
+  .field
+    = f.label :IndoorNumbe
+    = f.text_field :IndoorNumbe
+  .field
+    = f.label :Name
+    = f.text_area :Name
+  .field
+    = f.label :Latitud
+    = f.text_field :Latitud
+  .field
+    = f.label :Longitud
+    = f.text_field :Longitud
+  .field
+    = f.label :score
+    = f.text_field :score
+  .field
+    = f.label :businessmans
+    = f.text_area :businessmans
+  .field
+    = f.label :Description
+    = f.text_area :Description
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,44 @@
+%h1 Lista de sitios
+
+%table.table.table-striped.table-hover
+ %div.col-md-6.col-xs-10.col-sm-8.col-lg-5.center-block.no-float
+  %thead
+  %tr
+  %th Telnumber
+  %th Municipality
+  %th State
+  %th Colony
+  %th Outdoornumbe
+  %th Indoornumbe
+  %th Name
+  %th Latitud
+  %th Longitud
+  %th Score
+  %th Businessmans
+  %th Description
+  %th
+  %th
+  %th
+
+  %tbody
+ - @sites.each do |site|
+  %tr
+  %td= site.TelNumber
+  %td= site.Municipality
+  %td= site.State
+  %td= site.Colony
+  %td= site.OutdoorNumbe
+  %td= site.IndoorNumbe
+  %td= site.Name
+  %td= site.Latitud
+  %td= site.Longitud
+  %td= site.score
+  %td= site.businessmans
+  %td= site.Description
+  %td= link_to 'Ver', site
+  %td= link_to 'Editar', edit_site_path(site)
+  %td= link_to 'Eliminar', site, :method => :delete, :data => { :confirm => '¿Estas seguror de eliminar?' }
+
+%br
+
+= link_to 'Nueva Empresa', new_site_path, class:"payment-btn paypal-btn no-margin"

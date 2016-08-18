@@ -66,7 +66,7 @@ class Sites1 < ActiveRecord::Migration
 
 	s = Site.new
 	s.id = 2
-	s.TelNumber = 3123966363
+	s.TelNumber = 3123
 	s.Municipality = "Manzanillo"
 	s.State = "Colima"
 	s.Colony = "Av. Constitución , Vista Hermosa"
@@ -127,7 +127,7 @@ class Sites1 < ActiveRecord::Migration
 
 	s = Site.new
 	s.id = 3
-	s.TelNumber =3336664 
+	s.TelNumber =333
 	s.Municipality = "Manzanillo"
 	s.State = "Colima"
 	s.Colony = "Av. Lázaro Cárdenas,  Manzanillo, Col."
@@ -191,7 +191,7 @@ class Sites1 < ActiveRecord::Migration
 
 	s = Site.new
 	s.id = 4
-	s.TelNumber = 3337333
+	s.TelNumber = 333
 	s.Municipality = "Manzanillo"
 	s.State = "Colima"
 	s.Colony = "Boulevard Miguel de la Madrid Hurtado, Playa Azul Salagua."
@@ -233,7 +233,7 @@ class Sites1 < ActiveRecord::Migration
 
 	s = Site.new
 	s.id = 5
-	s.TelNumber = 3337333
+	s.TelNumber = 333
 	s.Municipality = "Manzanillo"
 	s.State = "Colima"
 	s.Colony = "xx xx de la xx xx, xx xx xx."
@@ -289,7 +289,7 @@ class Sites1 < ActiveRecord::Migration
 
 	s = Site.new
 	s.id = 6
-	s.TelNumber = 3322089
+	s.TelNumber = 3322
 	s.Municipality = "Manzanillo"
 	s.State = "Colima"
 	s.Colony = "Barrio 5 calle Mango"
@@ -352,7 +352,7 @@ class Sites1 < ActiveRecord::Migration
 
 	s = Site.new
 	s.id = 7
-	s.TelNumber =  3336020
+	s.TelNumber =  333
 	s.Municipality = "Manzanillo"
 	s.State = "Colima"
 	s.Colony = "Manzanillo, Col., División del Norte, Las Brisas, Playa Azul las Brisas."
@@ -404,7 +404,7 @@ class Sites1 < ActiveRecord::Migration
 
 	s = Site.new
 	s.id = 8
-	s.TelNumber =  00000
+	s.TelNumber =  000
 	s.Municipality = "Manzanillo"
 	s.State = "Colima"
 	s.Colony = "Lic. Miguel de la Madrid Hurtado , El Tajo."
@@ -474,7 +474,7 @@ class Sites1 < ActiveRecord::Migration
 
 	s = Site.new
 	s.id = 9
-	s.TelNumber =  00000
+	s.TelNumber =  000
 	s.Municipality = "Manzanillo"
 	s.State = "Colima"
 	s.Colony = "Las Palmas."
@@ -532,7 +532,7 @@ class Sites1 < ActiveRecord::Migration
 
 	s = Site.new
 	s.id = 10
-	s.TelNumber =  3343043
+	s.TelNumber =  3343
 	s.Municipality = "Manzanillo"
 	s.State = "Colima"
 	s.Colony = "Plaza las Palmas, Blvd Miguel de la Madrid, Salahua."
@@ -581,7 +581,7 @@ class Sites1 < ActiveRecord::Migration
 
 	s = Site.new
 	s.id = 11
-	s.TelNumber =  10000
+	s.TelNumber =  100
 	s.Municipality = "Manzanillo"
 	s.State = "Colima"
 	s.Colony = "Miguel de la Madrid, Santiago Centro."

@@ -1,0 +1,42 @@
+%p#notice= notice
+
+%p
+  %b Telnumber:
+  = @site.TelNumber
+%p
+  %b Municipality:
+  = @site.Municipality
+%p
+  %b State:
+  = @site.State
+%p
+  %b Colony:
+  = @site.Colony
+%p
+  %b Outdoornumbe:
+  = @site.OutdoorNumbe
+%p
+  %b Indoornumbe:
+  = @site.IndoorNumbe
+%p
+  %b Name:
+  = @site.Name
+%p
+  %b Latitud:
+  = @site.Latitud
+%p
+  %b Longitud:
+  = @site.Longitud
+%p
+  %b Score:
+  = @site.score
+%p
+  %b Businessmans:
+  = @site.businessmans
+%p
+  %b Description:
+  = @site.Description
+
+= link_to 'Edit', edit_site_path(@site)
+\|
+= link_to 'Back', sites_path
