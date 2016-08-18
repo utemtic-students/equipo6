@@ -207,25 +207,20 @@ ActiveRecord::Schema.define(version: 20160817222358) do
   add_index "site_x_types", ["types_id"], name: "index_site_x_types_on_types_id"
 
   create_table "sites", force: :cascade do |t|
-    t.string   "TelNumber"
-    t.string   "Municipality"
-    t.string   "State"
-    t.string   "Colony"
-    t.integer  "OutdoorNumbe"
-    t.integer  "IndoorNumbe"
-    t.string   "Name"
-    t.text     "Description"
-    t.decimal  "Latitud"
-    t.decimal  "Longitud"
-    t.integer  "scores_id"
-    t.integer  "businessmans_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.integer  "IsFree"
+    t.integer "TelNumber"
+    t.string  "Municipality"
+    t.text    "State"
+    t.text    "Colony"
+    t.integer "OutdoorNumbe"
+    t.integer "IndoorNumbe"
+    t.text    "Name"
+    t.integer "Latitud"
+    t.integer "Longitud"
+    t.integer "score"
+    t.text    "businessmans"
+    t.text    "Description"
+    t.integer "IsFree"
   end
-
-  add_index "sites", ["businessmans_id"], name: "index_sites_on_businessmans_id"
-  add_index "sites", ["scores_id"], name: "index_sites_on_scores_id"
 
   create_table "types", force: :cascade do |t|
     t.string   "Name"

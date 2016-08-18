@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
+  resources :sites
+  resources :posts
+  resources :posts
   get 'client/index'
-=======
   get 'turist_prod/index'
->>>>>>> 1cc94f5398c5205f2e24983be1cc079381b7c196
 
   get 'question/index'
   post 'question/index'
    
-  get 'client/index'
+  resources :client
   get '/client/new'
   post '/client/new'
   
