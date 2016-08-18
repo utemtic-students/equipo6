@@ -1,15 +1,26 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
+  get 'client/index'
+=======
+  get 'turist_prod/index'
+>>>>>>> 1cc94f5398c5205f2e24983be1cc079381b7c196
+
   get 'question/index'
   post 'question/index'
+   
+  get 'client/index'
+  get '/client/new'
+  post '/client/new'
   
-
   get 'detail/index'
   get 'question/index'
   get 'turist/index'
   post 'turist/index'
   get 'detail/index'
   post 'detail/index'
+  get 'turist_prod/index'
+  post 'turist_prod/index'
   
 
   resources :attachments, only: [:create,:destroy,:new,:show]

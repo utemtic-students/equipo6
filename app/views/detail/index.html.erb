@@ -87,7 +87,7 @@
                 <h2><center><%= @site.Description %>
                     <center> </h2>
                         <% if @site.IsFree == 0 %>
-                        <%= link_to "Promociones Y Productos", {:controller => "questions", :action => "question" }, :type=>"button", :class=>"btn btn-primary btn-lg btn-block"%>
+                        <%= link_to "Promociones Y Productos", {:controller => "turist_prod", :action => "index" }, :type=>"button", :class=>"btn btn-primary btn-lg btn-block"%>
                         <% end %>
                         <br><hr>
                         <h2>Informacion</h2>

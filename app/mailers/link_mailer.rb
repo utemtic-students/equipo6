@@ -1,9 +1,9 @@
 class LinkMailer < ActionMailer::Base
-	default from: "downloads@codigofacilito.com"
+	default from: "administracion@goturista.com"
 	layout false
 	def download_link(link)
 		@link = link
 		@product = link.product
-		mail(to: link.email,subject:"Descarga los productos que adquiriste en tiendus.com")
+		mail(to: link.email,subject:"Gracias por realizar tu compra con goturista")
 	end
 end
