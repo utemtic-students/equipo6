@@ -14,7 +14,7 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 1
-	p.SRC = "sites/elCosteño/logo.png"
+	p.SRC = "sites/elCosteño/logo.jpg"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
@@ -114,6 +114,10 @@ class Sites1 < ActiveRecord::Migration
 	sxc.sites_id = 2
 	sxc.clasifications_id = 11
 	sxc.save
+	sxc = SiteXClasification.new
+	sxc.sites_id = 2
+	sxc.clasifications_id = 18
+	sxc.save
 	sxt = SiteXType.new
 	sxt.sites_id = 2
 	sxt.types_id = 1
@@ -201,11 +205,6 @@ class Sites1 < ActiveRecord::Migration
 	p.sites_id = 4
 	p.SRC = "sites/elCamaronFeliz/logo.png"
 	p.Section = "Principal"
-	p.save
-	p = Photo.new
-	p.sites_id = 4
-	p.SRC = "sites/elCamaronFeliz/gal/img1.jpg"
-	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 4
@@ -339,6 +338,10 @@ class Sites1 < ActiveRecord::Migration
 	sxc = SiteXClasification.new
 	sxc.sites_id = 6
 	sxc.clasifications_id = 25
+	sxc.save
+	sxc = SiteXClasification.new
+	sxc.sites_id = 6
+	sxc.clasifications_id = 18
 	sxc.save
 	sxt = SiteXType.new
 	sxt.sites_id = 6
@@ -514,7 +517,7 @@ class Sites1 < ActiveRecord::Migration
 	sxc.save
 	sxc = SiteXClasification.new
 	sxc.sites_id = 9
-	sxc.clasifications_id = 31
+	sxc.clasifications_id = 32
 	sxc.save
 	sxc = SiteXClasification.new
 	sxc.sites_id = 9
@@ -611,6 +614,10 @@ class Sites1 < ActiveRecord::Migration
 	sxc = SiteXClasification.new
 	sxc.sites_id = 11
 	sxc.clasifications_id = 3
+	sxc.save
+	sxc = SiteXClasification.new
+	sxc.sites_id = 11
+	sxc.clasifications_id = 15
 	sxc.save
 	sxt = SiteXType.new
 	sxt.sites_id = 11

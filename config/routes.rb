@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
-  get 'client/index'
-=======
-  get 'turist_prod/index'
->>>>>>> 1cc94f5398c5205f2e24983be1cc079381b7c196
 
+  get 'client/index'
+  get 'turist_prod/index'
   get 'question/index'
   post 'question/index'
    

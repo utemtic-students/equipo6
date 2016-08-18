@@ -15,7 +15,7 @@ class QuestionController < ApplicationController
 			cont = 0;
 		end
 
- 		if @questions_id > 2
+ 		if @questions_id >=2
  			
 			answers = [];
 			answersExist = @answers_id.split(',');

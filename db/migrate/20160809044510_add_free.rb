@@ -1,5 +1,6 @@
 class AddFree < ActiveRecord::Migration
-	add_column :sites, :IsFree, :integer
+	
   def change
+  	add_column :sites, :IsFree, :integer
   end
 end
