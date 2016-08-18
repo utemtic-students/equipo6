@@ -124,5 +124,12 @@ class InsertClasification < ActiveRecord::Migration
 	c.id = 31
 	c.Name = "Romance"
 	c.save 
+	c = Clasification.new
+	c.id = 32
+	c.Name = "Plaza"
+	c.save 
+	c.id = 33
+	c.Name = "Playa"
+	c.save 
   end
 end

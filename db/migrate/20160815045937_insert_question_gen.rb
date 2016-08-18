@@ -130,7 +130,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 
 	a = Answer.new
 	a.id = 7
-	a.Body = 'Méxicana'
+	a.Body = 'Cortes Finos'
 	a.SRC = 'questions/restaurantes/mexicana/mexicana.jpg'
 	a.Description = ""
 	a.save
@@ -142,7 +142,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	axc = AnswerXClasification.new
 	axc.id = 6
 	axc.answers_id = 7
-	axc.clasifications_id = 19
+	axc.clasifications_id = 26
 	axc.save
 
 	a = Answer.new
@@ -242,17 +242,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	axc.clasifications_id = 2
 	axc.save
 
-	axq = AnswerXQuestion.new
-	axq.id = 5
-	axq.answers_id = 12
-	axq.questions_id = 5
-	axq.save
-
-	axq = AnswerXQuestion.new
-	axq.id = 6
-	axq.answers_id = 11
-	axq.questions_id = 6
-	axq.save
+	
 
 	q = Question.new
 	q.id = 5
@@ -455,6 +445,11 @@ class InsertQuestionGen < ActiveRecord::Migration
 	axc.id = 23
 	axc.answers_id = 23
 	axc.types_id = 3
+	axc.save
+	axc = AnswerXClasification.new
+	axc.id = 30
+	axc.answers_id = 23
+	axc.clasifications_id = 32
 	axc.save
 
 	q = Question.new

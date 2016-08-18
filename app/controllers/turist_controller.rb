@@ -2,7 +2,14 @@ class TuristController < ApplicationController
   def index
     if params[:answers_id]
       answers_id = params[:answers_id].split(',');
+      totalAnswer =[];
+      answers_id.each do |answer|
+        answer = answer.to_i;
+        if answer > 4
+          totalAnswer.push(answer);
+        end
         
+      end  
       @sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
                    .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
                    .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")
@@ -11,7 +18,9 @@ class TuristController < ApplicationController
                    .joins("LEFT JOIN clasifications ON clasifications.id = site_x_clasifications.clasifications_id")
                    .joins("LEFT JOIN answer_x_types  ON answer_x_types.types_id = types.id")
                    .joins("LEFT JOIN answer_x_clasifications  ON answer_x_clasifications.clasifications_id = clasifications.id")
-                   .where("answer_x_clasifications.answers_id IN (?)", answers_id).distinct();
+                   .where("answer_x_clasifications.answers_id IN (?)", totalAnswer).distinct();
+
+    
 
 
     elsif params[:type_id] && params[:clasification_id]
