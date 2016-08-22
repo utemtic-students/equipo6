@@ -222,7 +222,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	axc = AnswerXClasification.new
 	axc.id = 11
 	axc.answers_id = 11
-	axc.clasifications_id = 4
+	axc.clasifications_id = 3
 	axc.save
 
 	a = Answer.new
@@ -394,6 +394,11 @@ class InsertQuestionGen < ActiveRecord::Migration
 	axc.id = 20
 	axc.answers_id = 20
 	axc.types_id = 6
+	axc.save
+	axc = AnswerXClasification.new
+	axc.id = 50
+	axc.answers_id = 20
+	axc.clasifications_id = 33
 	axc.save
 
 	a = Answer.new

@@ -48,10 +48,6 @@ class Sites1 < ActiveRecord::Migration
 	sxc.save
 	sxc = SiteXClasification.new
 	sxc.sites_id = 1
-	sxc.clasifications_id = 3
-	sxc.save
-	sxc = SiteXClasification.new
-	sxc.sites_id = 1
 	sxc.clasifications_id = 10
 	sxc.save
 	sxc = SiteXClasification.new
@@ -518,10 +514,6 @@ class Sites1 < ActiveRecord::Migration
 	sxc = SiteXClasification.new
 	sxc.sites_id = 9
 	sxc.clasifications_id = 32
-	sxc.save
-	sxc = SiteXClasification.new
-	sxc.sites_id = 9
-	sxc.clasifications_id = 11
 	sxc.save
 	sxt = SiteXType.new
 	sxt.sites_id = 9
