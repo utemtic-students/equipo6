@@ -50,10 +50,6 @@ class Sites1 < ActiveRecord::Migration
 	sxc.sites_id = 1
 	sxc.clasifications_id = 10
 	sxc.save
-	sxc = SiteXClasification.new
-	sxc.sites_id = 1
-	sxc.clasifications_id = 11
-	sxc.save
 	sxt = SiteXType.new
 	sxt.sites_id = 1
 	sxt.types_id = 1
@@ -105,10 +101,6 @@ class Sites1 < ActiveRecord::Migration
 	sxc = SiteXClasification.new
 	sxc.sites_id = 2
 	sxc.clasifications_id = 23
-	sxc.save
-	sxc = SiteXClasification.new
-	sxc.sites_id = 2
-	sxc.clasifications_id = 11
 	sxc.save
 	sxc = SiteXClasification.new
 	sxc.sites_id = 2
@@ -171,10 +163,6 @@ class Sites1 < ActiveRecord::Migration
 	sxc = SiteXClasification.new
 	sxc.sites_id = 3
 	sxc.clasifications_id = 26
-	sxc.save
-	sxc = SiteXClasification.new
-	sxc.sites_id = 3
-	sxc.clasifications_id = 10
 	sxc.save
 	sxc = SiteXClasification.new
 	sxc.sites_id = 3
@@ -388,10 +376,6 @@ class Sites1 < ActiveRecord::Migration
 	sxc.sites_id = 7
 	sxc.clasifications_id = 22
 	sxc.save
-	sxc = SiteXClasification.new
-	sxc.sites_id = 7
-	sxc.clasifications_id = 11
-	sxc.save
 	sxt = SiteXType.new
 	sxt.sites_id = 7
 	sxt.types_id = 1
@@ -459,10 +443,6 @@ class Sites1 < ActiveRecord::Migration
 	sxc.sites_id = 8
 	sxc.clasifications_id = 20
 	sxc.save
-	sxc = SiteXClasification.new
-	sxc.sites_id = 8
-	sxc.clasifications_id = 11
-	sxc.save
 	sxt = SiteXType.new
 	sxt.sites_id = 8
 	sxt.types_id = 1
@@ -507,10 +487,7 @@ class Sites1 < ActiveRecord::Migration
 	p.save
 
 
-	sxc = SiteXClasification.new
-	sxc.sites_id = 9
-	sxc.clasifications_id = 10
-	sxc.save
+
 	sxc = SiteXClasification.new
 	sxc.sites_id = 9
 	sxc.clasifications_id = 32
@@ -599,14 +576,8 @@ class Sites1 < ActiveRecord::Migration
 	p.Section = "Galeria"
 	p.save
 
-	sxc = SiteXClasification.new
-	sxc.sites_id = 11
-	sxc.clasifications_id = 9
-	sxc.save
-	sxc = SiteXClasification.new
-	sxc.sites_id = 11
-	sxc.clasifications_id = 3
-	sxc.save
+
+	
 	sxc = SiteXClasification.new
 	sxc.sites_id = 11
 	sxc.clasifications_id = 15

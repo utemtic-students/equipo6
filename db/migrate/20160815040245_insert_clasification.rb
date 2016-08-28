@@ -33,22 +33,6 @@ class InsertClasification < ActiveRecord::Migration
 	c.Name = "Relajacion"
 	c.save
 	c = Clasification.new
-	c.id = 9
-	c.Name = "Amigos"
-	c.save
-	c = Clasification.new
-	c.id = 10
-	c.Name = "Familia"
-	c.save
-	c = Clasification.new
-	c.id = 11
-	c.Name = "Pareja"
-	c.save
-	c = Clasification.new
-	c.id = 12
-	c.Name = "Solo"
-	c.save
-	c = Clasification.new
 	c.id = 13
 	c.Name = "Baile"
 	c.save

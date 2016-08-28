@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160818060312) do
+ActiveRecord::Schema.define(version: 20160828054916) do
 
   create_table "answer_x_clasifications", force: :cascade do |t|
     t.integer  "answers_id"
@@ -72,6 +72,13 @@ ActiveRecord::Schema.define(version: 20160818060312) do
   add_index "attachments", ["product_id"], name: "index_attachments_on_product_id"
 
   create_table "clasifications", force: :cascade do |t|
+    t.string   "Name"
+    t.text     "Description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "companions", force: :cascade do |t|
     t.string   "Name"
     t.text     "Description"
     t.datetime "created_at",  null: false
@@ -195,6 +202,16 @@ ActiveRecord::Schema.define(version: 20160818060312) do
 
   add_index "site_x_clasifications", ["clasifications_id"], name: "index_site_x_clasifications_on_clasifications_id"
   add_index "site_x_clasifications", ["sites_id"], name: "index_site_x_clasifications_on_sites_id"
+
+  create_table "site_x_companions", force: :cascade do |t|
+    t.integer  "sites_id"
+    t.integer  "companions_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "site_x_companions", ["companions_id"], name: "index_site_x_companions_on_companions_id"
+  add_index "site_x_companions", ["sites_id"], name: "index_site_x_companions_on_sites_id"
 
   create_table "site_x_types", force: :cascade do |t|
     t.integer  "sites_id"
