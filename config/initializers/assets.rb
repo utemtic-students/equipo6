@@ -13,4 +13,7 @@ Rails.application.config.assets.precompile += %w( landing.css )
 Rails.application.config.assets.precompile += %w( question.js )
 Rails.application.config.assets.precompile += %w( carrucel.js )
 Rails.application.config.assets.precompile += %w( question.css )
+Rails.application.config.assets.precompile += %w( turist_prod.js )
+Rails.application.config.assets.precompile += %w( modalMap.css )
+Rails.application.config.assets.precompile += %w( modalMap.js )
 

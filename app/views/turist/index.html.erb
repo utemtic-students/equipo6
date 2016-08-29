@@ -1,3 +1,6 @@
+<%= stylesheet_link_tag    'modalMap', media: 'all', 'data-turbolinks-track' => true %>
+
+
 <div class="navbar navbar-info">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -30,36 +33,52 @@
             <center><h2>Estos lugares</h2></center>
             <center><h3><strong>"Podrian gustarte"</strong></h3></center>
         </div>
-
-        <br>
-        
+        <br> 
         <div class="col-md-9">
             <div class="row">
                 <% cont = 0 %>
                 <% @sites.each do |site| %>
-                    <%  cont = cont + 1 %>
+                     <%  cont = cont + 1 %>
+                    <% if cont % 2 != 0 %>
+                        <div class="row">
+                    <% end %>
+                    
                     <div class="col-sm-12 col-md-6">
                         <div class="thumbnail">
-                            <%= image_tag  site.SRC%>
+                            <%= image_tag  site[:site].SRC%>
                             <div >
                                 <br> 
                                 
                                 <h3 id="titulo" class="description">
-                                    <%= link_to site.Name, {:controller => "detail", :action => "index", :site_id => site.id}%>
+                                    <%= link_to site[:site].Name, {:controller => "detail", :action => "index", :site_id => site[:site].id}%>
                                 </h3>
                                 <hr>
                                 <h4 class="description">
-                                  <p class="text-justify"> <%= site.Description%> </p>
+                                  <p class="text-justify"> <%= site[:site].Description%> </p>
                               </h4>
                               <h5 class="description">
                                 <p>
-                                    <a  href=""><strong>Actividades Extrema</strong></a><br>
+                                    <strong>
+                                    <% for tp in site[:type] %>
+                                        - <%= link_to tp[:name], {:controller => "turist", :action => "index", :type_id => tp[:id]}%>
+                                    <% end %>
+                                    </strong>
+                                    <br>
                                 </p>
                                 <p>
-                                    <a  href=""> Categoria - <strong>Tour</strong></a><br>
+                                    Categorias:  
+                                    <strong>
+                                        <% for cla in site[:clasification] %>
+                                           - <%= link_to cla[:name], {:controller => "turist", :action => "index", :clasification_id => cla[:id]}%>
+                                        <% end %> 
+                                    </strong>
+                                    <br>
                                 </p>
                             </h5>
-                            <%= link_to "Ver Más", {:controller => "detail", :action => "index", :site_id => site.id }, :class=>"btn btn-primary"%>
+                            <%= link_to "Ver Más", {:controller => "detail", :action => "index", :site_id => site[:site].id }, :class=>"btn btn-primary"%>
+                            <button type="button" id="btnModel<%=cont%>" class="btn btn-primary ">Ver Mapa</button>
+                            
+
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">6 reviews</p>
@@ -74,10 +93,26 @@
                         </div>
                     </div>
                     <% if cont % 2 == 0 %>
-                        <div class="clearfix visible-lg-block"></div>
+                        </div >
                     <% end %>
-                    
                 <% end %>
             </div>
         </div>
+    <input type="hidden" name="allSite" id="allSite" value="<%=cont%>">
 </div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag 'modalMap', 'data-turbolinks-track' => true %>
