@@ -1,3 +1,6 @@
+<%= stylesheet_link_tag    'modalMap', media: 'all', 'data-turbolinks-track' => true %>
+
+
 <div class="navbar navbar-info">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -35,7 +38,11 @@
             <div class="row">
                 <% cont = 0 %>
                 <% @sites.each do |site| %>
-                    <%  cont = cont + 1 %>
+                     <%  cont = cont + 1 %>
+                    <% if cont % 2 != 0 %>
+                        <div class="row">
+                    <% end %>
+                    
                     <div class="col-sm-12 col-md-6">
                         <div class="thumbnail">
                             <%= image_tag  site[:site].SRC%>
@@ -69,6 +76,9 @@
                                 </p>
                             </h5>
                             <%= link_to "Ver Más", {:controller => "detail", :action => "index", :site_id => site[:site].id }, :class=>"btn btn-primary"%>
+                            <button type="button" id="btnModel<%=cont%>" class="btn btn-primary ">Ver Mapa</button>
+                            
+
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">6 reviews</p>
@@ -83,10 +93,26 @@
                         </div>
                     </div>
                     <% if cont % 2 == 0 %>
-                        <div class="clearfix visible-lg-block"></div>
+                        </div >
                     <% end %>
-                    
                 <% end %>
             </div>
         </div>
+    <input type="hidden" name="allSite" id="allSite" value="<%=cont%>">
 </div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>Some text in the Modal Body</p>
+      <p>Some other text...</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag 'modalMap', 'data-turbolinks-track' => true %>

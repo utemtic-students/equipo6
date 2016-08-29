@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'mobile/index'
+
   resources :sites
   resources :posts
   resources :posts

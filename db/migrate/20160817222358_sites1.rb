@@ -182,7 +182,7 @@ class Sites1 < ActiveRecord::Migration
 	s.OutdoorNumbe = 28219
 	s.IndoorNumbe = 
 	s.Name = "El Camarón Feliz"
-	s.Description =""
+	s.Description ="Un lugar acogedor, perfecto para llevar a la pareja a una cena especial y disfrutar de una platica con esa persona especial."
 	s.IsFree= 0
 	s.save
 	p = Photo.new
