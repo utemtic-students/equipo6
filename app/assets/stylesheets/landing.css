@@ -138,3 +138,8 @@ z-index: 1000  !important;
     
     margin-bottom: 0px;
 }
+
+.list-group .list-group-item .list-group-item-heading {
+    color: #03a9f4;
+    
+}

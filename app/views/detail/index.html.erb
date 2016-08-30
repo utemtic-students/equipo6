@@ -84,14 +84,19 @@
 
 <div class="container">
     <div class="row">
-        <div id="map-outer" class="col-md-12">
-            <div id="address" class="col-md-12">
-                <h2><center><%= @site.Description %>
-                    <center> </h2>
+                <h2><center><%= @site.Description %> <center> </h2>
                         <% if @site.IsFree == 0 %>
                         <%= link_to "Promociones Y Productos", {:controller => "turist_prod", :action => "index" }, :type=>"button", :class=>"btn btn-primary btn-lg btn-block"%>
                         <% end %>
-                        <br><hr>
+
+    </div>    
+</div>                           
+
+<div class="container">
+    <div class="row">
+    <hr>
+        <div class="col-md-6">
+                        
                         <h2>Informacion</h2>
                         <address>
                             <% @type.each do |item| %>
@@ -108,11 +113,85 @@
 
                             <abbr>Tel: </abbr> <%= @site.TelNumber  %>
                         </address>
-                    </div>
-                    <div id="map-container" class="col-md-12"></div>
-                </div><!-- /map-outer -->
-            </div> <!-- /row -->
 
+        </div>
+<div class="col-md-6">
+    <h2>Actividades cercanas</h2>
+
+<div class="list-group">
+            <div class="list-group-item">
+                <div class="row-picture">
+                <img class="circle" src="" alt="icon">
+             </div>
+                <div class="row-content">
+                 <h4 class="list-group-item-heading">Motos acuaticas</h4>
+
+                <p class="list-group-item-text">Disfruta de un pase por las bahias de Manzanillo</p>
+                 <div class="ratings">
+                <p class="pull-right">15 reviews</p>
+                <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                </p>
+            </div>
+
+                </div>
+            </div>
+            <div class="list-group-separator"></div>
+            <div class="list-group-item">
+                <div class="row-picture">
+                <img class="circle" src="" alt="icon">
+                </div>
+             <div class="row-content">
+                <h4 class="list-group-item-heading">Pesca de orilla</h4>
+
+                <p class="list-group-item-text">Disfrut con tu familia un rato relajante</p>
+                 <div class="ratings">
+                <p class="pull-right">15 reviews</p>
+                <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                </p>
+            </div>
+                </div>
+            </div>
+            <div class="list-group-separator"></div>
+            <div class="list-group-item">
+                <div class="row-picture">
+                <img class="circle" src="" alt="icon">
+                </div>
+                <div class="row-content">
+                <h4 class="list-group-item-heading">Paseo en Kayack</h4>
+
+                 <p class="list-group-item-text">Un paseo en cayack por las bahias de Manzanillo</p>
+                  <div class="ratings">
+                <p class="pull-right">15 reviews</p>
+                <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                </p>
+            </div>
+                </div>
+            </div>
+            <div class="list-group-separator"></div>
+</div>
+        </div>
+
+    </div>
+</div> <!-- /row -->
+
+
+
+<div class="container">
             <div class="row">
                 <form class="form-horizontal" name="commentform">
                     <div class="form-group">
