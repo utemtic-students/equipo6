@@ -16,10 +16,12 @@
             <ul class="nav navbar-nav">
                 <li class="active"><%= link_to '¿Tienes un negocio?, Registrate', '../users/sign_up' %></li>
                 <li><%= link_to 'Ingresa', 'users/sign_in' %></li>
+                <% contMenu = 0 %>
                 <% @types.each do |type| %>
-                    <li>
+                    <li id="menuItem<%=contMenu%>">
                         <%= link_to type.Name, {:controller => "turist", :action => "index", :type_id => type.id }%>
                     </li>
+                    <% contMenu = contMenu + 1 %>
                 <% end %>
             </ul>
         </div>
@@ -50,7 +52,7 @@
                             <button type="button" class="btn btn-primary btn-radio"><%= answer.Body%></button>
                             <%= check_box_tag answer.Body, answer.id, answer.id, :disabled=>"true" %>
                             
-                            <%= image_tag  answer.SRC, :class=>"img-responsive img-radio thumb" %>
+                            <% image_tag  answer.SRC, :class=>"img-responsive img-radio thumb" %>
                         </li>
                     <% end %>
                 </ul>

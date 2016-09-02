@@ -142,3 +142,32 @@ z-index: 1000  !important;
     color: #03a9f4;
     
 }
+.rating{
+  background: #444;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+span{
+  font-size: 30px;
+  color:#fff;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.rating-text{
+  top: 2em;
+  color: #fff;
+}
+
+#one, #two, #three, #four, #five,.rating-text{
+  display:none;
+}
+
+label{
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}

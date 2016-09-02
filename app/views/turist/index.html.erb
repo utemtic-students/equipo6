@@ -1,6 +1,5 @@
 <%= stylesheet_link_tag    'modalMap', media: 'all', 'data-turbolinks-track' => true %>
 
-
 <div class="navbar navbar-info">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -80,20 +79,23 @@
                             
 
                             </div>
-                            <div class="ratings">
-                                <p class="pull-right">6 reviews</p>
-                                <p>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                </p>
+                            <div class="rating">
+                                <input type="radio" id="one" name="rate" value="Poor" />
+                                <label class="one" for="one">&star;</label>
+                                <input type="radio" id="two" name="rate" value="Fair" />
+                                <label class="two" for="two">&star;</label>
+                                <input type="radio" id="three" name="rate" value="Good" />
+                                <label class="three" for="three">&hearts;</label>
+                                <input type="radio" id="four" name="rate" value="Very Good" />
+                                <label class="four" for="four">&hearts;</label>
+                                <input type="radio" id="five" name="rate" value="Excellent" />
+                                <label class="five" for="five">&star;</label>
+                                <p class="rating-text"></p>
                             </div>
                         </div>
                     </div>
                     <% if cont % 2 == 0 %>
-                        </div >
+                        </div >|
                     <% end %>
                 <% end %>
             </div>
@@ -104,7 +106,7 @@
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">×</span>
-      <h2>Modal Header</h2>
+      <h2>Modal Header</h2>|
     </div>
     <div class="modal-body">
       <p>Some text in the Modal Body</p>
