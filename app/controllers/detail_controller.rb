@@ -7,6 +7,10 @@ class DetailController < ApplicationController
 		@photoPrincipal = Photo.select('SRC, Section').where("Section = 'Principal' AND sites_id= ?", params[:site_id]);
 		@photosGaleria = Photo.select('SRC, Section').where("Section = 'Galeria' AND sites_id= ?", params[:site_id]);
 		@types = Type.all
+		@sitesRel = SiteXSite.select('sites.*, photos.SRC')
+							 .joins("LEFT JOIN sites ON site_x_sites.siteRel = sites.id")
+							 .joins("LEFT JOIN photos ON photos.Section = 'Principal' AND  site_x_sites.siteRel = photos.sites_id")
+							 .where("site_x_sites.sites_id = ?",params[:site_id] );
 		render layout: "landing"
 	else
   		redirect_to "/turist/index"
