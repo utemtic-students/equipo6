@@ -16,19 +16,21 @@
             <ul class="nav navbar-nav">
                 <li class="active"><%= link_to '¿Tienes un negocio?, Registrate', '../users/sign_up' %></li>
                 <li><%= link_to 'Ingresa', 'users/sign_in' %></li>
+                <% contMenu = 0 %>
                 <% @types.each do |type| %>
-                    <li>
+                    <li id="menuItem<%=contMenu%>">
                         <%= link_to type.Name, {:controller => "turist", :action => "index", :type_id => type.id }%>
                     </li>
+                    <% contMenu = contMenu + 1 %>
                 <% end %>
             </ul>
         </div>
     </div>
 </div>
 <div class="col-md-12  " >
-    <center><h2>Selecciona las imagenes con las que te identifiques</h2></center>
+    <center><h4>Selecciona las imagenes con las que te identifiques</h4></center>
     <% @questions.each do |question| %>
-    <center><h3><strong><%= question.Question %></strong></h3></center>
+    <center><h4><strong><%= question.Question %></strong></h4></center>
     <% end %>
 </div>
  <!--start-->
@@ -41,7 +43,7 @@
         <%= text_field_tag :answers_del, @answers_del , :type=>"hidden"%>
         <%= text_field_tag :allQuest, @allQuest , :type=>"hidden"%>
     </div>
-    <div style="padding:5px 0;">
+    <div id="divSlider" style="padding:5px 0;">
         <div id="thumbnail-slider">
             <div class="inner">
                 <ul>
@@ -50,7 +52,8 @@
                             <button type="button" class="btn btn-primary btn-radio"><%= answer.Body%></button>
                             <%= check_box_tag answer.Body, answer.id, answer.id, :disabled=>"true" %>
                             
-                            <%= image_tag  answer.SRC, :class=>"img-responsive img-radio thumb" %>
+                            <%=image_tag  'questions/'+answer.SRC, :class=>"img-responsive img-radio thumb hidden-sm hidden-xs"%>
+                            <%=image_tag  'questionsMobil/'+answer.SRC, :class=>"img-responsive img-radio thumb hidden-md hidden-lg"%>
                         </li>
                     <% end %>
                 </ul>
@@ -59,14 +62,3 @@
     </div>
         <%= submit_tag "Siguiente" , :class=>"btn btn-primary btn-lg btn-block"%>
 <% end %>
-<div class="container">
-    <hr>
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Universidad Tecnologica de Manzanillo 2016</p>
-            </div>
-        </div>    
-    </footer>
-</div>

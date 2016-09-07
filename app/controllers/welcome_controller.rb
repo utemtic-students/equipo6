@@ -4,6 +4,16 @@ class WelcomeController < ApplicationController
   end
 
   def unregistered
+    @types = ''
+    types = Type.all;
+    @contMenuItem = 0;
+    types.each do |type|
+      @types.concat(type.Name)
+      @types.concat('-')
+      @types.concat(type.id.to_s)
+      @types.concat(',')      
+      @contMenuItem = @contMenuItem +1;
+    end
   	render layout: "landing"
   end
 

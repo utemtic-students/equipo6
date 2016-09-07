@@ -9,7 +9,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 1
 	a.Body = 'Solo'
-	a.SRC = 'questions/acompañantes/solo/solo.jpg'
+	a.SRC = 'acompañantes/solo/solo.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -26,7 +26,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 2
 	a.Body = 'Amigos'
-	a.SRC = 'questions/acompañantes/amigos/amigos.jpg'
+	a.SRC = 'acompañantes/amigos/amigos.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -43,7 +43,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 3
 	a.Body = 'Familia'
-	a.SRC = 'questions/acompañantes/familia/familia.jpg'
+	a.SRC = 'acompañantes/familia/familia.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -60,7 +60,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 4
 	a.Body = 'Pareja'
-	a.SRC = 'questions/acompañantes/pareja/pareja.jpg'
+	a.SRC = 'acompañantes/pareja/pareja.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -85,7 +85,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 5
 	a.Body = 'Restaurantes'
-	a.SRC = 'questions/restaurantes/Restaurantes.jpg'
+	a.SRC = 'restaurantes/Restaurantes.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -114,7 +114,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 6
 	a.Body = 'China'
-	a.SRC = 'questions/restaurantes/china/china.jpg'
+	a.SRC = 'restaurantes/china/china.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -131,7 +131,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 7
 	a.Body = 'Cortes Finos'
-	a.SRC = 'questions/restaurantes/mexicana/mexicana.jpg'
+	a.SRC = 'restaurantes/mexicana/mexicana.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -148,7 +148,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 8
 	a.Body = 'Mariscos'
-	a.SRC = 'questions/restaurantes/mariscos/mariscos.jpg'
+	a.SRC = 'restaurantes/mariscos/mariscos.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -165,7 +165,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 9
 	a.Body = 'Rapida'
-	a.SRC = 'questions/restaurantes/rapida/rapida.jpg'
+	a.SRC = 'restaurantes/rapida/rapida.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -182,7 +182,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 10
 	a.Body = 'Actividades'
-	a.SRC = 'questions/actividades/actividades.jpg'
+	a.SRC = 'actividades/actividades.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -211,7 +211,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 11
 	a.Body = 'Tranquilo'
-	a.SRC = 'questions/tranquilo/tranquilo.jpg'
+	a.SRC = 'tranquilo/tranquilo.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -228,7 +228,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 12
 	a.Body = 'Extremo'
-	a.SRC = 'questions/extremo/extremo.jpg'
+	a.SRC = 'extremo/extremo.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -253,7 +253,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 13
 	a.Body = 'Moto Acuatica'
-	a.SRC = 'questions/extremo/motoAcuatica.jpg'
+	a.SRC = 'extremo/motoAcuatica.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -270,7 +270,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 14
 	a.Body = 'Cayack'
-	a.SRC = 'questions/extremo/cayack.jpg'
+	a.SRC = 'extremo/cayack.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -287,7 +287,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 15
 	a.Body = 'Pladdle Surf'
-	a.SRC = 'questions/extremo/pladdleSurf.jpg'
+	a.SRC = 'extremo/pladdleSurf.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -313,7 +313,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 16
 	a.Body = 'Banana'
-	a.SRC = 'questions/tranquilo/banana.jpg'
+	a.SRC = 'tranquilo/banana.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -330,7 +330,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 17
 	a.Body = 'Paseo En Lancha'
-	a.SRC = 'questions/tranquilo/PaseoEnLancha.jpg'
+	a.SRC = 'tranquilo/PaseoEnLancha.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -347,7 +347,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 18
 	a.Body = 'Barco Fiesta'
-	a.SRC = 'questions/tranquilo/barcoFiesta.jpg'
+	a.SRC = 'tranquilo/barcoFiesta.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -364,7 +364,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 19
 	a.Body = 'Tortugas'
-	a.SRC = 'questions/tranquilo/tortugas.jpg'
+	a.SRC = 'tranquilo/tortugas.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -382,7 +382,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 20
 	a.Body = 'Playas'
-	a.SRC = 'questions/playa/playa.jpg'
+	a.SRC = 'playa/playa.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -404,7 +404,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 21
 	a.Body = 'Antros'
-	a.SRC = 'questions/antros/antros.jpg'
+	a.SRC = 'antros/antros.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -421,7 +421,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 22
 	a.Body = 'Bares'
-	a.SRC = 'questions/bares/bares.jpg'
+	a.SRC = 'bares/bares.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -438,7 +438,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 23
 	a.Body = 'Plazas'
-	a.SRC = 'questions/plazas/plazas.jpg'
+	a.SRC = 'plazas/plazas.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -466,7 +466,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 24
 	a.Body = 'Disco'
-	a.SRC = 'questions/musica/disco/disco.jpg'
+	a.SRC = 'musica/disco/disco.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -483,7 +483,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 25
 	a.Body = 'Rock'
-	a.SRC = 'questions/musica/rock/rock.jpg'
+	a.SRC = 'musica/rock/rock.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new
@@ -500,7 +500,7 @@ class InsertQuestionGen < ActiveRecord::Migration
 	a = Answer.new
 	a.id = 26
 	a.Body = 'Reggae'
-	a.SRC = 'questions/musica/reggae/reggae.jpg'
+	a.SRC = 'musica/reggae/reggae.jpg'
 	a.Description = ""
 	a.save
 	qxa = QuestionXAnswer.new

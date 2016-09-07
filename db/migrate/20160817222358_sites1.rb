@@ -14,32 +14,32 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 1
-	p.SRC = "sites/elCosteño/logo.jpg"
+	p.SRC = "elCosteño/logo.jpg"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
 	p.sites_id = 1
-	p.SRC = "sites/elCosteño/gal/img1.jpg"
+	p.SRC = "elCosteño/gal/img1.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 1
-	p.SRC = "sites/elCosteño/gal/img2.jpg"
+	p.SRC = "elCosteño/gal/img2.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 1
-	p.SRC = "sites/elCosteño/gal/img3.jpg"
+	p.SRC = "elCosteño/gal/img3.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 1
-	p.SRC = "sites/elCosteño/gal/img4.jpg"
+	p.SRC = "elCosteño/gal/img4.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 1
-	p.SRC = "sites/elCosteño/gal/img5.jpg"
+	p.SRC = "elCosteño/gal/img5.jpg"
 	p.Section = "Galeria"
 	p.save
 	sxc = SiteXClasification.new
@@ -70,32 +70,32 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 2
-	p.SRC = "sites/daiisushi/logo.jpg"
+	p.SRC = "daiisushi/logo.jpg"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
 	p.sites_id = 2
-	p.SRC = "sites/daiisushi/gal/img1.jpg"
+	p.SRC = "daiisushi/gal/img1.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 2
-	p.SRC = "sites/daiisushi/gal/img2.jpg"
+	p.SRC = "daiisushi/gal/img2.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 2
-	p.SRC = "sites/daiisushi/gal/img3.jpg"
+	p.SRC = "daiisushi/gal/img3.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 2
-	p.SRC = "sites/daiisushi/gal/img4.jpg"
+	p.SRC = "daiisushi/gal/img4.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 2
-	p.SRC = "sites/daiisushi/gal/img5.jpg"
+	p.SRC = "daiisushi/gal/img5.jpg"
 	p.Section = "Galeria"
 	p.save
 	sxc = SiteXClasification.new
@@ -127,37 +127,37 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 3
-	p.SRC = "sites/ante/logo.jpg"
+	p.SRC = "ante/logo.jpg"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
 	p.sites_id = 3
-	p.SRC = "sites/ante/gal/img1.jpg"
+	p.SRC = "ante/gal/img1.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 3
-	p.SRC = "sites/ante/gal/img2.jpg"
+	p.SRC = "ante/gal/img2.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 3
-	p.SRC = "sites/ante/gal/img3.jpg"
+	p.SRC = "ante/gal/img3.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 3
-	p.SRC = "sites/ante/gal/img4.jpg"
+	p.SRC = "ante/gal/img4.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 3
-	p.SRC = "sites/ante/gal/img5.jpg"
+	p.SRC = "ante/gal/img5.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 3
-	p.SRC = "sites/ante/gal/img6.jpg"
+	p.SRC = "ante/gal/img6.jpg"
 	p.Section = "Galeria"
 	p.save
 	sxc = SiteXClasification.new
@@ -187,22 +187,22 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 4
-	p.SRC = "sites/elCamaronFeliz/logo.png"
+	p.SRC = "elCamaronFeliz/logo.png"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
 	p.sites_id = 4
-	p.SRC = "sites/elCamaronFeliz/gal/img2.jpg"
+	p.SRC = "elCamaronFeliz/gal/img2.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 4
-	p.SRC = "sites/elCamaronFeliz/gal/img3.jpg"
+	p.SRC = "elCamaronFeliz/gal/img3.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 4
-	p.SRC = "sites/elCamaronFeliz/gal/img4.jpg"
+	p.SRC = "elCamaronFeliz/gal/img4.jpg"
 	p.Section = "Galeria"
 	p.save
 
@@ -229,32 +229,32 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 5
-	p.SRC = "sites/elMarinero/logo.jpg"
+	p.SRC = "elMarinero/logo.jpg"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
 	p.sites_id = 5
-	p.SRC = "sites/elMarinero/gal/img1.jpg"
+	p.SRC = "elMarinero/gal/img1.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 5
-	p.SRC = "sites/elMarinero/gal/img2.jpg"
+	p.SRC = "elMarinero/gal/img2.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 5
-	p.SRC = "sites/elMarinero/gal/img3.jpg"
+	p.SRC = "elMarinero/gal/img3.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 5
-	p.SRC = "sites/elMarinero/gal/img4.jpg"
+	p.SRC = "elMarinero/gal/img4.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 5
-	p.SRC = "sites/elMarinero/gal/img5.jpg"
+	p.SRC = "elMarinero/gal/img5.jpg"
 	p.Section = "Galeria"
 	p.save
 
@@ -285,37 +285,37 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 6
-	p.SRC = "sites/laKatana/logo.jpg"
+	p.SRC = "laKatana/logo.jpg"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
 	p.sites_id = 6
-	p.SRC = "sites/laKatana/gal/img1.jpg"
+	p.SRC = "laKatana/gal/img1.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 6
-	p.SRC = "sites/laKatana/gal/img2.jpg"
+	p.SRC = "laKatana/gal/img2.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 6
-	p.SRC = "sites/laKatana/gal/img3.jpg"
+	p.SRC = "laKatana/gal/img3.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 6
-	p.SRC = "sites/laKatana/gal/img4.jpg"
+	p.SRC = "laKatana/gal/img4.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 6
-	p.SRC = "sites/laKatana/gal/img5.jpg"
+	p.SRC = "laKatana/gal/img5.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 6
-	p.SRC = "sites/laKatana/gal/img6.jpg"
+	p.SRC = "laKatana/gal/img6.jpg"
 	p.Section = "Galeria"
 	p.save
 
@@ -348,27 +348,27 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 7
-	p.SRC = "sites/laVainilla/logo.jpg"
+	p.SRC = "laVainilla/logo.jpg"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
 	p.sites_id = 7
-	p.SRC = "sites/laVainilla/gal/img1.jpg"
+	p.SRC = "laVainilla/gal/img1.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 7
-	p.SRC = "sites/laVainilla/gal/img2.jpg"
+	p.SRC = "laVainilla/gal/img2.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 7
-	p.SRC = "sites/laVainilla/gal/img3.jpg"
+	p.SRC = "laVainilla/gal/img3.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 7
-	p.SRC = "sites/laVainilla/gal/img4.jpg"
+	p.SRC = "laVainilla/gal/img4.jpg"
 	p.Section = "Galeria"
 	p.save
 
@@ -396,42 +396,42 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 8
-	p.SRC = "sites/laMarina/logo.jpg"
+	p.SRC = "laMarina/logo.jpg"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
 	p.sites_id = 8
-	p.SRC = "sites/laMarina/gal/img1.jpg"
+	p.SRC = "laMarina/gal/img1.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 8
-	p.SRC = "sites/laMarina/gal/img2.jpg"
+	p.SRC = "laMarina/gal/img2.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 8
-	p.SRC = "sites/laMarina/gal/img3.jpg"
+	p.SRC = "laMarina/gal/img3.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 8
-	p.SRC = "sites/laMarina/gal/img4.jpg"
+	p.SRC = "laMarina/gal/img4.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 8
-	p.SRC = "sites/laMarina/gal/img5.jpg"
+	p.SRC = "laMarina/gal/img5.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 8
-	p.SRC = "sites/laMarina/gal/img6.jpg"
+	p.SRC = "laMarina/gal/img6.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 8
-	p.SRC = "sites/laMarina/gal/img7.jpg"
+	p.SRC = "laMarina/gal/img7.jpg"
 	p.Section = "Galeria"
 	p.save
 
@@ -462,27 +462,27 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 9
-	p.SRC = "sites/plazaLasPalmas/logo.jpg"
+	p.SRC = "plazaLasPalmas/logo.jpg"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
 	p.sites_id = 9
-	p.SRC = "sites/plazaLasPalmas/gal/img1.jpg"
+	p.SRC = "plazaLasPalmas/gal/img1.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 9
-	p.SRC = "sites/plazaLasPalmas/gal/img2.jpg"
+	p.SRC = "plazaLasPalmas/gal/img2.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 9
-	p.SRC = "sites/plazaLasPalmas/gal/img3.jpg"
+	p.SRC = "plazaLasPalmas/gal/img3.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 9
-	p.SRC = "sites/plazaLasPalmas/gal/img4.jpg"
+	p.SRC = "plazaLasPalmas/gal/img4.jpg"
 	p.Section = "Galeria"
 	p.save
 
@@ -513,27 +513,27 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 10
-	p.SRC = "sites/wingsArmy/logo.jpg"
+	p.SRC = "wingsArmy/logo.jpg"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
 	p.sites_id = 10
-	p.SRC = "sites/wingsArmy/gal/img1.jpg"
+	p.SRC = "wingsArmy/gal/img1.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 10
-	p.SRC = "sites/wingsArmy/gal/img2.jpg"
+	p.SRC = "wingsArmy/gal/img2.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 10
-	p.SRC = "sites/wingsArmy/gal/img3.jpg"
+	p.SRC = "wingsArmy/gal/img3.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 10
-	p.SRC = "sites/wingsArmy/gal/img4.jpg"
+	p.SRC = "wingsArmy/gal/img4.jpg"
 	p.Section = "Galeria"
 	p.save
 
@@ -562,17 +562,17 @@ class Sites1 < ActiveRecord::Migration
 	s.save
 	p = Photo.new
 	p.sites_id = 11
-	p.SRC = "sites/barHoa/logo.jpg"
+	p.SRC = "barHoa/logo.jpg"
 	p.Section = "Principal"
 	p.save
 	p = Photo.new
 	p.sites_id = 11
-	p.SRC = "sites/barHoa/gal/img1.jpg"
+	p.SRC = "barHoa/gal/img1.jpg"
 	p.Section = "Galeria"
 	p.save
 	p = Photo.new
 	p.sites_id = 11
-	p.SRC = "sites/barHoa/gal/img2.jpg"
+	p.SRC = "barHoa/gal/img2.jpg"
 	p.Section = "Galeria"
 	p.save
 

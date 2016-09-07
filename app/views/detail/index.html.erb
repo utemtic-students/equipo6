@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag    'modalMap', media: 'all', 'data-turbolinks-track' => true %>
+
 <div class="navbar navbar-info">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -84,11 +86,11 @@
 
 <div class="container">
     <div class="row">
-                <h2><center><%= @site.Description %> <center> </h2>
-                        <% if @site.IsFree == 0 %>
-                        <%= link_to "Promociones Y Productos", {:controller => "turist_prod", :action => "index" }, :type=>"button", :class=>"btn btn-primary btn-lg btn-block"%>
-                        <% end %>
-
+        <h2><center><%= @site.Description %> <center> </h2>
+        <% if @site.IsFree == 0 %>
+            <%= link_to "Promociones Y Productos", {:controller => "turist_prod", :action => "index" }, :type=>"button", :class=>"btn btn-primary btn-lg btn-block"%>
+        <% end %>
+        <button type="button" id="btnModel<%=cont%>" class="btn btn-primary ">Ver Mapa</button>
     </div>    
 </div>                           
 
