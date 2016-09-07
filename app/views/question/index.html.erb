@@ -52,7 +52,8 @@
                             <button type="button" class="btn btn-primary btn-radio"><%= answer.Body%></button>
                             <%= check_box_tag answer.Body, answer.id, answer.id, :disabled=>"true" %>
                             
-                            <%=image_tag  'questions/home', :class=>"img-responsive img-radio thumb" %>
+                            <%=image_tag  'questions/'+answer.SRC, :class=>"img-responsive img-radio thumb hidden-sm hidden-xs"%>
+                            <%=image_tag  'questionsMobil/'+answer.SRC, :class=>"img-responsive img-radio thumb hidden-md hidden-lg"%>
                         </li>
                     <% end %>
                 </ul>
