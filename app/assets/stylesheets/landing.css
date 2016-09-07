@@ -144,19 +144,11 @@ z-index: 1000  !important;
 }
 .rating{
   background: #444;
-  width: 200px;
+  width: 100px;
   padding: 20px;
   text-align: center;
   margin: 0 auto;
 }
-
-span{
-  font-size: 30px;
-  color:#fff;
-  display: block;
-  padding-bottom: 10px;
-}
-
 .rating-text{
   top: 2em;
   color: #fff;
@@ -171,3 +163,5 @@ label{
   color: #fff;
   cursor: pointer;
 }
+
+
