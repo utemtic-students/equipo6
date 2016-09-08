@@ -74,16 +74,14 @@
                                     </strong>
                                     <br>
                                 </p>
-                            </h5>
-                            <%= link_to "Ver Más", {:controller => "detail", :action => "index", :site_id => site[:site].id }, :class=>"btn btn-primary"%>
-                            <button type="button" id="btnModel<%=cont%>" class="btn btn-primary ">Ver Mapa</button>
-                            
-
+                                </h5>
+                                <%= link_to "Ver Más", {:controller => "detail", :action => "index", :site_id => site[:site].id }, :class=>"btn btn-primary"%>
+                                <button type="button" id="btnModel<%=cont%>" class="btn btn-primary ">Ver Mapa</button>
                             </div>
                         </div>
                     </div>
                     <% if cont % 2 == 0 %>
-                        </div >|
+                        </div >
                     <% end %>
                 <% end %>
             </div>
