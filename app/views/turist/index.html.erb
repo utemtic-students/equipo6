@@ -29,6 +29,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3 col-xs-12  " >
+        <% @idTypes.each do |site| %>
+            <%=site.types_id%>
+        <%end%>
             <center><h2>Estos lugares</h2></center>
             <center><h3><strong>"Podrian gustarte"</strong></h3></center>
         </div>
