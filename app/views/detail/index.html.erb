@@ -71,22 +71,52 @@
                         </a>
                     </div>
                 </div>
-
-            </div>
-            <div class="ratings">
-               <input type="text" class="kv-fa rating-loading" value="2" data-size="xs" title=""> 
-            </div>
-
-
+            </div> 
         </div>
     </div>
 </div>
-
-
 <div class="container">
     <div class="row">
-        <h2><center><%= @site.Description %> <center> </h2>
-        <button type="button" id="btnModel1" class="btn btn-primary ">Ver Mapa</button>
+       
+        
+        <center>
+            <h2><%= @site.Description %>  </h2>
+        </center>
+            <div class="ratings">
+                <p>
+                     <input type="text" class="kv-fa rating-loading" value="2" data-size="xs" title=""> 
+                </p>
+            </div>
+            
+            <button type="button" id="btnModel1" class="btn btn-primary ">Ver Mapa</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Calificame
+            </button>
+            <center>
+            <div class="collapse" id="collapseExample">
+              <div class="well">
+                <div class="ratings">
+                    <p> <h4 class="list-group-item-heading">Servicio<h4> </p>
+                    <p>
+                         <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title=""> 
+                    </p>
+                    <p> <h4 class="list-group-item-heading">Ambiente<h4> </p>
+                    <p>
+                        <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title=""> 
+                    </p>
+                    <p> <h4 class="list-group-item-heading">Calidad<h4> </p>
+                    <p>
+                        <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title=""> 
+                    </p>
+                    <p> <h4 class="list-group-item-heading">Precio<h4> </p>
+                    <p>
+                        <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title=""> 
+                    </p>
+
+                </div>
+              </div>
+            </div>
+        </center>
     </div>    
 </div>                           
 
@@ -124,7 +154,6 @@
                             <h4 class="list-group-item-heading"><%= link_to item.Name, {:controller => "detail", :action => "index", :site_id => item.id }%></h4>
                             <p class="list-group-item-text"><%= item.Description%></p>
                             <div class="ratings">
-                                <p class="pull-right">15 reviews</p>
                                 <p>
                                      <input type="text" class="kv-fa rating-loading" value="2" data-size="xs" title=""> 
                                 </p>
@@ -138,32 +167,32 @@
     </div>
 </div> <!-- /row -->
 <div class="container">
-            <div class="row">
-                <form class="form-horizontal" name="commentform">
-                    <div class="form-group">
-                        <div class="col-md-4 col-sm-12">
-                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Nombre"/>
-                        </div>
-                        <div class="col-md-4 col-sm-12">
-                            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Apellido"/>
-                        </div>
-                        <div class="col-md-4 col-sm-12 input-group ">
-                            <span class="input-group-addon">@</span>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Gmail"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-12">
-                            <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Agrega tus Comentarios "></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-6">
-                            <button type="submit" value="Submit" class="btn btn-warning ">Enviar</button>
-                        </div>
-                    </div>
-                </form>
-            </div><!-- /row -->
+    <div class="row">
+        <form class="form-horizontal" name="commentform">
+            <div class="form-group">
+                <div class="col-md-4 col-sm-12">
+                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Nombre"/>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Apellido"/>
+                </div>
+                <div class="col-md-4 col-sm-12 input-group ">
+                    <span class="input-group-addon">@</span>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Gmail"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <textarea rows="6" class="form-control" id="comments" name="comments" placeholder="Agrega tus Comentarios "></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6">
+                    <button type="submit" value="Submit" class="btn btn-warning ">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div><!-- /row -->
 </div><!-- /container -->
 <input type="hidden" name="allSite" id="allSite" value="1">
 <div id="myModal" class="modal">
