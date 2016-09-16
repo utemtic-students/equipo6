@@ -5,11 +5,12 @@ class TuristController < ApplicationController
       totalAnswer =[];
       answers_id.each do |answer|
         answer = answer.to_i;
-        if answer > 4
-          totalAnswer.push(answer);
-        end
+        totalAnswer.push(answer);
         
       end  
+      @idTypes = AnswerXType.select('answer_x_types.types_id')
+                   .joins('LEFT JOIN  answers ON answers.id  = answer_x_types.answers_id')
+                   .where('answers.id IN(?)',totalAnswer).distinct();
       sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
                    .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
                    .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")

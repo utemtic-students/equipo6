@@ -139,29 +139,7 @@ z-index: 1000  !important;
 }
 
 .list-group .list-group-item .list-group-item-heading {
-    color: #03a9f4;
-    
-}
-.rating{
-  background: #444;
-  width: 100px;
-  padding: 20px;
-  text-align: center;
-  margin: 0 auto;
-}
-.rating-text{
-  top: 2em;
-  color: #fff;
-}
-
-#one, #two, #three, #four, #five,.rating-text{
-  display:none;
-}
-
-label{
-  font-size: 30px;
-  color: #fff;
-  cursor: pointer;
+    color: #03a9f4;  
 }
 
 

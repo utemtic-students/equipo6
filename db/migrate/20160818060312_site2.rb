@@ -372,6 +372,44 @@ class Site2 < ActiveRecord::Migration
 	sxc.clasifications_id = 33
 	sxc.save
 
+	s = Site.new
+	s.id = 21
+	s.TelNumber =  10000
+	s.Municipality = "Manzanillo"
+	s.State = "Colima"
+	s.Colony = "Las Brisas"
+	s.OutdoorNumbe = 15675
+	s.IndoorNumbe = 
+	s.Name = "Sunset"
+	s.Description =""
+	s.IsFree= 0
+	s.save
+	p = Photo.new
+	p.sites_id = 21
+	p.SRC = "sunset/logo.jpg"
+	p.Section = "Principal"
+	p.save
+	p = Photo.new
+	p.sites_id = 21
+	p.SRC = "sunset/img1.jpg"
+	p.Section = "Galeria"
+	p.save
+	p = Photo.new
+	p.sites_id = 21
+	p.SRC = "sunset/img2.jpg"
+	p.Section = "Galeria"
+	p.save
+	
+
+	sxc = SiteXClasification.new
+	sxc.sites_id = 21
+	sxc.clasifications_id = 14
+	sxc.save
+	sxt = SiteXType.new
+	sxt.sites_id = 21
+	sxt.types_id = 5
+	sxt.save
+
 
   end
 end
