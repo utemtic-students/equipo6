@@ -8,22 +8,46 @@ class TuristController < ApplicationController
         totalAnswer.push(answer);
         
       end  
-      @idTypes = AnswerXType.select('answer_x_types.types_id')
-                   .joins('LEFT JOIN  answers ON answers.id  = answer_x_types.answers_id')
-                   .where('answers.id IN(?)',totalAnswer).distinct();
-      sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
-                   .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
-                   .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")
-                   .joins("LEFT JOIN types ON types.id = site_x_types.types_id")
-                   .joins("LEFT JOIN site_x_clasifications ON  site_x_clasifications.sites_id = sites.id ")
-                   .joins("LEFT JOIN clasifications ON clasifications.id = site_x_clasifications.clasifications_id")
-                   .joins("LEFT JOIN answer_x_types  ON answer_x_types.types_id = types.id")
-                   .joins("LEFT JOIN answer_x_clasifications  ON answer_x_clasifications.clasifications_id = clasifications.id")
-                   .where("answer_x_clasifications.answers_id IN (?)", totalAnswer).distinct();
-
-    
-
-
+      if answers_id.count == 1
+         sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
+                     .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
+                     .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")
+                     .joins("LEFT JOIN types ON types.id = site_x_types.types_id")
+                     .joins("LEFT JOIN site_x_clasifications ON  site_x_clasifications.sites_id = sites.id ")
+                     .joins("LEFT JOIN clasifications ON clasifications.id = site_x_clasifications.clasifications_id").distinct();
+      else
+        idTypes = AnswerXType.select('answer_x_types.types_id')
+                     .joins('LEFT JOIN  answers ON answers.id  = answer_x_types.answers_id')
+                     .where('answers.id IN(?)',totalAnswer).distinct();
+        totalTypes =[];
+        idTypes.each do |typ|
+           totalTypes.push(typ.types_id);
+        end
+        idClasification = AnswerXClasification.select('answer_x_clasifications.clasifications_id')
+                     .joins('LEFT JOIN  answers ON answers.id  = answer_x_clasifications.answers_id')
+                     .where('answers.id IN(?)',totalAnswer).distinct();
+        totalClasifications =[];
+        idClasification.each do |cls|
+           totalClasifications.push(cls.clasifications_id);
+        end
+        if idClasification.count == 0
+          sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
+                     .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
+                     .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")
+                     .joins("LEFT JOIN types ON types.id = site_x_types.types_id")
+                     .joins("LEFT JOIN site_x_clasifications ON  site_x_clasifications.sites_id = sites.id ")
+                     .joins("LEFT JOIN clasifications ON clasifications.id = site_x_clasifications.clasifications_id")
+                     .where("site_x_types.types_id IN (?)", totalTypes).distinct();
+        else
+          sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
+                     .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
+                     .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")
+                     .joins("LEFT JOIN types ON types.id = site_x_types.types_id")
+                     .joins("LEFT JOIN site_x_clasifications ON  site_x_clasifications.sites_id = sites.id ")
+                     .joins("LEFT JOIN clasifications ON clasifications.id = site_x_clasifications.clasifications_id")
+                     .where("site_x_types.types_id IN (?) AND site_x_clasifications.clasifications_id IN (?)", totalTypes, totalClasifications).distinct();
+        end
+      end
     elsif params[:type_id] && params[:clasification_id]
       sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
                    .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
@@ -33,11 +57,17 @@ class TuristController < ApplicationController
                    .joins("LEFT JOIN clasifications ON clasifications.id = site_x_clasifications.clasifications_id")
                    .where("types.id = ? AND clasifications.id = ?",params[:type_id],params[:clasification_id]);
     elsif params[:type_id]
+      types_id = params[:type_id].split(',');
+      totalTypes =[];
+      types_id.each do |item|
+        item = item.to_i;
+        totalTypes.push(item);
+      end  
       sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
                    .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
                    .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")
                    .joins("LEFT JOIN types ON types.id = site_x_types.types_id")
-                   .where("types.id = ?",params[:type_id]);
+                   .where("types.id IN (?)",totalTypes);
     elsif params[:clasification_id]
         sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
                    .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
