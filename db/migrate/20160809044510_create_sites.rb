@@ -10,7 +10,7 @@ class CreateSites < ActiveRecord::Migration
       t.text :Name
       t.integer :Latitud
       t.integer :Longitud
-      t.integer :score
+      t.integer :Score_id
       t.text :businessmans
       t.text :Description
 

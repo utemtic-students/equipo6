@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907224350) do
+ActiveRecord::Schema.define(version: 20160916195222) do
 
   create_table "answer_x_clasifications", force: :cascade do |t|
     t.integer  "answers_id"
@@ -186,6 +186,15 @@ ActiveRecord::Schema.define(version: 20160907224350) do
     t.integer  "Fin"
   end
 
+  create_table "scores", force: :cascade do |t|
+    t.integer  "Calidad"
+    t.float    "Ambiente"
+    t.float    "Servicio"
+    t.float    "Precio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "shopping_carts", force: :cascade do |t|
     t.string   "status"
     t.string   "ip"
@@ -242,7 +251,7 @@ ActiveRecord::Schema.define(version: 20160907224350) do
     t.text    "Name"
     t.integer "Latitud"
     t.integer "Longitud"
-    t.integer "score"
+    t.integer "Score_id"
     t.text    "businessmans"
     t.text    "Description"
     t.integer "IsFree"
