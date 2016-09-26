@@ -12,6 +12,12 @@ Rails.application.routes.draw do
   get 'turist_prod/index'
   get 'question/index'
   post 'question/index'
+  get 'question/newQuest'
+  post 'question/newQuest'
+  get 'question/validarSiguiente'
+  post 'question/validarSiguiente'
+  get 'question/desmarcar'
+  post 'question/desmarcar'
    
   resources :client
   get '/client/new'
