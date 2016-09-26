@@ -1,7 +1,3 @@
-<%= javascript_include_tag 'question', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag  'question', media: 'all', 'data-turbolinks-track' => true %>
-
-
 <div class="navbar navbar-info">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -18,15 +14,16 @@
                 <li><%= link_to 'Ingresa', 'users/sign_in' %></li>
                 <% contMenu = 0 %>
                 <% @types.each do |type| %>
-                    <li id="menuItem<%=contMenu%>">
-                        <%= link_to type.Name, {:controller => "turist", :action => "index", :type_id => type.id }%>
-                    </li>
-                    <% contMenu = contMenu + 1 %>
+                <li id="menuItem<%=contMenu%>">
+                    <%= link_to type.Name, {:controller => "turist", :action => "index", :type_id => type.id }%>
+                </li>
+                <% contMenu = contMenu + 1 %>
                 <% end %>
             </ul>
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <div class="col-md-12  " >
     <center><h4>Selecciona las imagenes con las que te identifiques</h4></center>
     <% @questions.each do |question| %>
@@ -53,11 +50,73 @@
                             <%= check_box_tag answer.Body, answer.id, answer.id, :disabled=>"true" %>
                             
                             <%=image_tag  'questions/'+answer.SRC, :class=>"img-responsive img-radio thumb "%>
+=======
+<div class="container">
+    <div class="row">
+        <section>
+        <div class="wizard">
+            <div class="wizard-inner">
+                <div class="connecting-line"></div>
+                <ul class="nav nav-tabs" id="navQuest" role="tablist" style="background: #fff;">
+                    <%bandera1 = true%>
+                    <% @questions.each do |item| %>
+                        <li role="presentation" id="li<%=item[:question].id%>" class=" <%= bandera1 == true ? 'active' : 'disabled hidden ' %>" id="liQuestion">
+                            <a class="liQuestion" href="#step<%=item[:question].id%>" data-toggle="tab" aria-controls="step<%=item[:question].id%>" role="tab" title="<%=item[:question].Question%>">
+                                <span class="round-tab">
+                                    <i class="glyphicon glyphicon-folder-open"></i>
+                                </span>
+                            </a>
+>>>>>>> d9d5586bf10a913bfd6c76ef006c9dc17b32ce05
                         </li>
-                    <% end %>
+                        <%bandera1 = false%>
+                    <%end%>
                 </ul>
             </div>
+
+            <%= form_tag({:controller => 'turist' , :action => "index"}, :method => "get") do %>
+                <%bandera2 = true%>
+                <div>
+                    <%= text_field_tag :answers_id, @answers_id , :type=>""%>
+                </div>
+                <div class="tab-content">
+                <% @questions.each do |item| %>
+                        <div class="tab-pane <%= bandera2 == true ? 'active': '' %>" role="tabpanel" id="step<%=item[:question].id%>">
+                             <div class="col-md-12  " >
+                                <center><h5>Selecciona las imagenes con las que te identifiques</h5></center>
+                                <center><h5><strong><%= item[:question].Question %></strong></h5></center>
+                            </div>
+                            <div class="carousel">
+                                <% item[:answer].each do |answer| %>
+                                    <a class="carousel-item"  id="">
+                                        <% id = 'chk'%>
+                                        <% id.concat(answer.id.to_s)%>
+                                        <button  type="button" class="btn btn-block btn-primary btn-radio"><%= answer.Body%></button>
+                                        <%= check_box_tag id, answer.id, answer.id, :disabled=>"true"  %>
+                                        <%= image_tag  'questions/'+answer.SRC, :class=>" img-responsive img-radio thumb hidden-sm hidden-xs"%>
+                                    </a>
+                                <%end%>
+                            </div>
+                            <div class=" navbar navbar-default navbar-fixed-bottom">
+                                <div class="container">
+                                    <center>
+                                       <ul class="list-inline">
+                                            <li><input type="button" value="Anterior" id="prev<%=item[:question].id%>" class="hidden btn btn-primary  prev-step "></li>
+                                            <li><%= link_to 'Omitir', {:controller => "turist", :action => "index"},:class=>"btn btn-primary hidden"%></li>
+                                            <li><input type="botton" value="Siguiente" id="con<%=item[:question].id%>" class="btn btn-primary btn-info-full next-step"></li>
+                                        </ul>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                        <%bandera2=false%>
+                    <% end %>
+                </div>
+            <% end %>
         </div>
-    </div>
-        <%= submit_tag "Siguiente" , :class=>"btn btn-primary btn-lg btn-block"%>
-<% end %>
+    </section>
+   </div>
+</div>
+<%= javascript_include_tag 'question', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag  'question', media: 'all', 'data-turbolinks-track' => true %>
+ 
+

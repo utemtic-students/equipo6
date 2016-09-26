@@ -1,80 +1,5 @@
 class InsertQuestionGen < ActiveRecord::Migration
   def change
-  	q = Question.new
-	q.id = 1
-	q.Question = "¿Quienes te acompañan?"
-	q.Section = 1
-	q.save
-
-	a = Answer.new
-	a.id = 1
-	a.Body = 'Solo'
-	a.SRC = 'acompañantes/solo/solo.jpg'
-	a.Description = ""
-	a.save
-	qxa = QuestionXAnswer.new
-	qxa.id = 1
-	qxa.questions_id = 1
-	qxa.answers_id = 1
-	qxa.save
-	axc = AnswerXClasification.new
-	axc.id = 1
-	axc.answers_id = 1
-	axc.clasifications_id = 12
-	axc.save
-
-	a = Answer.new
-	a.id = 2
-	a.Body = 'Amigos'
-	a.SRC = 'acompañantes/amigos/amigos.jpg'
-	a.Description = ""
-	a.save
-	qxa = QuestionXAnswer.new
-	qxa.id = 2
-	qxa.questions_id = 1
-	qxa.answers_id = 2
-	qxa.save
-	axc = AnswerXClasification.new
-	axc.id = 2
-	axc.answers_id = 2
-	axc.clasifications_id = 9
-	axc.save
-
-	a = Answer.new
-	a.id = 3
-	a.Body = 'Familia'
-	a.SRC = 'acompañantes/familia/familia.jpg'
-	a.Description = ""
-	a.save
-	qxa = QuestionXAnswer.new
-	qxa.id = 3
-	qxa.questions_id = 1
-	qxa.answers_id = 3
-	qxa.save
-	axc = AnswerXClasification.new
-	axc.id = 3
-	axc.answers_id = 3
-	axc.clasifications_id = 10
-	axc.save
-
-	a = Answer.new
-	a.id = 4
-	a.Body = 'Pareja'
-	a.SRC = 'acompañantes/pareja/pareja.jpg'
-	a.Description = ""
-	a.save
-	qxa = QuestionXAnswer.new
-	qxa.id = 4
-	qxa.questions_id = 1
-	qxa.answers_id = 4
-	qxa.save
-	axc = AnswerXClasification.new
-	axc.id = 4
-	axc.answers_id = 4
-	axc.clasifications_id = 11
-	axc.save
-
-
 
 	q = Question.new
 	q.id = 2
@@ -244,12 +169,6 @@ class InsertQuestionGen < ActiveRecord::Migration
 
 	
 
-	q = Question.new
-	q.id = 5
-	q.Question = "¿Que actividades extremas te gustaria practicar?"
-	q.Section = 1
-	q.save
-
 	a = Answer.new
 	a.id = 13
 	a.Body = 'Moto Acuatica'
@@ -300,15 +219,6 @@ class InsertQuestionGen < ActiveRecord::Migration
 	axc.answers_id = 15
 	axc.clasifications_id = 1
 	axc.save
-
-
-	
-
-	q = Question.new
-	q.id = 6
-	q.Question = "¿Que actividades tranquilas te gustaria practicar?"
-	q.Section = 1
-	q.save
 
 	a = Answer.new
 	a.id = 16
