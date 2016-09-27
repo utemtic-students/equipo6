@@ -13,5 +13,7 @@
 //= require jquery
 //= require bootstrap
 //= require bootstrap-material-design
+//= require underscore
+//= require gmaps/google
 //= require turbolinks
 
