@@ -5,7 +5,7 @@ class SitesController < ApplicationController
   # GET /sites.json
   def index
     @sites =  Site.where("businessmans = ?", 1)
-    @id = users:{id:self.id}
+    #@id = users:{id:self.id}
 
   end
 
