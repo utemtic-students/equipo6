@@ -47,7 +47,7 @@
             <%= form_tag({:controller => 'turist' , :action => "index"}, :method => "get") do %>
                 <%bandera2 = true%>
                 <div>
-                    <%= text_field_tag :answers_id, @answers_id , :type=>""%>
+                    <%= text_field_tag :answers_id, @answers_id , :type=>"hidden"%>
                 </div>
                 <div class="tab-content">
                 <% @questions.each do |item| %>
