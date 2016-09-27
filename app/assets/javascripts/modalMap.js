@@ -1,4 +1,4 @@
-
+/*
 var directionsService = new google.maps.DirectionsService();
 var directionsDisplay = new google.maps.DirectionsRenderer();
 
@@ -26,7 +26,7 @@ handler.buildMap({
   directionsDisplay.setMap(handler.getMap());
 
 });
-
+*/
 
 $(document).ready(function(){
 	var modal = document.getElementById('myModal');
