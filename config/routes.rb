@@ -30,7 +30,9 @@ Rails.application.routes.draw do
   resources :attachments, only: [:create,:destroy,:new,:show]
   resources :products
   resources :in_shopping_carts, only: [:create,:destroy]
-  devise_for :users
+  devise_for :users,:controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  post "/custom_sign_up", to: "users/omniauth_callbacks#custom_sign_up" 
+
 
   post "/emails/create", as: :create_email
   post "/pagar", to: "payments#create"
@@ -48,6 +50,8 @@ Rails.application.routes.draw do
 
   get "/ordenes", to: "ordenes#index"
   
+
+
   authenticated :user do
     root 'welcome#index'
   end
