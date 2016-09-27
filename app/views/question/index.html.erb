@@ -23,34 +23,6 @@
         </div>
     </div>
 </div>
-<<<<<<< HEAD
-<div class="col-md-12  " >
-    <center><h4>Selecciona las imagenes con las que te identifiques</h4></center>
-    <% @questions.each do |question| %>
-    <center><h4><strong><%= question.Question %></strong></h4></center>
-    <% end %>
-</div>
- <!--start-->
-<%= form_tag({:controller => @fin != 1 ? 'question' : 'turist' , :action => "index"}, :method => "post") do %>
-    <div>
-        <%= text_field_tag :inputHidden, :inputHidden %>
-        <%= text_field_tag :questions_id, @questions_id + 1, :type=>"hidden"%>
-        <%= text_field_tag :answers_id, @answers_id , :type=>"hidden"%>
-        <%= text_field_tag :answers_sec, @answers_sec , :type=>"hidden"%>
-        <%= text_field_tag :answers_del, @answers_del , :type=>"hidden"%>
-        <%= text_field_tag :allQuest, @allQuest , :type=>"hidden"%>
-    </div>
-    <div id="divSlider" style="padding:5px 0;">
-        <div id="thumbnail-slider">
-            <div class="inner">
-                <ul>
-                    <% @answers.each do |answer| %>
-                        <li>
-                            <button type="button" class="btn btn-primary btn-radio"><%= answer.Body%></button>
-                            <%= check_box_tag answer.Body, answer.id, answer.id, :disabled=>"true" %>
-                            
-                            <%=image_tag  'questions/'+answer.SRC, :class=>"img-responsive img-radio thumb "%>
-=======
 <div class="container">
     <div class="row">
         <section>
@@ -66,7 +38,6 @@
                                     <i class="glyphicon glyphicon-folder-open"></i>
                                 </span>
                             </a>
->>>>>>> d9d5586bf10a913bfd6c76ef006c9dc17b32ce05
                         </li>
                         <%bandera1 = false%>
                     <%end%>
@@ -92,7 +63,7 @@
                                         <% id.concat(answer.id.to_s)%>
                                         <button  type="button" class="btn btn-block btn-primary btn-radio"><%= answer.Body%></button>
                                         <%= check_box_tag id, answer.id, answer.id, :disabled=>"true"  %>
-                                        <%= image_tag  'questions/'+answer.SRC, :class=>" img-responsive img-radio thumb hidden-sm hidden-xs"%>
+                                        <%= image_tag  'questions/'+answer.SRC, :class=>" img-responsive img-radio thumb "%>
                                     </a>
                                 <%end%>
                             </div>
