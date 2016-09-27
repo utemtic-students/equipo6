@@ -16,4 +16,6 @@
  *= require_self
   @import bootstrap-sass;
  */
-
+body{
+	background-image: url(/assets/_DSC9481.jpg);
+}
