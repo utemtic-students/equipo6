@@ -6,14 +6,14 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'modalMap', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'star-rating', media: 'all', 'data-turbolinks-track' => true %>
-<%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'star-rating', 'data-turbolinks-track' => true %>
+	<%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'star-rating', 'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>
 </head>
 <body>
 	<div class="blue white-text large-padding bold text-center" style="<%= "display:none;" if alert.nil? && notice.nil? %>">
-		<p class="no-padding no-margin inline-block"><%= notice %><%= alert %></p>
+		<p class="no-padding no-margin inline-block close"><%= notice %><%= alert %></p>
 		<span class="pull-right close-parent">X</span>
 	</div>
 

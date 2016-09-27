@@ -32,8 +32,8 @@
                 <ul class="nav nav-tabs" id="navQuest" role="tablist" style="background: #fff;">
                     <%bandera1 = true%>
                     <% @questions.each do |item| %>
-                        <li role="presentation" id="li<%=item[:question].id%>" class=" <%= bandera1 == true ? 'active' : 'disabled hidden ' %>" id="liQuestion">
-                            <a class="liQuestion" href="#step<%=item[:question].id%>" data-toggle="tab" aria-controls="step<%=item[:question].id%>" role="tab" title="<%=item[:question].Question%>">
+                        <li role="presentation" id="li<%=item[:question].id%>"  class=" <%= bandera1 == true ? 'active' : 'disabled hidden ' %>" id="liQuestion">
+                            <a class="liQuestion" id="<%=item[:question].id%>" href="#step<%=item[:question].id%>" data-toggle="tab" aria-controls="step<%=item[:question].id%>" role="tab" title="<%=item[:question].Question%>">
                                 <span class="round-tab">
                                     <i class="glyphicon glyphicon-folder-open"></i>
                                 </span>
@@ -47,11 +47,11 @@
             <%= form_tag({:controller => 'turist' , :action => "index"}, :method => "get") do %>
                 <%bandera2 = true%>
                 <div>
-                    <%= text_field_tag :answers_id, @answers_id , :type=>""%>
+                    <%= text_field_tag :answers_id, @answers_id , :type=>"hidden"%>
                 </div>
                 <div class="tab-content">
                 <% @questions.each do |item| %>
-                        <div class="tab-pane <%= bandera2 == true ? 'active': '' %>" role="tabpanel" id="step<%=item[:question].id%>">
+                        <div class=" tab-pane <%= bandera2 == true ? 'active': '' %>" role="tabpanel" id="step<%=item[:question].id%>">
                              <div class="col-md-12  " >
                                 <center><h5>Selecciona las imagenes con las que te identifiques</h5></center>
                                 <center><h5><strong><%= item[:question].Question %></strong></h5></center>
@@ -61,9 +61,13 @@
                                     <a class="carousel-item"  id="">
                                         <% id = 'chk'%>
                                         <% id.concat(answer.id.to_s)%>
-                                        <button  type="button" class="btn btn-block btn-primary btn-radio"><%= answer.Body%></button>
+                                        <button  type="button" id="<%=id%>" class="btn btn-block btn-primary btn-radio"><%= answer.Body%></button>
                                         <%= check_box_tag id, answer.id, answer.id, :disabled=>"true"  %>
+<<<<<<< HEAD
                                         <%= image_tag  'questions/'+answer.SRC, :class=>" img-responsive img-radio thumb "%>
+=======
+                                        <%= image_tag  'questions/'+answer.SRC, :id=>id ,:class=>" img-responsive img-radio thumb"%>
+>>>>>>> 0488fef1717a54b0ee08fdf186733ba65610e8a6
                                     </a>
                                 <%end%>
                             </div>
@@ -71,9 +75,10 @@
                                 <div class="container">
                                     <center>
                                        <ul class="list-inline">
-                                            <li><input type="button" value="Anterior" id="prev<%=item[:question].id%>" class="hidden btn btn-primary  prev-step "></li>
-                                            <li><%= link_to 'Omitir', {:controller => "turist", :action => "index"},:class=>"btn btn-primary hidden"%></li>
-                                            <li><input type="botton" value="Siguiente" id="con<%=item[:question].id%>" class="btn btn-primary btn-info-full next-step"></li>
+                                            <li><input type="hidden" value="Anterior" id="prev<%=item[:question].id%>" class=" btn btn-primary  prev-step "></li>
+                                            
+                                            <li><input type="submit" value="Terminar" id="ter<%=item[:question].id%>" class="btn btn-primary btn-info-full"></li>
+                                            <li><input type="hidden" value="Siguiente" id="con<%=item[:question].id%>" class="btn btn-primary btn-info-full next-step"></li>
                                         </ul>
                                     </center>
                                 </div>

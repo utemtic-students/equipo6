@@ -1,10 +1,7 @@
-var answers_id = [];
+ 
 $(document).ready(function(){
     material();
-
     $('.carousel').carousel();
-    
-    
     $('.nav-tabs > li a[title]').tooltip();
     //Wizard
     $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
@@ -14,34 +11,80 @@ $(document).ready(function(){
         }
     });
     $(".next-step").click(function (e) {
+        var $active     = $('.wizard .nav-tabs li.active');
+        var lix         = document.getElementsByClassName("liQuestion");
+        var id          = ($active[0].id.replace('li',''));
+        var bandera     = true;
+        var contador    = 0;
 
-        var $active = $('.wizard .nav-tabs li.active');
+        for (var i = 0; i < lix.length; i++) {
+            if (id<lix[i].id && id!=lix[i].id  && bandera == true) {
+                if($("#li"+lix[i].id).hasClass('hidden'))
+                {
+                    contador++;         
+                }else
+                {
+                    bandera=false;
+                }
+            } 
+        }
+        for (var i = 0; i < contador; i++) {
+            var $active = $('.wizard .nav-tabs li.active');
+            $active.next().removeClass('disabled');
+            nextTab($active);
+        }
+            var $active = $('.wizard .nav-tabs li.active');
             $active.next().removeClass('disabled');
             nextTab($active);
             $('.carousel').carousel();
-        
     });
     $(".prev-step").click(function (e) {
-        var $active = $('.wizard .nav-tabs li.active');
-        prevTab($active);
+        var $active     = $('.wizard .nav-tabs li.active');
+        var lix         = document.getElementsByClassName("liQuestion");
+        var id          = ($active[0].id.replace('li',''));
+        var bandera     = true;
+        var contador    = 0;
+        console.log(lix.length);
+        for (var i = lix.length-1; i >= 0; i--) {
+            if (id>lix[i].id && id!=lix[i].id && bandera==true) {
+                if($("#li"+lix[i].id).hasClass('hidden'))
+                {
+                    contador++;         
+                }else
+                {
+                    bandera=false;
+                }
+            } 
+        }
+        console.log("con"+contador);
+        for (var i = 0; i < contador; i++) {
+           var $active = $('.wizard .nav-tabs li.active');
+            prevTab($active);
+        }
+
+          var $active = $('.wizard .nav-tabs li.active');
+            prevTab($active);
+        
         $('.carousel').carousel();
     });
      $(".liQuestion").click(function (e) {
         $('.carousel').carousel();
     });
 
-    document.getElementById("answers_id").value="";
+    document.getElementById("answers_id").value="0";
     $('.btn-radio').removeClass('active')
             .siblings('input:checkbox').prop('checked',false)
             .siblings('.img-radio').css('opacity','0.5');  
 
     $('.btn-radio').click(function(e) {
+        var answers_id = [];
         if( $(this).siblings('input:checkbox').prop("checked") != true)
         {
             $(this).addClass('active')
             .siblings('input').prop('checked',true)
             .siblings('.img-radio').css('opacity','1');
             var bandera = true;
+            answers_id = document.getElementById("answers_id").value.split(',');
             for (var i = 0; i < answers_id.length; i++) {
                 if (answers_id[i] == $(this).siblings('input:checkbox')[0].value){
                     bandera = false;
@@ -68,11 +111,9 @@ $(document).ready(function(){
             }
         }
     });
-    if(document.getElementById("answers_id").value=='')
-    {
-        $(".next-step")[0].value='Continuar';
-        $(".next-step")[0].type='submit';      
-    }
+        $('.carousel').carousel();
+
+
 
 });
 function mostrarPreguntas(item, mostrar){
@@ -80,10 +121,6 @@ function mostrarPreguntas(item, mostrar){
         url: "/question/newQuest/",
         dataType: "JSON",
         data: {item: item},
-        timeout: 10000,
-        error: function(){
-           console.log(" Por favor intente más tarde.");
-        },
         success: function(res){
             if(res){
                 for (var i = 0; i < res.quest.length; i++) {
@@ -91,23 +128,33 @@ function mostrarPreguntas(item, mostrar){
                     var prev = document.getElementById('prev'+res.quest[i].id);
                     if (mostrar == true) {
                         li.removeAttribute('class','hidden');
-                        prev.removeAttribute('class','hidden');
-                        prev.setAttribute('class','btn btn-primary  prev-step');
+                        prev.type = "button";
                         if (res.quest.length>0) {
                             $.ajax({
                                 url: "/question/validarSiguiente/",
                                 dataType: "JSON",
                                 data: {item: item},
-                                timeout: 10000,
-                                error: function(){
-                                   console.log(" Por favor intente más tarde.");
-                                },
                                 success: function(res){
                                     if(res){
                                             var id = res['quest'][0].questions_id;
                                             var continuar = document.getElementById('con'+id);
-                                            continuar.type = "botton";
+                                            continuar.type = "button";
                                             continuar.value= "Siguiente";
+                                            var lix = document.getElementsByClassName("liQuestion");
+                                            var iNumeroMayor = 0;
+                                            for (var i = 0; i < lix.length; i++) {
+                                                var continuar = document.getElementById('con'+lix[i].id);
+                                                continuar.type = "button";
+                                                if (!$("#li"+lix[i].id).hasClass('hidden')) {
+                                                    if (lix[i].id>iNumeroMayor){
+                                                        iNumeroMayor = lix[i].id;
+                                                        iPosicion = i;
+                                                    }
+                                                } 
+                                            }
+                                            var continuar = document.getElementById('con'+iNumeroMayor);
+                                            continuar.type = "hidden";
+                                            console.log(iNumeroMayor);
                                     }else{
                                     }
                                 }
@@ -121,10 +168,6 @@ function mostrarPreguntas(item, mostrar){
                                 url: "/question/desmarcar/",
                                 dataType: "JSON",
                                 data: {item: res.quest[i].id},
-                                timeout: 10000,
-                                error: function(){
-                                   console.log(" Por favor intente más tarde.");
-                                },
                                 success: function(res){
                                     if(res){
                                         var answers = new Array(document.getElementById("answers_id").value.split(','));
@@ -133,9 +176,9 @@ function mostrarPreguntas(item, mostrar){
                                            console.log(res.answers[i].answers_id);
                                            var ia = String(res.answers[i].answers_id);
                                             answers = answers.clean(ia);
-                                            $("#chk"+ia).removeClass('active')
+                                             $('#chk'+res.answers[i].answers_id).removeClass('active')
                                             .siblings('input:checkbox').prop('checked',false)
-                                            .siblings('.img-radio').css('opacity','0.5');;
+                                            .siblings('.img-radio').css('opacity','0.5');
                                         }
                                         document.getElementById("answers_id").value = answers;
                                     }else{
@@ -143,8 +186,22 @@ function mostrarPreguntas(item, mostrar){
                                 }
                              })
                         li.setAttribute('class','hidden');
+                         var lix = document.getElementsByClassName("liQuestion");
+                        var iNumeroMayor = 0;
+                        for (var i = 0; i < lix.length; i++) {
+                            var continuar = document.getElementById('con'+lix[i].id);
+                            continuar.type = "button";
+                            if (!$("#li"+lix[i].id).hasClass('hidden')) {
+                                if (lix[i].id>iNumeroMayor){
+                                    iNumeroMayor = lix[i].id;
+                                    iPosicion = i;
+                                }
+                            } 
+                        }
+                        var continuar = document.getElementById('con'+iNumeroMayor);
+                        continuar.type = "hidden";
+                        console.log(iNumeroMayor);
                     }
-                    
                 }    
             }else{
             }

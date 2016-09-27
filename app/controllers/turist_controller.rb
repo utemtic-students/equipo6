@@ -8,7 +8,7 @@ class TuristController < ApplicationController
         totalAnswer.push(answer);
         
       end  
-      if answers_id.count == 0
+      if answers_id.count == 1
          sites = Site.select('sites.id AS id, sites.Name AS Name, sites.Description AS Description, photos.SRC AS SRC')
                      .joins("LEFT JOIN photos ON photos.sites_id = sites.id AND photos.Section = 'Principal'")
                      .joins("LEFT JOIN site_x_types ON  site_x_types.sites_id = sites.id ")
