@@ -63,11 +63,7 @@
                                         <% id.concat(answer.id.to_s)%>
                                         <button  type="button" id="<%=id%>" class="btn btn-block btn-primary btn-radio"><%= answer.Body%></button>
                                         <%= check_box_tag id, answer.id, answer.id, :disabled=>"true"  %>
-<<<<<<< HEAD
                                         <%= image_tag  'questions/'+answer.SRC, :class=>" img-responsive img-radio thumb "%>
-=======
-                                        <%= image_tag  'questions/'+answer.SRC, :id=>id ,:class=>" img-responsive img-radio thumb"%>
->>>>>>> 0488fef1717a54b0ee08fdf186733ba65610e8a6
                                     </a>
                                 <%end%>
                             </div>
