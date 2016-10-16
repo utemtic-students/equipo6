@@ -1,4 +1,4 @@
-<div class="navbar navbar-info">
+    <div class="navbar navbar-info">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
@@ -35,7 +35,7 @@
                         <li role="presentation" id="li<%=item[:question].id%>"  class=" <%= bandera1 == true ? 'active' : 'disabled hidden ' %>" id="liQuestion">
                             <a class="liQuestion" id="<%=item[:question].id%>" href="#step<%=item[:question].id%>" data-toggle="tab" aria-controls="step<%=item[:question].id%>" role="tab" title="<%=item[:question].Question%>">
                                 <span class="round-tab">
-                                    <i class="glyphicon glyphicon-folder-open"></i>
+                                    <%= image_tag  'iconos/quest/'+item[:question].id.to_s+'/icono.png'%>
                                 </span>
                             </a>
                         </li>

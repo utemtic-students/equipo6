@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= jquery_ujs
 //= require bootstrap
 //= require bootstrap-material-design
 //= require underscore
 //= require gmaps/google
 //= require turbolinks
-

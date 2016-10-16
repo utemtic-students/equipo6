@@ -1,4 +1,5 @@
 <header class="navbar undefined">
+  <% if user_signed_in? %>
         <div class="navbar-branding"> <%= link_to "GoTurista", {:controller => "welcome", :action => "index" }, :class=>"navbar-brand "%><span id="toggle_sidemenu_l" class="fa fa-bars"></span></div>
         <ul class="nav navbar-nav navbar-left"></ul>
                 <form role="title" class="navbar-form navbar-left navbar-search alt">
@@ -15,7 +16,7 @@
                 <%= link_to   class:"animated animated-short fadeInUp", :controller => "welcome", :action => "settingsUser"  do %>
                   <span class="fa fa-gear"></span> Agustes de Usuario
                 <%end%></li>
-              <li class="dropdown-footer"><%= link_to "Cerrar sesión", destroy_user_session_path, class:"fa fa-power-off pr5" %></li>
+              <li class="dropdown-footer"><%= link_to "Cerrar sesión", destroy_user_session_path, :method => :delete, class:"fa fa-power-off pr5" %></li>
             </ul>
           </li>
         </ul>
@@ -36,7 +37,7 @@
             <li>
               <div class="" align='center'>
               <%= image_tag  "avatars/1.jpg", style:"width:50%; height:50%; border-radius:50%;"%>
-               
+
               </div>
             </li>
             <li class="sidebar-label pt35"></li>
@@ -58,12 +59,17 @@
             </li>
             <li>
               <%= link_to  :controller => "welcome", :action => "company"  do %>
-                <span class="fa fa-gear"></span><span class="sidebar-title">Empresas</span>  
+                <span class="fa fa-gear"></span><span class="sidebar-title">Empresas</span>
               <%end%>
             </li>
             </ul>
           <!-- Start: Sidebar Collapse Button-->
           <div class="sidebar-toggle-mini"><a href="#"><span class="fa fa-sign-out"></span></a></div>
         </div>
-      </aside>				
-
+        <% else %>
+        <li class="active"><%= link_to '¿Tienes un negocio?, Registrate',  new_user_registration_path  %></li>
+       <li><%= link_to 'Ingresa', user_session_path %></li></li>
+       <li class="fa fa-gear">
+       </li>
+       <% end %>
+      </aside>

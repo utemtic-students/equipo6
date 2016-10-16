@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161016154537) do
+ActiveRecord::Schema.define(version: 20161016172341) do
 
   create_table "answer_x_clasifications", force: :cascade do |t|
     t.integer  "answers_id"
@@ -186,6 +186,7 @@ ActiveRecord::Schema.define(version: 20161016154537) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "Fin"
+    t.string   "Icon"
   end
 
   create_table "scores", force: :cascade do |t|
