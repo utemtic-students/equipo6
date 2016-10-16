@@ -8,13 +8,8 @@ class QuestionController < ApplicationController
 			.where("qxa.questions_id = ? ", quest.id);
 	        @questions.push(:question => quest, :answer => answer);
       	end
-		
-		
-		
 		@types = Type.all;
 		render layout: "landing"
-		
-	  	
 	end
 	def questions
 		if params[:answers_id]!=''
