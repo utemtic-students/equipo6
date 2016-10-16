@@ -1,0 +1,105 @@
+ <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,600,700%7CMontserrat:400,700">
+    <link rel="stylesheet" type="text/css" href="../assets/skin/default_skin/css/theme.css">
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+
+  <!-- Start: Topbar-Dropdown-->
+ <section id="content_wrapper">
+        <header id="topbar" class="alt">
+          <div class="form-group">
+            <div class="col-md-4">
+              <div class="col-md-10">
+                Limite de Reservaciones por Dia:
+            </div>
+            <div class="col-md-2">
+              10
+            </div>
+            </div>
+            <div  class="col-md-3">
+              <input id="nombre" type="text" placeholder="Cantidad Reservacion" class="form-control">
+            </div>
+            <div  class="col-md-2">
+              <button class="btn btn-success btn-block" type="button">Agregar </button>
+            </div>
+                        <div  class="col-md-2">
+              <button class="btn btn-success btn-block" type="button">Quitar</button>
+            </div>
+          </div>
+        </header>
+        <!-- Begin: Content-->
+        <section id="content" class="animated fadeIn">
+          <!-- Demo Content: Center Column Text-->
+           <div class="panel">
+              <div class="panel-menu p12 admin-form theme-primary">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label class="field select">
+                      <select id="filter-category" name="filter-category">
+                        <option value="0">Filter by Category</option>
+                        <option value="1">Smart Phones</option>
+                      </select><i class="arrow"></i>
+                    </label>
+                  </div>
+                  <div class="col-md-4 mt-10 mt-md-0">
+                    <label class="field select">
+                      <select id="filter-status" name="filter-status">
+                        <option value="0">Filter by Status</option>
+                        <option value="1">Active</option>
+                      </select><i class="arrow"></i>
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="panel-body pn">
+                <div class="table-responsive of-y-a">
+                  <table class="table admin-form theme-warning tc-checkbox-1 fs13">
+                    <thead>
+                      <tr class="bg-light">
+                        <th>Imagen</th>
+                        <th>Nombre de Servicios</th>
+                        <th>Id</th>
+                        <th>Precio</th>
+                        <th class="text-right"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td  class="w100"><img title="user" src="../assets/img/stock/products/thumb_1.jpg" class="img-responsive mw40 ib mr10"></td>
+                        <td>Apple Ipod 4G - Silver</td>
+                        <td>#21362</td>
+                        <td>$215</td>
+                        <td class="text-right">
+                           <%= link_to "Ver Detalle", {:controller => "welcome", :action => "detailReservation" }, class:"btn btn-success br2 btn-xs fs12 dropdown-toggle" %>
+                            <button type="button"  aria-expanded="false" class="btn btn-danger br2 btn-xs fs12 dropdown-toggle" ><a href="#">Cancelar</a></button>
+                          </td> 
+                      </tr>   
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </section>  
+    <!-- core scripts-->
+    <script src="../plugins/core.min.js"></script>
+    <!-- Theme Javascript-->
+    <script src="../assets/js/utility/utility.js"></script>
+    <script src="../assets/js/demo/demo.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+        "use strict";
+        // Init Theme Core
+        Core.init();
+      });
+    </script>
