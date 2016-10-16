@@ -20,12 +20,12 @@ Rails.application.routes.draw do
   post 'question/validarSiguiente'
   get 'question/desmarcar'
   post 'question/desmarcar'
-  
-   
+
+
   resources :client
   get '/client/new'
   post '/client/new'
-  
+
   get 'detail/index'
   get 'question/index'
   get 'turist/index'
@@ -34,13 +34,13 @@ Rails.application.routes.draw do
   post 'detail/index'
   get 'turist_prod/index'
   post 'turist_prod/index'
-  
+
 
   resources :attachments, only: [:create,:destroy,:new,:show]
   resources :products
   resources :in_shopping_carts, only: [:create,:destroy]
   devise_for :users,:controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  post "/custom_sign_up", to: "users/omniauth_callbacks#custom_sign_up" 
+  post "/custom_sign_up", to: "users/omniauth_callbacks#custom_sign_up"
 
 
   post "/emails/create", as: :create_email
@@ -48,7 +48,7 @@ Rails.application.routes.draw do
   post "/payments/cards", to:"payments#process_card"
 
   get "/carrito", to: "shopping_carts#show"
-  get "/add/:product_id",as: :add_to_cart,to: "in_shopping_carts#create" 
+  get "/add/:product_id",as: :add_to_cart,to: "in_shopping_carts#create"
   get "/checkout", to: "payments#checkout"
 
   get "/descargar/:id", to:"links#download"
@@ -58,7 +58,7 @@ Rails.application.routes.draw do
   get "/ok", to: "welcome#payment_succed"
 
   get "/ordenes", to: "ordenes#index"
-  
+
 
 
   authenticated :user do
@@ -74,6 +74,7 @@ Rails.application.routes.draw do
   unauthenticated :user do
     devise_scope :user do
       root "welcome#unregistered", as: :unregistered_root
+      get '/users/sign_out' => 'devise/sessions#destroy'
     end
   end
 end
