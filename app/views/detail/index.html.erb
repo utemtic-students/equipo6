@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../">GoTurista!</a>
+            <a class="navbar-brand" href="../">GoTurista</a>
         </div>
         <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
             <ul class="nav navbar-nav">
@@ -29,8 +29,12 @@
         </div>
     </div>
 </div>
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="6000" id="bs-carousel">
+  <!-- Overlay -->
+  <div class="overlay"></div>
 
 
+<<<<<<< HEAD
 <div class="container">
     <center> <h1><%= @site.Name %> </h1>   </center>
 </div>
@@ -63,6 +67,7 @@
                                 <% end %>
                             <% end %>
 
+
                         </div>
                         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left"></span>
@@ -71,14 +76,36 @@
                             <span class="glyphicon glyphicon-chevron-right"></span>
                         </a>
                     </div>
+=======
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <%  positionLi = 0 %>
+    <% @photosGaleria.each do |photo| %>    
+        <li data-target="#bs-carousel" data-slide-to="<%=positionLi%>" class="<%= positionLi==0 ?  'active' : ''%> "></li>
+        <%positionLi = positionLi + 1%>
+    <% end %>
+  </ol>
+  
+  <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <%  position = 0 %>
+        <% @photosGaleria.each do |photo| %> 
+            <div class="item slides <%= position==0 ?  'active' : ''%> ">
+                <div class="slide-1" style='background-image: url("<%='../assets/sites/'+photo.SRC%>");'></div>
+                <div class="hero">
+                    <hgroup>
+                      <h2><%= @site.Name %> </h2>        
+                      <h5><%= @site.Description %></h5>
+                    </hgroup>
+                     <a href="#info"><button type="button" class="btn  btn-info btn-circle btn-xl"><i class="glyphicon glyphicon-menu-down"></i></button></a>
+>>>>>>> d4a4116b079e0900ccc8029666dfa61eec0d0e96
                 </div>
-            </div> 
-        </div>
-    </div>
+            </div>
+            <%position = position +1%>
+        <%end%>
+    </div> 
 </div>
-
-
-<div class="container">
+<div class="container" id="info">
     <div class="row">
        
         

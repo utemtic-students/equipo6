@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160916195222) do
+ActiveRecord::Schema.define(version: 20161016154537) do
 
   create_table "answer_x_clasifications", force: :cascade do |t|
     t.integer  "answers_id"
@@ -146,8 +146,10 @@ ActiveRecord::Schema.define(version: 20160916195222) do
     t.text     "SRC"
     t.string   "Section"
     t.integer  "position"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "Description"
+    t.string   "Title"
   end
 
   add_index "photos", ["sites_id"], name: "index_photos_on_sites_id"
