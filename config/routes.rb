@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   post 'question/validarSiguiente'
   get 'question/desmarcar'
   post 'question/desmarcar'
+  
    
   resources :client
   get '/client/new'
