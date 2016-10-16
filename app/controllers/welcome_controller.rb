@@ -2,6 +2,18 @@ class WelcomeController < ApplicationController
   def index
     @orders = current_user.orders.order("created_at desc")
   end
+  def services
+    @orders = current_user.orders.order("created_at desc")
+  end
+  def settingsUser
+    @orders = current_user.orders.order("created_at desc")    
+  end
+  def company
+    @orders = current_user.orders.order("created_at desc")    
+  end
+  def settingsCompany
+    @orders = current_user.orders.order("created_at desc")
+  end
 
   def unregistered
     @types = ''

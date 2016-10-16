@@ -62,6 +62,15 @@ Rails.application.routes.draw do
 
   authenticated :user do
     root 'welcome#index'
+    get 'welcome/services'
+    get 'welcome/settingsUser'
+    get 'welcome/reservation'
+    get 'welcome/detailReservation'
+    get 'welcome/company'
+    get 'welcome/settingsCompany'
+
+
+
   end
 
   unauthenticated :user do
