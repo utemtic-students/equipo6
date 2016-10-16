@@ -1,5 +1,31 @@
 $(document).ready(function(){
-		scrollA();
+	scrollA();
+	window.myMap =  function () {           
+	  var map = new google.maps.Map(document.getElementById('map'), {
+	    center: {lat: -34.397, lng: 150.644},
+	    zoom: 6
+	  });
+	  var infoWindow = new google.maps.InfoWindow({map: map});
+
+	  // Try HTML5 geolocation.
+	  if (navigator.geolocation) {
+	    navigator.geolocation.getCurrentPosition(function(position) {
+	      var pos = {
+	        lat: position.coords.latitude,
+	        lng: position.coords.longitude
+	      };
+
+	      infoWindow.setPosition(pos);
+	      infoWindow.setContent('Location found.');
+	      map.setCenter(pos);
+	    }, function() {
+	      handleLocationError(true, infoWindow, map.getCenter());
+	    });
+	  } else {
+	    // Browser doesn't support Geolocation
+	    handleLocationError(false, infoWindow, map.getCenter());
+	  }
+	}
 	var modal = document.getElementById('myModal');
 	var span = document.getElementsByClassName("close")[0];
 	var allSite = document.getElementById('allSite').value;
@@ -77,8 +103,6 @@ $(document).ready(function(){
 								'change', function () {
 										console.log('Rating selected: ' + $(this).val());
 								});
-				map();
-
 });
 
 function scrollA()
@@ -105,32 +129,4 @@ function scrollA()
 		 }
 
 	 });
-}
-	 
-function map()
-{
-	var directionsService = new google.maps.DirectionsService();
-	var directionsDisplay = new google.maps.DirectionsRenderer();
-
-	function calcRoute() {
-		var origin      = new google.maps.LatLng(31.8465264,-116.65861,12);
-		var destination = new google.maps.LatLng(31.8465264,-116.65861,12);
-		var request = {
-				origin:      origin,
-				destination: destination,
-				travelMode:  google.maps.TravelMode.DRIVING
-		};
-		directionsService.route(request, function(response, status) {
-			if (status == google.maps.DirectionsStatus.OK) {
-				directionsDisplay.setDirections(response);
-			}
-		});
-	}
-	calcRoute();
-	var handler = Gmaps.build('Google');
-	handler.buildMap({
-	internal: {id: 'directions'}
-	}, function(){
-		directionsDisplay.setMap(handler.getMap());
-	});
 }
