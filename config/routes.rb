@@ -69,9 +69,6 @@ Rails.application.routes.draw do
     get 'welcome/detailReservation'
     get 'welcome/company'
     get 'welcome/settingsCompany'
-
-
-
   end
 
   unauthenticated :user do
