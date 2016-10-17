@@ -186,7 +186,7 @@ ActiveRecord::Schema.define(version: 20161016172341) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "Fin"
-    t.string   "Icon"
+    t.string   "IconSRC"
   end
 
   create_table "scores", force: :cascade do |t|
