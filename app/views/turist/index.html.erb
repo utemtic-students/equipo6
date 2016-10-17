@@ -1,14 +1,25 @@
+    
 
     <%= stylesheet_link_tag    'modalMap', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag    'star-rating', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'star-rating', 'data-turbolinks-track' => true %>
-  <!--# <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkXUzNLpepjc8VL_nf7IWDweKVlzorwBk&callback">
-    </script>
-   # <%= javascript_include_tag 'infobox_packed', 'data-turbolinks-track' => true %>
-    #<script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>-->
+    <%= javascript_include_tag 'modalMap', 'data-turbolinks-track' => true %>
+    
+    
+<style type="text/css">
+   <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
 
+</style>
     <div class="navbar navbar-info">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -25,7 +36,6 @@
                         <%= link_to "Explora Manzanillo", {:controller => "question", :action => "index" }%>
                     </li>
                     <li class="active"><%= link_to '¿Tienes un negocio?, Registrate', '../users/sign_up' %></li>
-                    <li><%= link_to 'Ingresa', '../users/sign_in' %></li>
                     <% @types.each do |type| %>
                         <li>
                             <%= link_to type.Name, {:controller => "turist", :action => "index", :type_id => type.id }%>
@@ -124,15 +134,21 @@
           <h2>Mapa de ubicación</h2>
         </div>
         <div class="modal-body">
-        
-  <div style='width: 800px;'>
-    <div id="directions" style='width: 800px; height: 400px;'></div>
-  </div>
+          <div style='width: 80%px; height: 60%;'>
+           <div id="map" style="width:100%;height:100%"></div>
 
+            <script>
+            
+            </script>
+            
+                        
+          </div>
         </div>
         <div class="modal-footer">
           <h3>Suerte..!</h3>
         </div>
       </div>
     </div>
-    <%= javascript_include_tag 'modalMap', 'data-turbolinks-track' => true %>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjLr0F1Y-72VXmRo54_VTChaZcuiENzt4&callback=myMap"
+    async defer></script>
+
