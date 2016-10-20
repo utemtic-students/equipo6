@@ -1,116 +1,127 @@
-    <%= stylesheet_link_tag    'modalMap', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag    'star-rating', media: 'all', 'data-turbolinks-track' => true %>
-    <%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'star-rating', 'data-turbolinks-track' => true %>
-    
-  
-  
-    <div class="navbar navbar-info">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <%= link_to "GoTurista", {:controller => "welcome", :action => "index" }, :class=>"navbar-brand" %>
-            </div>
-            <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
-                <ul class="nav navbar-nav">
+<%= stylesheet_link_tag    'modalMap', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag    'star-rating', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag    'font-awesome', media: 'all', 'data-turbolinks-track' => true %>
+<%= stylesheet_link_tag    'bootstrap-selectCSS', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'star-rating', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'bootstrap-select', 'data-turbolinks-track' => true %>
+
+
+<div class="navbar navbar-info">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-material-light-blue-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <%= link_to "GoTurista", {:controller => "welcome", :action => "index" }, :class=>"navbar-brand" %>
+        </div>
+        <div class="navbar-collapse collapse navbar-material-light-blue-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <%= link_to "Explora Manzanillo", {:controller => "question", :action => "index" }%>
+                </li>
+                <li class="active"><%= link_to '¿Tienes un negocio?, Registrate', '../users/sign_up' %></li>
+                <% @types.each do |type| %>
                     <li>
-                        <%= link_to "Explora Manzanillo", {:controller => "question", :action => "index" }%>
+                        <%= link_to type.Name, {:controller => "turist", :action => "index", :type_id => type.id }%>
                     </li>
-                    <li class="active"><%= link_to '¿Tienes un negocio?, Registrate', '../users/sign_up' %></li>
-                    <% @types.each do |type| %>
-                        <li>
-                            <%= link_to type.Name, {:controller => "turist", :action => "index", :type_id => type.id }%>
-                        </li>
-                    <% end %>
-                </ul>
-            </div>
+                <% end %>
+            </ul>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-xs-12  " >
-                <center><h2>Estos lugares</h2></center>
-                <center><h3><strong>"Podrian gustarte"</strong></h3></center>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-xs-12  " >
+            <center><h2>Estos lugares</h2></center>
+            <center><h3><strong>"Podrian gustarte"</strong></h3></center>
+            <br>
+            <br>
+             <div class="col-md-12 col-xs-12  " >
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Mejor Calificados</a></li>
+                    <li><a href="#">Mejor Precio</a></li>
+                     <li><a href="#">Mas populares </a></li>
+                </ul>
                 <br>
-                <br>
-                 <div class="col-md-12 col-xs-12  " >
-                    <ul class="nav nav-pills nav-stacked">
-                        <li class="active"><a href="#">Mejor Calificados</a></li>
-                        <li><a href="#">Mejor Precio</a></li>
-                         <li><a href="#">Mas populares </a></li>
-                    </ul>
-                    <br>
-                    
-                
+                <center><h3><strong>Filtro De Busqueda</strong></h3></center>
+                <select class="selectpicker" data-style="btn-primary" multiple data-selected-text-format="count" data-live-search="true">
+                    <optgroup label="Web">
+                        <option>PHP</option>
+                        <option>CSS</option>
+                        <option>HTML</option>
+                        <option>CSS 3</option>
+                        <option>Bootstrap</option>
+                        <option>JavaScript</option>
+                    </optgroup>
+                    <optgroup label="Programming">
+                      <option>Java</option>
+                      <option>C#</option>
+                      <option>Python</option>
+                    </optgroup>
+                </select>
             </div>
-
-            </div>
-            <br> 
-
-            <div class="col-md-9 col-xs-12">
-                <div class="row">
-                    <% cont = 0 %>
-                    <% @sites.each do |site| %>
-                         <%  cont = cont + 1 %>
-                        <% if cont % 2 != 0 %>
-                            <div class="row">
-                        <% end %>
-                        <div class="col-sm-12 col-md-6">
-                            <div class="thumbnail">
-                                <%= image_tag  "sites/"+site[:site].SRC, :class=>"hidden-xs hidden-sm"%>
-                                <%= image_tag  "sitesMobil/"+site[:site].SRC, :class=>"hidden-lg hidden-md"%>
-                                <div >
-                                    <br> 
-                                    
-                                    <h3 id="titulo" class="description">
-                                        <%= link_to site[:site].Name, {:controller => "detail", :action => "index", :site_id => site[:site].id}%>
-                                    </h3>
-                                    <hr>
-                                        <div class="ratings">
-                                            <p>
-                                                 <input type="text" class="kv-fa rating-loading" value="2" data-size="xs" title=""> 
-                                            </p>
-                                         </div>
-                                    <hr>
-                                    <h4 class="description">
-                                      <p class="text-justify"> <%= site[:site].Description%> </p>
-                                  </h4>
-                                  <h5 class="description">
-                                    <p>
-                                        <strong>
-                                        <% for tp in site[:type] %>
-                                            <%= link_to tp[:name], {:controller => "turist", :action => "index", :type_id => tp[:id]}%>
-                                        <% end %>
-                                        </strong>
-                                        <br>
-                                    </p>
-                                    <p>
-                                        Categorias:  
-                                        <strong>
-                                            <% for cla in site[:clasification] %>
-                                                <%= link_to cla[:name], {:controller => "turist", :action => "index", :clasification_id => cla[:id]}%>,
-                                            <% end %> 
-                                        </strong>
-                                        <br>
-                                    </p>
-                                    </h5>
-                                    <%= link_to "Ver Más", {:controller => "detail", :action => "index", :site_id => site[:site].id }, :class=>"btn btn-primary"%>
-                                    <button type="button" id="btnModel<%=cont%>" class="btn btn-primary ">Reservar</button>
-                                </div>
+        </div>
+        <br> 
+        <div class="col-md-9 col-xs-12">
+            <div class="row">
+                <% cont = 0 %>
+                <% @sites.each do |site| %>
+                     <%  cont = cont + 1 %>
+                    <% if cont % 2 != 0 %>
+                        <div class="row">
+                    <% end %>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="thumbnail">
+                            <%= image_tag  "sites/"+site[:site].SRC, :class=>"hidden-xs hidden-sm"%>
+                            <%= image_tag  "sitesMobil/"+site[:site].SRC, :class=>"hidden-lg hidden-md"%>
+                            <div >
+                                <br> 
+                                
+                                <h3 id="titulo" class="description">
+                                    <%= link_to site[:site].Name, {:controller => "detail", :action => "index", :site_id => site[:site].id}%>
+                                </h3>
+                                <hr>
+                                    <div class="ratings">
+                                        <p>
+                                             <input type="text" class="kv-fa rating-loading" value="2" data-size="xs" title=""> 
+                                        </p>
+                                     </div>
+                                <hr>
+                                <h4 class="description">
+                                  <p class="text-justify"> <%= site[:site].Description%> </p>
+                              </h4>
+                              <h5 class="description">
+                                <p>
+                                    <strong>
+                                    <% for tp in site[:type] %>
+                                        <%= link_to tp[:name], {:controller => "turist", :action => "index", :type_id => tp[:id]}%>
+                                    <% end %>
+                                    </strong>
+                                    <br>
+                                </p>
+                                <p>
+                                    Categorias:  
+                                    <strong>
+                                        <% for cla in site[:clasification] %>
+                                            <%= link_to cla[:name], {:controller => "turist", :action => "index", :clasification_id => cla[:id]}%>,
+                                        <% end %> 
+                                    </strong>
+                                    <br>
+                                </p>
+                                </h5>
+                                <%= link_to "Ver Más", {:controller => "detail", :action => "index", :site_id => site[:site].id }, :class=>"btn btn-primary"%>
+                                <button type="button" id="btnModel<%=cont%>" class="btn btn-primary ">Reservar</button>
                             </div>
                         </div>
-                        <% if cont % 2 == 0 %>
-                            </div >
-                        <% end %>
+                    </div>
+                    <% if cont % 2 == 0 %>
+                        </div >
                     <% end %>
-                </div>
+                <% end %>
             </div>
-
-        <input type="hidden" name="allSite" id="allSite" value="<%=cont%>">
-    </div>
-        
-    <%= javascript_include_tag 'modalMap', 'data-turbolinks-track' => true %>
+        </div>
+    <input type="hidden" name="allSite" id="allSite" value="<%=cont%>">
+</div>
+<%= javascript_include_tag 'modalMap', 'data-turbolinks-track' => true %>
