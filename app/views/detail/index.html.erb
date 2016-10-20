@@ -34,21 +34,21 @@
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <%  positionLi = 0 %>
-    <% @photosGaleria.each do |photo| %>    
+    <% @photosGaleria.each do |photo| %>
         <li data-target="#bs-carousel" data-slide-to="<%=positionLi%>" class="<%= positionLi==0 ?  'active' : ''%> "></li>
         <%positionLi = positionLi + 1%>
     <% end %>
   </ol>
-  
+
   <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <%  position = 0 %>
-        <% @photosGaleria.each do |photo| %> 
+        <% @photosGaleria.each do |photo| %>
             <div class="item slides <%= position==0 ?  'active' : ''%> ">
                 <div class="slide-1" style='background-image: url("<%='../assets/sites/'+photo.SRC%>");'></div>
                 <div class="hero">
                     <hgroup>
-                      <h2><%= @site.Name %> </h2>        
+                      <h2><%= @site.Name %> </h2>
                       <h5><%= @site.Description %></h5>
                     </hgroup>
                      <a href="#info"><button type="button" class="btn  btn-info btn-circle btn-xl"><i class="glyphicon glyphicon-menu-down"></i></button></a>
@@ -56,57 +56,68 @@
             </div>
             <%position = position +1%>
         <%end%>
-    </div> 
+    </div>
 </div>
 <div class="container" id="info">
     <div class="row">
-       
-        
+
+
         <center>
             <h2><%= @site.Description %>  </h2>
         </center>
             <div class="ratings">
                 <p>
-                     <input type="text" class="kv-fa rating-loading" value="2" data-size="xs" title=""> 
+                     <input type="text" class="kv-fa rating-loading" value="2" data-size="xs" title="">
                 </p>
             </div>
-            
+
             <button type="button" id="btnModel1" class="btn btn-primary ">Ver Mapa</button>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 Calificame
             </button>
-            <center>
-            <div class="collapse" id="collapseExample">
-              <div class="well">
+<!-- Codigo de boton compartir-->
+
+<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+            <div id="fb-root"></div>
+              <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1735635396715126";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+                <center>
+                  <div class="collapse" id="collapseExample">
+                    <div class="well">
                 <div class="ratings">
                     <p> <h4 class="list-group-item-heading">Servicio<h4> </p>
                     <p>
-                         <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title=""> 
+                         <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title="">
                     </p>
                     <p> <h4 class="list-group-item-heading">Ambiente<h4> </p>
                     <p>
-                        <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title=""> 
+                        <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title="">
                     </p>
                     <p> <h4 class="list-group-item-heading">Calidad<h4> </p>
                     <p>
-                        <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title=""> 
+                        <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title="">
                     </p>
                     <p> <h4 class="list-group-item-heading">Precio<h4> </p>
                     <p>
-                        <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title=""> 
+                        <input type="text" class="kv-fa-heart rating-loading" value="2" data-size="xs" title="">
                     </p>
 
                 </div>
               </div>
             </div>
         </center>
-    </div>    
-</div>                           
+    </div>
+</div>
 
 <div class="container">
     <div class="row">
         <hr>
-        <div class="col-md-6">             
+        <div class="col-md-6">
             <h2>Informacion</h2>
             <address>
                 <% @type.each do |item| %>
@@ -125,7 +136,7 @@
             </address>
         </div>
         <div class="col-md-6">
-            <h2>Actividades cercanas</h2>    
+            <h2>Actividades cercanas</h2>
             <div class="list-group">
                 <% @sitesRel.each do |item| %>
                     <div class="list-group-item">
@@ -138,19 +149,19 @@
                             <p class="list-group-item-text"><%= item.Description%></p>
                             <div class="ratings">
                                 <p>
-                                     <input type="text" class="kv-fa rating-loading" value="2" data-size="xs" title=""> 
+                                     <input type="text" class="kv-fa rating-loading" value="2" data-size="xs" title="">
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="list-group-separator"></div>     
+                    <div class="list-group-separator"></div>
                 <%end%>
             </div>
         </div>
     </div>
 </div> <!-- /row -->
 
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <form class="form-horizontal" name="commentform">
             <div class="form-group">
@@ -176,8 +187,21 @@
                 </div>
             </div>
         </form>
-    </div><!-- /row -->
-</div><!-- /container -->
+    </div> /row
+</div> /container -->
+
+<!-- Codigo de comentarios en facebook-->
+<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1546169515689645";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!--******************************************* -->
 <input type="hidden" name="allSite" id="allSite" value="1">
 <div id="myModal" class="modal">
   <div class="modal-content">
