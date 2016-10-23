@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161016172341) do
+ActiveRecord::Schema.define(version: 20161018054821) do
 
   create_table "answer_x_clasifications", force: :cascade do |t|
     t.integer  "answers_id"
@@ -83,6 +83,11 @@ ActiveRecord::Schema.define(version: 20161016172341) do
     t.text     "Description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "details", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "in_shopping_carts", force: :cascade do |t|
@@ -186,7 +191,7 @@ ActiveRecord::Schema.define(version: 20161016172341) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "Fin"
-    t.string   "IconSRC"
+    t.string   "Icon"
   end
 
   create_table "scores", force: :cascade do |t|
