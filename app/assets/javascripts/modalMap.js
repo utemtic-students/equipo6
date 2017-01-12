@@ -1,48 +1,6 @@
 $(document).ready(function(){
-	scrollA();
-	window.myMap =  function () {           
-	  var map = new google.maps.Map(document.getElementById('map'), {
-	    center: {lat: -34.397, lng: 150.644},
-	    zoom: 6
-	  });
-	  var infoWindow = new google.maps.InfoWindow({map: map});
-
-	  // Try HTML5 geolocation.
-	  if (navigator.geolocation) {
-	    navigator.geolocation.getCurrentPosition(function(position) {
-	      var pos = {
-	        lat: position.coords.latitude,
-	        lng: position.coords.longitude
-	      };
-
-	      infoWindow.setPosition(pos);
-	      infoWindow.setContent('Location found.');
-	      map.setCenter(pos);
-	    }, function() {
-	      handleLocationError(true, infoWindow, map.getCenter());
-	    });
-	  } else {
-	    // Browser doesn't support Geolocation
-	    handleLocationError(false, infoWindow, map.getCenter());
-	  }
-	}
-	var modal = document.getElementById('myModal');
-	var span = document.getElementsByClassName("close")[0];
+		scrollA();
 	var allSite = document.getElementById('allSite').value;
-	for (var i = 1; i <= parseInt(allSite); i++) {
-		var btn = document.getElementById("btnModel"+i);
-		btn.onclick = function() {
-				modal.style.display = "block";
-		}
-	}
-	span.onclick = function() {
-			modal.style.display = "none";
-	}
-	window.onclick = function(event) {
-			if (event.target == modal) {
-					modal.style.display = "none";
-			}
-	}
 	 $('.kv-gly-star').rating({
 						containerClass: 'is-star'
 				});
@@ -103,6 +61,7 @@ $(document).ready(function(){
 								'change', function () {
 										console.log('Rating selected: ' + $(this).val());
 								});
+
 });
 
 function scrollA()
@@ -130,3 +89,4 @@ function scrollA()
 
 	 });
 }
+	 
