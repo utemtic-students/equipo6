@@ -1,0 +1,14 @@
+<article>
+  <h3 class="large-padding red white-text no-margin">
+    <%= link_to product.name,product,class:"white-text" %>
+  </h3>
+  <div class="large-padding text-left">
+    <div class="col-md-9 inline-block no-padding">
+      <%= product.description %>
+    </div>
+    <div class="col-md-3 inline-block no-padding">
+      <%= product.sales.count %>
+      ventas
+    </div>
+  </div>
+</article>

@@ -2,21 +2,14 @@
 <html id="htmlX">
 <head>
   <title>GoTurista!</title>
-  
   <%= csrf_meta_tags %>
+  <link href="/assets/application.scss" media="screen" rel="stylesheet" />
 </head>
 <body>
-	<div class="blue white-text large-padding bold text-center" style="<%= "display:none;" if alert.nil? && notice.nil? %>">
-		<p class="no-padding no-margin inline-block close"><%= notice %><%= alert %></p>
-		<span class="pull-right close-parent">X</span>
-	</div>
-
-
+	
 	<%= render "partials/nav" %>
-
 	<div class="col-md-11 no-float center-block">
-		
-		<%= yield %>
 	</div>
+	<%= yield %>
 </body>
 </html>

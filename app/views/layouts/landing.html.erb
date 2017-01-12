@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html id="htmlX">
+<head>
+  <title>GoTurista!</title>
+  <%= csrf_meta_tags %>
+  <link href="/assets/application.scss" media="screen" rel="stylesheet"/> 
+  <link href="/assets/landing.css" media="screen" rel="stylesheet"/>
+  <script type="text/javascript" src="/assets/application.js"></script>
+</head>
+<body>
+	
+	<%= render "partials/nav" %>
+	<div class="col-md-11 no-float center-block">
+	</div>
+
+ <%= yield %>
+</body>
+</html>

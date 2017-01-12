@@ -1,8 +1,14 @@
+<div class="blue white-text large-padding bold text-center" style="<%= "display:none;" if alert.nil? && notice.nil? %>">
+    <p class="no-padding no-margin inline-block close"><%= notice %><%= alert %></p>
+    <span class="pull-right close-parent">X</span>
+  </div>
 <header class="navbar undefined">
   <% if user_signed_in? %>
         <div class="navbar-branding"> <%= link_to "GoTurista", {:controller => "welcome", :action => "index" }, :class=>"navbar-brand "%><span id="toggle_sidemenu_l" class="fa fa-bars"></span></div>
-        <ul class="nav navbar-nav navbar-left"></ul>
-                <form role="title" class="navbar-form navbar-left navbar-search alt">
+
+
+
+        <form role="title" class="navbar-form navbar-left navbar-search alt">
           <div class="form-group">
             <h1 class="mn">General</h1>
           </div>
@@ -14,7 +20,7 @@
               <li class="list-group-item"><a href="#" class="animated animated-short fadeInUp"><span class="fa fa-bell"></span> Notifications</a></li>
               <li class="list-group-item">
                 <%= link_to   class:"animated animated-short fadeInUp", :controller => "welcome", :action => "settingsUser"  do %>
-                  <span class="fa fa-gear"></span> Agustes de Usuario
+                  <span class="fa fa-gear"></span> Ajustes de Usuario
                 <%end%></li>
               <li class="dropdown-footer"><%= link_to "Cerrar sesión", destroy_user_session_path, :method => :delete, class:"fa fa-power-off pr5" %></li>
             </ul>
@@ -64,12 +70,8 @@
             </li>
             </ul>
           <!-- Start: Sidebar Collapse Button-->
-          <div class="sidebar-toggle-mini"><a href="#"><span class="fa fa-sign-out"></span></a></div>
-        </div>
-        <% else %>
-        <li class="active"><%= link_to '¿Tienes un negocio?, Registrate',  new_user_registration_path  %></li>
-       <li><%= link_to 'Ingresa', user_session_path %></li></li>
-       <li class="fa fa-gear">
-       </li>
+           <% else %>
+        
+    
        <% end %>
       </aside>
