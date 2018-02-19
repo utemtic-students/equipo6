@@ -7,6 +7,6 @@
 
 -Daniel Villa Valdez
 
--Miguel Angel Ventura Marin
+-Miguel Angel Ventura Marin <- soy integrante y no me encuentro como colaborador
 
 -Fernando Amezcua Alcantar
